@@ -14,9 +14,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //if let scene = GameScene(fileNamed:"GameScene") {
-        
-        let scene = GameScene(size:CGSize(width: 2048, height: 1536))
+        // width = 682 and height = 511 because is the "MainMenu.png" resolution (1x)
+        let scene = GameScene(size:CGSize(width: 682, height: 511))
         
         // Configure the view.
         let skView = self.view as! SKView

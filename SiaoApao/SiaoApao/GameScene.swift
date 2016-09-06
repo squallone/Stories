@@ -12,6 +12,12 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
           backgroundColor = SKColor.blackColor()
+        
+        let background = SKSpriteNode(imageNamed: "MainMenu")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        background.zPosition = -1
+        addChild(background)
     }
 
 }
