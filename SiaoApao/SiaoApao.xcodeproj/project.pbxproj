@@ -15,6 +15,7 @@
 		926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926289A71D7F7F4D00F253FF /* LaunchScreen.storyboard */; };
 		926289B41D7F7F4D00F253FF /* SiaoApaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289B31D7F7F4D00F253FF /* SiaoApaoTests.swift */; };
 		926289BF1D7F7F4D00F253FF /* SiaoApaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */; };
+		F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED681D7F8C6B00D98278 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		926289BA1D7F7F4D00F253FF /* SiaoApaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiaoApaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiaoApaoUITests.swift; sourceTree = "<group>"; };
 		926289C01D7F7F4D00F253FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F220ED681D7F8C6B00D98278 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				9262899A1D7F7F4D00F253FF /* AppDelegate.swift */,
+				F220ED681D7F8C6B00D98278 /* Constants.swift */,
+				F220ED611D7F8C4B00D98278 /* Assets */,
+				F220ED621D7F8C4B00D98278 /* Helpers */,
+				F220ED631D7F8C4B00D98278 /* Libraries */,
+				F220ED641D7F8C4B00D98278 /* Project Classes */,
 				9262899E1D7F7F4D00F253FF /* GameScene.swift */,
 				926289A01D7F7F4D00F253FF /* GameViewController.swift */,
 				926289A21D7F7F4D00F253FF /* Main.storyboard */,
@@ -126,6 +133,62 @@
 				926289C01D7F7F4D00F253FF /* Info.plist */,
 			);
 			path = SiaoApaoUITests;
+			sourceTree = "<group>";
+		};
+		F220ED611D7F8C4B00D98278 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			path = Source/Assets;
+			sourceTree = "<group>";
+		};
+		F220ED621D7F8C4B00D98278 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			path = Source/Helpers;
+			sourceTree = "<group>";
+		};
+		F220ED631D7F8C4B00D98278 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			path = Source/Libraries;
+			sourceTree = "<group>";
+		};
+		F220ED641D7F8C4B00D98278 /* Project Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F220ED651D7F8C4B00D98278 /* Controllers */,
+				F220ED661D7F8C4B00D98278 /* Models */,
+				F220ED671D7F8C4B00D98278 /* Views */,
+			);
+			name = "Project Classes";
+			path = "Source/Project Classes";
+			sourceTree = "<group>";
+		};
+		F220ED651D7F8C4B00D98278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F220ED661D7F8C4B00D98278 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F220ED671D7F8C4B00D98278 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +325,7 @@
 				9262899F1D7F7F4D00F253FF /* GameScene.swift in Sources */,
 				926289A11D7F7F4D00F253FF /* GameViewController.swift in Sources */,
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
+				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +554,7 @@
 				926289C51D7F7F4D00F253FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		926289C61D7F7F4D00F253FF /* Build configuration list for PBXNativeTarget "SiaoApaoTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +563,7 @@
 				926289C81D7F7F4D00F253FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		926289C91D7F7F4D00F253FF /* Build configuration list for PBXNativeTarget "SiaoApaoUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +572,7 @@
 				926289CB1D7F7F4D00F253FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
