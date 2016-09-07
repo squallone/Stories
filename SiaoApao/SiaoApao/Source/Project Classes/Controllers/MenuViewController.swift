@@ -10,26 +10,47 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    // MARK: - @IBOutlet
+    
+    @IBOutlet weak var btnStories: UIButton!
+    @IBOutlet weak var btnGames: UIButton!
+    @IBOutlet weak var btnCharacters: UIButton!
+    
+    // MARK: - Properties
+    
+    var flowController: SAMenuFlowController!
+    
+    // MARK: View fife cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        flowController = SAMenuFlowController(navigationController: self.navigationController)
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Navigation
+    
+    @IBAction func showStories(sender: AnyObject) {
+        flowController.showStories()
     }
     
+    @IBAction func showGames(sender: AnyObject) {
+        flowController.showGames()
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func showCharacters(sender: AnyObject) {
+        flowController.showCharacters()
+        
+    }
+    
+    // MARK: - Language
+    
+    @IBAction func changeLanguageToEnglish(sender: AnyObject) {
+    }
+    
+    @IBAction func changeLanguageToSpanish(sender: AnyObject) {
+        
+    }
     
 }

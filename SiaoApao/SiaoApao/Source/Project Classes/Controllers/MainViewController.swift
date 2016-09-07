@@ -10,18 +10,24 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var flowController: SAFlowController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.flowController = SAFlowController(controller: self)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        self.flowController!.showMenu()
+        // Controller and NavigationController
+        let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: menuViewController)
+        
+        // Hide navigation bar
+        navigationController.navigationBar.hidden = true
+        
+        // Present ViewController
+        self.presentViewController(navigationController, animated: true, completion: nil)
         
     }
     

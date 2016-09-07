@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="SiaoApao" customModuleProvider="target">
             <connections>
+                <outlet property="btnCharacters" destination="5ho-Qc-pA9" id="W3G-MQ-Awi"/>
+                <outlet property="btnGames" destination="kEH-Ht-PWE" id="qRx-er-E2f"/>
+                <outlet property="btnStories" destination="l27-HJ-8D6" id="oNj-ew-tun"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Wbx-gw-Cb7"/>
             </connections>
         </placeholder>
@@ -27,6 +30,9 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l27-HJ-8D6">
                             <rect key="frame" x="83" y="86" width="141" height="34"/>
                             <state key="normal" image="menu_stories"/>
+                            <connections>
+                                <action selector="showStories:" destination="-1" eventType="touchUpInside" id="Fme-iF-oAk"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_back_games" translatesAutoresizingMaskIntoConstraints="NO" id="bpi-nD-2o1">
                             <rect key="frame" x="331" y="20" width="187" height="142"/>
@@ -34,6 +40,9 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-Ht-PWE">
                             <rect key="frame" x="355" y="86" width="138" height="34"/>
                             <state key="normal" image="menu_games"/>
+                            <connections>
+                                <action selector="showGames:" destination="-1" eventType="touchUpInside" id="wFE-NZ-Xsf"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_back_characters" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-aF-Mfy">
                             <rect key="frame" x="539" y="45" width="293" height="116"/>
@@ -41,6 +50,9 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ho-Qc-pA9">
                             <rect key="frame" x="579" y="86" width="214" height="34"/>
                             <state key="normal" image="menu_characters"/>
+                            <connections>
+                                <action selector="showCharacters:" destination="-1" eventType="touchUpInside" id="abA-dz-weZ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -59,9 +71,15 @@
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i26-t3-hq9">
                             <rect key="frame" x="0.0" y="64" width="145" height="25"/>
+                            <connections>
+                                <action selector="changeLanguageToEnglish:" destination="-1" eventType="touchUpInside" id="gKy-Ii-cma"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-Vr-NSN">
                             <rect key="frame" x="0.0" y="100" width="145" height="25"/>
+                            <connections>
+                                <action selector="changeLanguageToSpanish:" destination="-1" eventType="touchUpInside" id="gBV-Ef-1vN"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

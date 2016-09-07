@@ -14,8 +14,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="CCo-xp-VWH">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CCo-xp-VWH" secondAttribute="bottom" id="0gr-hu-Ofs"/>
+                <constraint firstItem="CCo-xp-VWH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6m7-Qe-OmJ"/>
+                <constraint firstAttribute="trailing" secondItem="CCo-xp-VWH" secondAttribute="trailing" id="HPL-6v-SPy"/>
+                <constraint firstItem="CCo-xp-VWH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="whc-Ff-JBj"/>
+            </constraints>
             <point key="canvasLocation" x="328" y="208"/>
         </view>
     </objects>
+    <resources>
+        <image name="SplashScreen" width="682" height="512"/>
+    </resources>
 </document>
