@@ -13,6 +13,7 @@ class SAMenuStoriesViewController: UIViewController {
     // MARK: - Properties
     
     var flowController: SAMenuStoriesFlowController!
+    var testViewController: SADayAndNightViewController!
     
     // MARK: View fife cycle
     
@@ -30,12 +31,17 @@ class SAMenuStoriesViewController: UIViewController {
     
     
     @IBAction func showCharacters(sender: AnyObject) {
-        
+        print("TEST");
+        testViewController = SADayAndNightViewController()
+
+        // Present ViewController
+        self.presentViewController(testViewController, animated: true, completion: nil)
     }
     
     @IBAction func showMenu(sender: AnyObject) {
         flowController.showMenu()
         
     }
+    
     
 }

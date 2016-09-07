@@ -14,8 +14,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // width = 682 and height = 511 because is the "MainMenu.png" resolution (1x)
-        let scene = GameScene(size:CGSize(width: 682, height: 511))
+        // width = 910 and height = 682 because is the "MainMenu.png" resolution (1x)
+        let scene = GameScene(size:CGSize(width: 910, height: 682))
         
         // Configure the view.
         let skView = self.view as! SKView
@@ -29,7 +29,6 @@ class GameViewController: UIViewController {
         scene.scaleMode = .AspectFill
         
         skView.presentScene(scene)
-        //}
     }
     
     override func shouldAutorotate() -> Bool {

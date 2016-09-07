@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9242E1B51D80538C0025A172 /* SADayAndNightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SADayAndNightViewController.swift */; };
+		9242E1B71D80550F0025A172 /* SADayAndNightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B61D80550F0025A172 /* SADayAndNightScene.swift */; };
 		9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9262899A1D7F7F4D00F253FF /* AppDelegate.swift */; };
 		9262899F1D7F7F4D00F253FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9262899E1D7F7F4D00F253FF /* GameScene.swift */; };
 		926289A11D7F7F4D00F253FF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289A01D7F7F4D00F253FF /* GameViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9242E1B41D80538C0025A172 /* SADayAndNightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightViewController.swift; sourceTree = "<group>"; };
+		9242E1B61D80550F0025A172 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
 		926289971D7F7F4C00F253FF /* SiaoApao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiaoApao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9262899A1D7F7F4D00F253FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9262899E1D7F7F4D00F253FF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9242E1B31D8053370025A172 /* DayAndNight */ = {
+			isa = PBXGroup;
+			children = (
+				9242E1B41D80538C0025A172 /* SADayAndNightViewController.swift */,
+				9242E1B61D80550F0025A172 /* SADayAndNightScene.swift */,
+			);
+			name = DayAndNight;
+			sourceTree = "<group>";
+		};
 		9262898E1D7F7F4C00F253FF = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +224,7 @@
 				F220ED7A1D7F979700D98278 /* MenuController */,
 				F2D601FB1D7FE498006B2AE7 /* MenuStoriesViewController */,
 				F2D602021D7FE5AA006B2AE7 /* MenuCharactersViewController */,
+				9242E1B31D8053370025A172 /* DayAndNight */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -413,7 +427,9 @@
 			files = (
 				9262899F1D7F7F4D00F253FF /* GameScene.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
+				9242E1B51D80538C0025A172 /* SADayAndNightViewController.swift in Sources */,
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
+				9242E1B71D80550F0025A172 /* SADayAndNightScene.swift in Sources */,
 				F220ED6F1D7F935500D98278 /* view.swift in Sources */,
 				F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */,
 				F220ED6D1D7F934E00D98278 /* model.swift in Sources */,

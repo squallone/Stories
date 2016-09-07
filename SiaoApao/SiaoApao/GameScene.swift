@@ -11,7 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-          backgroundColor = SKColor.blackColor()
+        backgroundColor = SKColor.blackColor()
         
         let background = SKSpriteNode(imageNamed: "MainMenu")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
