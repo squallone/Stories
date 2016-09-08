@@ -71,7 +71,7 @@ class SADayAndNightScene: SKScene {
         squareNode.anchorPoint = CGPoint(x: 0, y: 1)
         squareNode.zPosition = zNodePosition.square
         addChild(squareNode)
-
+        
         let sinkNode = SKSpriteNode(imageNamed: "sink")
         sinkNode.position = CGPoint(x: 0, y:0)
         sinkNode.anchorPoint = CGPoint(x: 0, y:0)

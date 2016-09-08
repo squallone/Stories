@@ -13,7 +13,6 @@ class SAMenuStoriesViewController: UIViewController {
     // MARK: - Properties
     
     var flowController: SAMenuStoriesFlowController!
-    var testViewController: SADayAndNightViewController!
     
     // MARK: View fife cycle
     
@@ -23,19 +22,35 @@ class SAMenuStoriesViewController: UIViewController {
         
     }
     
-    // MARK: - Navigation
+    // MARK: Stories
     
-    @IBAction func showGames(sender: AnyObject) {
+    @IBAction func showBeforeGoinTobed(sender: AnyObject) {
+        
+        let testViewController = SADayAndNightViewController()
+        // Present ViewController
+        self.presentViewController(testViewController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func showDinnerAroundTheWorld(sender: AnyObject) {
         
     }
     
     
+    @IBAction func showTheStoryBehindTheWorld(sender: AnyObject) {
+    
+    }
+    
+    // MARK: - Navigation
+    
+    @IBAction func showGames(sender: AnyObject) {
+        flowController.showGames()
+    }
+    
+    
     @IBAction func showCharacters(sender: AnyObject) {
-        print("TEST");
-        testViewController = SADayAndNightViewController()
-
-        // Present ViewController
-        self.presentViewController(testViewController, animated: true, completion: nil)
+        flowController.showCharacters()
+        
     }
     
     @IBAction func showMenu(sender: AnyObject) {

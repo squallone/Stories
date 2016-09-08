@@ -66,15 +66,27 @@
                         <action selector="showMenu:" destination="-1" eventType="touchUpInside" id="Xrv-Ns-Bdw"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back_selector" translatesAutoresizingMaskIntoConstraints="NO" id="U8l-Cp-WqG">
-                    <rect key="frame" x="151" y="446" width="485" height="129"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back_selector" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-6J-T2d">
-                    <rect key="frame" x="28" y="316" width="485" height="129"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back_selector" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-wm-R9U">
-                    <rect key="frame" x="139" y="184" width="485" height="129"/>
-                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-gE-DYc" userLabel="Story 1">
+                    <rect key="frame" x="130" y="184" width="494" height="129"/>
+                    <state key="normal" image="back_selector"/>
+                    <connections>
+                        <action selector="showBeforeGoinTobed:" destination="-1" eventType="touchUpInside" id="4AO-iT-wsY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-5S-vaF" userLabel="Story 2">
+                    <rect key="frame" x="23" y="316" width="494" height="129"/>
+                    <state key="normal" image="back_selector"/>
+                    <connections>
+                        <action selector="showDinnerAroundTheWorld:" destination="-1" eventType="touchUpInside" id="lcn-yT-Cdp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVn-KF-byt" userLabel="Story 3">
+                    <rect key="frame" x="139" y="445" width="494" height="129"/>
+                    <state key="normal" image="back_selector"/>
+                    <connections>
+                        <action selector="showTheStoryBehindTheWorld:" destination="-1" eventType="touchUpInside" id="nIg-5N-c3j"/>
+                    </connections>
+                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_back_stories" translatesAutoresizingMaskIntoConstraints="NO" id="ELO-WC-TDj">
                     <rect key="frame" x="403" y="17" width="266" height="128"/>
                 </imageView>
@@ -82,6 +94,48 @@
                     <rect key="frame" x="466" y="70" width="141" height="34"/>
                     <state key="normal" image="menu_stories"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Before Going To Bed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peI-Ja-hMx" customClass="SALabel" customModule="SiaoApao" customModuleProvider="target">
+                    <rect key="frame" x="202" y="211" width="336" height="65"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="29"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.2156862745" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="outlineWidth">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dinner Around The World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7be-ip-38M" customClass="SALabel" customModule="SiaoApao" customModuleProvider="target">
+                    <rect key="frame" x="84" y="340" width="384" height="65"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="29"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.2156862745" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="outlineWidth">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Story Behind The Mask" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXM-La-wfg" customClass="SALabel" customModule="SiaoApao" customModuleProvider="target">
+                    <rect key="frame" x="182" y="477" width="409" height="65"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="29"/>
+                    <color key="textColor" red="0.50196078430000002" green="0.2156862745" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="outlineWidth">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

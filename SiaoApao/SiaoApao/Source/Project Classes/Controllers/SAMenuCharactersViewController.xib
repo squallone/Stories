@@ -12,9 +12,81 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainMenu" translatesAutoresizingMaskIntoConstraints="NO" id="EvI-oJ-nGl">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-0u-MMw">
+                    <rect key="frame" x="192" y="71" width="224" height="224"/>
+                    <state key="normal" image="character_apao"/>
+                    <connections>
+                        <action selector="pressApao:" destination="-1" eventType="touchUpInside" id="8JW-Di-fVm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7n-bh-72J">
+                    <rect key="frame" x="507" y="71" width="224" height="224"/>
+                    <state key="normal" image="character_sia"/>
+                    <connections>
+                        <action selector="pressSia:" destination="-1" eventType="touchUpInside" id="uZY-up-oaR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVf-O5-tzy">
+                    <rect key="frame" x="187" y="432" width="229" height="224"/>
+                    <state key="normal" image="character_tyro"/>
+                    <connections>
+                        <action selector="presstyro:" destination="-1" eventType="touchUpInside" id="tCg-vE-NLC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-Mq-mom">
+                    <rect key="frame" x="541" y="462" width="218" height="229"/>
+                    <state key="normal" image="character_galileo"/>
+                    <connections>
+                        <action selector="pressGalileo:" destination="-1" eventType="touchUpInside" id="mMR-H5-8RC"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_apao" translatesAutoresizingMaskIntoConstraints="NO" id="ymK-mN-Cmr">
+                    <rect key="frame" x="338" y="111" width="112" height="60"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_sia" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-qQ-RTv">
+                    <rect key="frame" x="666" y="116" width="72" height="38"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_galileo" translatesAutoresizingMaskIntoConstraints="NO" id="iE9-C0-buR">
+                    <rect key="frame" x="661" y="475" width="136" height="73"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_tyro" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-gG-fXu">
+                    <rect key="frame" x="329" y="456" width="102" height="56"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-ay-ybO" userLabel="Corner">
+                    <rect key="frame" x="899" y="8" width="117" height="117"/>
+                    <state key="normal" image="logo_corner"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="JZc-PD-WWd"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EvI-oJ-nGl" secondAttribute="bottom" id="9RZ-SW-CKD"/>
+                <constraint firstAttribute="trailing" secondItem="EvI-oJ-nGl" secondAttribute="trailing" id="aFi-7C-edf"/>
+                <constraint firstItem="EvI-oJ-nGl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aN5-Wh-48Y"/>
+                <constraint firstItem="EvI-oJ-nGl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xmu-eq-mmF"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
         </view>
     </objects>
+    <resources>
+        <image name="MainMenu" width="682" height="511"/>
+        <image name="character_apao" width="316" height="317"/>
+        <image name="character_galileo" width="326" height="344"/>
+        <image name="character_sia" width="318" height="319"/>
+        <image name="character_tyro" width="322" height="315"/>
+        <image name="label_apao" width="145" height="49"/>
+        <image name="label_galileo" width="193" height="41"/>
+        <image name="label_sia" width="86" height="41"/>
+        <image name="label_tyro" width="134" height="49"/>
+        <image name="logo_corner" width="168" height="168"/>
+    </resources>
 </document>

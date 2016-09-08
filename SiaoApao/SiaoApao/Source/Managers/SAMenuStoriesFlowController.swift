@@ -10,6 +10,8 @@ import UIKit
 
 class SAMenuStoriesFlowController: NSObject {
     
+    // MARK: Properties
+    
     var navigationController: UINavigationController!
     
     // MARK: - Instance
@@ -21,8 +23,22 @@ class SAMenuStoriesFlowController: NSObject {
         }
     }
     
+    // MARK: - Navigation
     
     func showMenu(){
         self.navigationController.popViewControllerAnimated(true)
+    }
+    
+    func showGames(){
+        
+        let menuStoriesViewController = SAMenuGamesViewController(nibName: "SAMenuGamesViewController", bundle: nil)
+        self.navigationController .pushViewController(menuStoriesViewController, animated: true)
+    }
+    
+    func showCharacters(){
+        
+        let menuStoriesViewController = SAMenuCharactersViewController(nibName: "SAMenuCharactersViewController", bundle: nil)
+        self.navigationController .pushViewController(menuStoriesViewController, animated: true)
+        
     }
 }

@@ -55,14 +55,13 @@ class SAMenuFlowController: NSObject {
     
     func showGames(){
         
-        let menuStoriesViewController = SAMenuStoriesViewController(nibName: "SAMenuStoriesViewController", bundle: nil)
+        let menuStoriesViewController = SAMenuGamesViewController(nibName: "SAMenuGamesViewController", bundle: nil)
         self.navigationController .pushViewController(menuStoriesViewController, animated: true)
-        
     }
     
     func showCharacters(){
         
-        let menuStoriesViewController = SAMenuStoriesViewController(nibName: "SAMenuStoriesViewController", bundle: nil)
+        let menuStoriesViewController = SAMenuCharactersViewController(nibName: "SAMenuCharactersViewController", bundle: nil)
         self.navigationController .pushViewController(menuStoriesViewController, animated: true)
         
     }
