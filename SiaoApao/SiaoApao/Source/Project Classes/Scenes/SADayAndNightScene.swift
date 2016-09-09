@@ -38,7 +38,6 @@ enum zNodePosition {
 class SADayAndNightScene: SKScene {
     /* Setup your scene here */
     override func didMoveToView(view: SKView) {
-        backgroundColor = SKColor.blueColor()
         
         /* Create node statics */
         /*
