@@ -29,6 +29,7 @@
 		F220ED801D7F981700D98278 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED7E1D7F981700D98278 /* MainViewController.xib */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
+		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
 		F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */; };
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
@@ -88,6 +89,7 @@
 		F220ED7E1D7F981700D98278 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
+		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
 		F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesViewController.swift; sourceTree = "<group>"; };
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				924012A41D8264AA005B4087 /* Surf */,
 				92CEFE711D825A3B00F04105 /* SADayAndNight */,
 				F272BBC01D8267B4003E55D1 /* Globes */,
+				F2AA72F11D827F7300C2B314 /* SABaseScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */,
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
 				F220ED6F1D7F935500D98278 /* view.swift in Sources */,
+				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
 				F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */,
 				F220ED6D1D7F934E00D98278 /* model.swift in Sources */,
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,

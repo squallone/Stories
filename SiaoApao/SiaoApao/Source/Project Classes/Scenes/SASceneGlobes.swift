@@ -8,11 +8,10 @@
 
 import SpriteKit
 
-class SASceneGlobes: SKScene {
+class SASceneGlobes: SABaseScene {
     
     override func didMoveToView(view: SKView) {
-        //backgroundColor = SKColor.blueColor()
+        super.didMoveToView(view)
         
     }
-    
 }
