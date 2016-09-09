@@ -10,6 +10,8 @@
 		924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924012A51D8264E5005B4087 /* SASurfScene.sks */; };
 		924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924012A71D8265C6005B4087 /* SASurfScene.swift */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
+		924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */; };
+		924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */; };
 		9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9262899A1D7F7F4D00F253FF /* AppDelegate.swift */; };
 		926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926289A51D7F7F4D00F253FF /* Assets.xcassets */; };
 		926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926289A71D7F7F4D00F253FF /* LaunchScreen.storyboard */; };
@@ -64,6 +66,8 @@
 		924012A51D8264E5005B4087 /* SASurfScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASurfScene.sks; sourceTree = "<group>"; };
 		924012A71D8265C6005B4087 /* SASurfScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASurfScene.swift; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
+		924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPortraitScene.swift; sourceTree = "<group>"; };
+		924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPortraitScene.sks; sourceTree = "<group>"; };
 		926289971D7F7F4C00F253FF /* SiaoApao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiaoApao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9262899A1D7F7F4D00F253FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926289A51D7F7F4D00F253FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,8 +135,8 @@
 		924012A41D8264AA005B4087 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
-				924012A51D8264E5005B4087 /* SASurfScene.sks */,
 				924012A71D8265C6005B4087 /* SASurfScene.swift */,
+				924012A51D8264E5005B4087 /* SASurfScene.sks */,
 			);
 			name = Surf;
 			sourceTree = "<group>";
@@ -143,6 +147,15 @@
 				9242E1B41D80538C0025A172 /* SASheetViewController.swift */,
 			);
 			name = Sheet;
+			sourceTree = "<group>";
+		};
+		924E1CEA1D826E7600A50AA0 /* Portrait */ = {
+			isa = PBXGroup;
+			children = (
+				924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */,
+				924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */,
+			);
+			name = Portrait;
 			sourceTree = "<group>";
 		};
 		9262898E1D7F7F4C00F253FF = {
@@ -203,6 +216,7 @@
 		92CEFE701D825A1F00F04105 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				924E1CEA1D826E7600A50AA0 /* Portrait */,
 				924012A41D8264AA005B4087 /* Surf */,
 				92CEFE711D825A3B00F04105 /* SADayAndNight */,
 				F272BBC01D8267B4003E55D1 /* Globes */,
@@ -467,6 +481,7 @@
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
+				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 			);
@@ -505,6 +520,7 @@
 				F220ED6D1D7F934E00D98278 /* model.swift in Sources */,
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
+				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
