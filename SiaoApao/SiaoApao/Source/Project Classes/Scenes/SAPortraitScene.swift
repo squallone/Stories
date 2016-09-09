@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class SAPortraitScene: SKScene {
+class SAPortraitScene: SABaseScene {
     /* Setup your scene here */
     override func didMoveToView(view: SKView) {
         

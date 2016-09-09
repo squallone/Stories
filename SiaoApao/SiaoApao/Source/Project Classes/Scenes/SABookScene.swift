@@ -1,17 +1,17 @@
 //
-//  SASceneGlobes.swift
+//  SABookScene.swift
 //  SiaoApao
 //
-//  Created by Abdiel Soto on 9/8/16.
+//  Created by Raul Lopez Martinez on 09/09/16.
 //  Copyright © 2016 SmartDev. All rights reserved.
 //
 
 import SpriteKit
 
-class SASceneGlobes: SABaseScene {
-    
+class SABookScene: SKScene {
+    /* Setup your scene here */
     override func didMoveToView(view: SKView) {
-        super.didMoveToView(view)
         
     }
+    
 }
