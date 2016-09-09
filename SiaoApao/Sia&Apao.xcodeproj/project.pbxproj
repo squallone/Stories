@@ -437,6 +437,7 @@
 				TargetAttributes = {
 					926289961D7F7F4C00F253FF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EFQ8TSM8WJ;
 					};
 					926289AE1D7F7F4D00F253FF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -448,7 +449,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 926289921D7F7F4C00F253FF /* Build configuration list for PBXProject "SiaoApao" */;
+			buildConfigurationList = 926289921D7F7F4C00F253FF /* Build configuration list for PBXProject "Sia&Apao" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -595,7 +596,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -641,7 +641,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -666,10 +665,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: abdiel soto (CXP2WN5H44)";
 				INFOPLIST_FILE = SiaoApao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Home.SiaoApao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartthinking.SiaoApao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a53aaa2-4488-4c6c-bacb-6aba46e9a987";
 			};
 			name = Debug;
 		};
@@ -677,10 +678,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: abdiel soto (CXP2WN5H44)";
 				INFOPLIST_FILE = SiaoApao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Home.SiaoApao;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartthinking.SiaoApao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a53aaa2-4488-4c6c-bacb-6aba46e9a987";
 			};
 			name = Release;
 		};
@@ -735,7 +738,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		926289921D7F7F4C00F253FF /* Build configuration list for PBXProject "SiaoApao" */ = {
+		926289921D7F7F4C00F253FF /* Build configuration list for PBXProject "Sia&Apao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				926289C11D7F7F4D00F253FF /* Debug */,
