@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+/*
+
 // MARK: - Margin Enum
 
 enum Margin {
@@ -30,7 +32,7 @@ enum zNodePosition {
     static let interaction: CGFloat = 0.0
     static let square: CGFloat = 0.5
     static let sink: CGFloat = 1.0
-}
+}*/
 
 
 class SADayAndNightScene: SKScene {
@@ -39,7 +41,7 @@ class SADayAndNightScene: SKScene {
         backgroundColor = SKColor.blueColor()
         
         /* Create node statics */
-        
+        /*
         let fenceNode = SKSpriteNode(imageNamed: "fence")
         fenceNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
         fenceNode.anchorPoint = CGPoint(x: 0.5, y: 1.0)
@@ -76,8 +78,6 @@ class SADayAndNightScene: SKScene {
         sinkNode.position = CGPoint(x: 0, y:0)
         sinkNode.anchorPoint = CGPoint(x: 0, y:0)
         sinkNode.zPosition = zNodePosition.sink
-        addChild(sinkNode)
-        
-        
+        addChild(sinkNode)*/
     }
 }

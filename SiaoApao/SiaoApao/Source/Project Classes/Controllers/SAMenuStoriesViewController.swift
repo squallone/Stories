@@ -26,7 +26,7 @@ class SAMenuStoriesViewController: UIViewController {
     
     @IBAction func showBeforeGoinTobed(sender: AnyObject) {
         
-        let testViewController = SADayAndNightViewController()
+        let testViewController = SASheetViewController()
         // Present ViewController
         self.presentViewController(testViewController, animated: true, completion: nil)
     }
