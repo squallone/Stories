@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		924012A61D8264E5005B4087 /* SASurf.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924012A51D8264E5005B4087 /* SASurf.sks */; };
-		924012A81D8265C6005B4087 /* SASurf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924012A71D8265C6005B4087 /* SASurf.swift */; };
+		924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924012A51D8264E5005B4087 /* SASurfScene.sks */; };
+		924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924012A71D8265C6005B4087 /* SASurfScene.swift */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
 		9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9262899A1D7F7F4D00F253FF /* AppDelegate.swift */; };
 		926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926289A51D7F7F4D00F253FF /* Assets.xcassets */; };
@@ -58,8 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		924012A51D8264E5005B4087 /* SASurf.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASurf.sks; sourceTree = "<group>"; };
-		924012A71D8265C6005B4087 /* SASurf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASurf.swift; sourceTree = "<group>"; };
+		924012A51D8264E5005B4087 /* SASurfScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASurfScene.sks; sourceTree = "<group>"; };
+		924012A71D8265C6005B4087 /* SASurfScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASurfScene.swift; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
 		926289971D7F7F4C00F253FF /* SiaoApao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiaoApao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9262899A1D7F7F4D00F253FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 		924012A41D8264AA005B4087 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
-				924012A51D8264E5005B4087 /* SASurf.sks */,
-				924012A71D8265C6005B4087 /* SASurf.swift */,
+				924012A51D8264E5005B4087 /* SASurfScene.sks */,
+				924012A71D8265C6005B4087 /* SASurfScene.swift */,
 			);
 			name = Surf;
 			sourceTree = "<group>";
@@ -442,7 +442,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924012A61D8264E5005B4087 /* SASurf.sks in Resources */,
+				924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */,
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
@@ -486,7 +486,7 @@
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
-				924012A81D8265C6005B4087 /* SASurf.swift in Sources */,
+				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
 				F220ED711D7F936200D98278 /* library.swift in Sources */,

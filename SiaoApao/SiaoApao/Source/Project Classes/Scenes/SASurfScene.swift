@@ -6,4 +6,12 @@
 //  Copyright © 2016 SmartDev. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
+
+class SASurfScene: SKScene {
+    /* Setup your scene here */
+    override func didMoveToView(view: SKView) {
+    
+    }
+
+}
