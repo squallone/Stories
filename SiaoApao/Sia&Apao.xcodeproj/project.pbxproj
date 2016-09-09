@@ -31,6 +31,8 @@
 		92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */; };
 		F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */; };
 		F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */; };
+		F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F641D82951D0056A22B /* SABearinBedScene.swift */; };
+		F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2008F661D8295380056A22B /* SABearinBedScene.sks */; };
 		F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED681D7F8C6B00D98278 /* Constants.swift */; };
 		F220ED6D1D7F934E00D98278 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED6C1D7F934E00D98278 /* model.swift */; };
 		F220ED6F1D7F935500D98278 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED6E1D7F935500D98278 /* view.swift */; };
@@ -105,6 +107,8 @@
 		92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
 		F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToothbrushScene.swift; sourceTree = "<group>"; };
 		F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ToothbrushScene.sks; sourceTree = "<group>"; };
+		F2008F641D82951D0056A22B /* SABearinBedScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABearinBedScene.swift; sourceTree = "<group>"; };
+		F2008F661D8295380056A22B /* SABearinBedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SABearinBedScene.sks; sourceTree = "<group>"; };
 		F220ED681D7F8C6B00D98278 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 		F220ED6C1D7F934E00D98278 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		F220ED6E1D7F935500D98278 /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				9241096A1D828D85009523F9 /* Book */,
 				9205CE271D82946300CC06F0 /* Fishbowl */,
 				F2008F611D828D410056A22B /* ToothbrushScene */,
+				F2008F641D82951D0056A22B /* SABearinBedScene.swift */,
+				F2008F661D8295380056A22B /* SABearinBedScene.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
+				F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +620,7 @@
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
 				9241096C1D828FB1009523F9 /* SABookScene.swift in Sources */,
+				F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */,
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
 				923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
