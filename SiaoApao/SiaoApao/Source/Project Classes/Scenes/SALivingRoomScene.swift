@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class SALivingRoomScene: SKScene {
+class SALivingRoomScene: SABaseScene {
     /* Setup your scene here */
     override func didMoveToView(view: SKView) {
         

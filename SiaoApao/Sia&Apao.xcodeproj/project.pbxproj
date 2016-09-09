@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9205CE281D82951D00CC06F0 /* SAFishbowlScene.sks */; };
+		9205CE2B1D82953D00CC06F0 /* SAFishbowlScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205CE2A1D82953D00CC06F0 /* SAFishbowlScene.swift */; };
 		923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923912E31D827A5F000FC33C /* SAPuppetScene.sks */; };
 		923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923912E51D827A80000FC33C /* SAPuppetScene.swift */; };
 		923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923912E91D8283D7000FC33C /* SALivingRoomScene.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9205CE281D82951D00CC06F0 /* SAFishbowlScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAFishbowlScene.sks; sourceTree = "<group>"; };
+		9205CE2A1D82953D00CC06F0 /* SAFishbowlScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAFishbowlScene.swift; sourceTree = "<group>"; };
 		923912E31D827A5F000FC33C /* SAPuppetScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPuppetScene.sks; sourceTree = "<group>"; };
 		923912E51D827A80000FC33C /* SAPuppetScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPuppetScene.swift; sourceTree = "<group>"; };
 		923912E91D8283D7000FC33C /* SALivingRoomScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALivingRoomScene.swift; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9205CE271D82946300CC06F0 /* Fishbowl */ = {
+			isa = PBXGroup;
+			children = (
+				9205CE281D82951D00CC06F0 /* SAFishbowlScene.sks */,
+				9205CE2A1D82953D00CC06F0 /* SAFishbowlScene.swift */,
+			);
+			name = Fishbowl;
+			sourceTree = "<group>";
+		};
 		923912E21D8279F5000FC33C /* Puppet */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +289,7 @@
 				923912E81D8283B5000FC33C /* LivingRoom */,
 				923912E71D8281DD000FC33C /* Carpet */,
 				9241096A1D828D85009523F9 /* Book */,
+				9205CE271D82946300CC06F0 /* Fishbowl */,
 				F2AA72F11D827F7300C2B314 /* SABaseScene.swift */,
 			);
 			path = Scenes;
@@ -545,6 +559,7 @@
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
+				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +604,7 @@
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
 				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
+				9205CE2B1D82953D00CC06F0 /* SAFishbowlScene.swift in Sources */,
 				F220ED711D7F936200D98278 /* library.swift in Sources */,
 				F220ED751D7F939D00D98278 /* asset.swift in Sources */,
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
