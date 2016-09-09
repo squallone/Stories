@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923912E31D827A5F000FC33C /* SAPuppetScene.sks */; };
 		923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923912E51D827A80000FC33C /* SAPuppetScene.swift */; };
+		923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923912E91D8283D7000FC33C /* SALivingRoomScene.swift */; };
+		923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923912EB1D828409000FC33C /* SALivingRoomScene.sks */; };
+		923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923912ED1D828829000FC33C /* SACarpetScene.sks */; };
+		923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923912EF1D8288E1000FC33C /* SACarpetScene.swift */; };
 		924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924012A51D8264E5005B4087 /* SASurfScene.sks */; };
 		924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924012A71D8265C6005B4087 /* SASurfScene.swift */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
@@ -66,6 +70,10 @@
 /* Begin PBXFileReference section */
 		923912E31D827A5F000FC33C /* SAPuppetScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPuppetScene.sks; sourceTree = "<group>"; };
 		923912E51D827A80000FC33C /* SAPuppetScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPuppetScene.swift; sourceTree = "<group>"; };
+		923912E91D8283D7000FC33C /* SALivingRoomScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALivingRoomScene.swift; sourceTree = "<group>"; };
+		923912EB1D828409000FC33C /* SALivingRoomScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SALivingRoomScene.sks; sourceTree = "<group>"; };
+		923912ED1D828829000FC33C /* SACarpetScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SACarpetScene.sks; sourceTree = "<group>"; };
+		923912EF1D8288E1000FC33C /* SACarpetScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACarpetScene.swift; sourceTree = "<group>"; };
 		924012A51D8264E5005B4087 /* SASurfScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASurfScene.sks; sourceTree = "<group>"; };
 		924012A71D8265C6005B4087 /* SASurfScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASurfScene.swift; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +149,24 @@
 				923912E31D827A5F000FC33C /* SAPuppetScene.sks */,
 			);
 			name = Puppet;
+			sourceTree = "<group>";
+		};
+		923912E71D8281DD000FC33C /* Carpet */ = {
+			isa = PBXGroup;
+			children = (
+				923912EF1D8288E1000FC33C /* SACarpetScene.swift */,
+				923912ED1D828829000FC33C /* SACarpetScene.sks */,
+			);
+			name = Carpet;
+			sourceTree = "<group>";
+		};
+		923912E81D8283B5000FC33C /* LivingRoom */ = {
+			isa = PBXGroup;
+			children = (
+				923912E91D8283D7000FC33C /* SALivingRoomScene.swift */,
+				923912EB1D828409000FC33C /* SALivingRoomScene.sks */,
+			);
+			name = LivingRoom;
 			sourceTree = "<group>";
 		};
 		924012A41D8264AA005B4087 /* Surf */ = {
@@ -232,6 +258,8 @@
 				924012A41D8264AA005B4087 /* Surf */,
 				924E1CEA1D826E7600A50AA0 /* Portrait */,
 				923912E21D8279F5000FC33C /* Puppet */,
+				923912E81D8283B5000FC33C /* LivingRoom */,
+				923912E71D8281DD000FC33C /* Carpet */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -493,8 +521,10 @@
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
+				923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */,
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
+				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,9 +562,11 @@
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
+				923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
+				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
 				F220ED711D7F936200D98278 /* library.swift in Sources */,
 				F220ED751D7F939D00D98278 /* asset.swift in Sources */,
