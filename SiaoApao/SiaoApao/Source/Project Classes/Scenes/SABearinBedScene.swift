@@ -1,19 +1,18 @@
 //
-//  SAPortraitScene.swift
-//  SiaoApao
+//  SABearinBedScene.swift
+//  Sia&Apao
 //
-//  Created by Raul Lopez Martinez on 08/09/16.
+//  Created by Abdiel Soto on 9/9/16.
 //  Copyright © 2016 SmartDev. All rights reserved.
 //
 
 import SpriteKit
 
-class SAPortraitScene: SABaseScene {
-    /* Setup your scene here */
+class SABearinBedScene: SABaseScene {
+    
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
     }
-
     
 }
