@@ -18,9 +18,8 @@ class SASheetViewController: UIViewController {
         self.view = SKView(frame: UIScreen.mainScreen().bounds)
         
         
-        
-        if let scene = SABookScene(fileNamed:"SABookScene") {
-        //if let scene = SASurfScene(fileNamed:"SASurfScene") {
+        if let scene = SADayAndNightScene(fileNamed:"SADayAndNightScene") {
+            //if let scene = SASurfScene(fileNamed:"SASurfScene") {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = true
