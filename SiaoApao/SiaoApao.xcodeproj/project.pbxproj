@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923912E31D827A5F000FC33C /* SAPuppetScene.sks */; };
+		923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923912E51D827A80000FC33C /* SAPuppetScene.swift */; };
 		924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924012A51D8264E5005B4087 /* SASurfScene.sks */; };
 		924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924012A71D8265C6005B4087 /* SASurfScene.swift */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		923912E31D827A5F000FC33C /* SAPuppetScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPuppetScene.sks; sourceTree = "<group>"; };
+		923912E51D827A80000FC33C /* SAPuppetScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPuppetScene.swift; sourceTree = "<group>"; };
 		924012A51D8264E5005B4087 /* SASurfScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASurfScene.sks; sourceTree = "<group>"; };
 		924012A71D8265C6005B4087 /* SASurfScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASurfScene.swift; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923912E21D8279F5000FC33C /* Puppet */ = {
+			isa = PBXGroup;
+			children = (
+				923912E51D827A80000FC33C /* SAPuppetScene.swift */,
+				923912E31D827A5F000FC33C /* SAPuppetScene.sks */,
+			);
+			name = Puppet;
+			sourceTree = "<group>";
+		};
 		924012A41D8264AA005B4087 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,21 +227,22 @@
 		92CEFE701D825A1F00F04105 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				924E1CEA1D826E7600A50AA0 /* Portrait */,
-				924012A41D8264AA005B4087 /* Surf */,
-				92CEFE711D825A3B00F04105 /* SADayAndNight */,
+				92CEFE711D825A3B00F04105 /* DayAndNight */,
 				F272BBC01D8267B4003E55D1 /* Globes */,
+				924012A41D8264AA005B4087 /* Surf */,
+				924E1CEA1D826E7600A50AA0 /* Portrait */,
+				923912E21D8279F5000FC33C /* Puppet */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		92CEFE711D825A3B00F04105 /* SADayAndNight */ = {
+		92CEFE711D825A3B00F04105 /* DayAndNight */ = {
 			isa = PBXGroup;
 			children = (
 				92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */,
 				92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */,
 			);
-			name = SADayAndNight;
+			name = DayAndNight;
 			sourceTree = "<group>";
 		};
 		F220ED611D7F8C4B00D98278 /* Assets */ = {
@@ -322,8 +336,8 @@
 		F272BBC01D8267B4003E55D1 /* Globes */ = {
 			isa = PBXGroup;
 			children = (
-				F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */,
 				F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */,
+				F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */,
 			);
 			name = Globes;
 			sourceTree = "<group>";
@@ -474,6 +488,7 @@
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
+				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
@@ -525,6 +540,7 @@
 				F220ED751D7F939D00D98278 /* asset.swift in Sources */,
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
+				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				F220ED731D7F938900D98278 /* helpers.swift in Sources */,
 			);
