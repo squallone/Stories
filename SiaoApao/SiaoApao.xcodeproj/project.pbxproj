@@ -29,6 +29,8 @@
 		F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED771D7F975600D98278 /* MenuViewController.xib */; };
 		F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED7D1D7F981700D98278 /* MainViewController.swift */; };
 		F220ED801D7F981700D98278 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED7E1D7F981700D98278 /* MainViewController.xib */; };
+		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
+		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */; };
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
@@ -88,6 +90,8 @@
 		F220ED771D7F975600D98278 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F220ED7D1D7F981700D98278 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F220ED7E1D7F981700D98278 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
+		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesViewController.swift; sourceTree = "<group>"; };
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				924E1CEA1D826E7600A50AA0 /* Portrait */,
 				924012A41D8264AA005B4087 /* Surf */,
 				92CEFE711D825A3B00F04105 /* SADayAndNight */,
+				F272BBC01D8267B4003E55D1 /* Globes */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -312,6 +317,15 @@
 				F220ED7E1D7F981700D98278 /* MainViewController.xib */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		F272BBC01D8267B4003E55D1 /* Globes */ = {
+			isa = PBXGroup;
+			children = (
+				F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */,
+				F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */,
+			);
+			name = Globes;
 			sourceTree = "<group>";
 		};
 		F2B66E971D81227900652249 /* MenuGames */ = {
@@ -460,6 +474,7 @@
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
+				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
@@ -490,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */,
 				F2B66E991D8126AF00652249 /* SALabel.swift in Sources */,
 				F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
