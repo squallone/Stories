@@ -10,13 +10,17 @@ import SpriteKit
 
 class SADayAndNightScene: SABaseScene {
     
+    // MARK: - Constants
+    var threshold: CGFloat = 550.0
+    
     // MARK: - Points
-    var startYPosition: CGFloat?
-    var finishYposition: CGFloat?
+    var startYPosition: CGFloat = 605.0
+    var finishYposition: CGFloat? = 360.0
     
     // MARK: - Properties
     var sunSpriteNode: SKSpriteNode?
     var moonSpriteNode: SKSpriteNode?
+    var squareSpriteNode: SKSpriteNode?
     var selectedNode = SKSpriteNode()
 
 
@@ -26,8 +30,10 @@ class SADayAndNightScene: SABaseScene {
         
         sunSpriteNode = self.childNodeWithName("sun") as? SKSpriteNode
         moonSpriteNode = self.childNodeWithName("moon") as? SKSpriteNode
+        squareSpriteNode = self.childNodeWithName("square") as? SKSpriteNode
+        squareSpriteNode?.userInteractionEnabled = false
         
-        let gestureRecognizer = UIGestureRecognizer(target: self, action: #selector(SADayAndNightScene.handlePanFrom))
+        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SADayAndNightScene.handlePanFrom))
         self.view!.addGestureRecognizer(gestureRecognizer)
     }
     
@@ -36,21 +42,61 @@ class SADayAndNightScene: SABaseScene {
     
     func handlePanFrom(recognizer: UIPanGestureRecognizer) {
         if recognizer.state == .Began {
+            print("Began");
             var touchLocation = recognizer.locationInView(recognizer.view)
             touchLocation = self.convertPointToView(touchLocation)
+            
+            self.selectetNodeForTouch(touchLocation)
         } else if recognizer.state == .Changed {
-            
+            var translationPoint = recognizer.translationInView(recognizer.view!)
+            translationPoint = CGPoint(x: translationPoint.x, y: -translationPoint.y)
+        
+            self.panForTranslation(translationPoint)
+            recognizer.setTranslation(CGPointZero, inView: recognizer.view)
         } else if recognizer.state == .Ended {
+            print("End");
+            if selectedNode != sunSpriteNode || selectedNode != moonSpriteNode {
             
-            
+            }
         }
     }
     
     func panForTranslation(translation: CGPoint) {
         let position = selectedNode.position
-        
-        if selectedNode.name! == sunSpriteNode || selectedNode.name! == moonSpriteNode {
-            selectedNode.position = CGPoint(x: position.x + translation.x, y: position.y + translation.y)
+        print("Change y: \(position)");
+
+        if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
+            selectedNode.position = CGPoint(x: position.x, y: position.y + translation.y)
         }
+    }
+    
+    
+    func selectetNodeForTouch(touchLocation: CGPoint) {
+        // Get Touched node
+        let touchedNode = self.nodeAtPoint(touchLocation)
+        
+        if touchedNode is SKSpriteNode {
+            
+            if !selectedNode.isEqual(touchedNode) {
+                selectedNode.removeAllActions()
+                selectedNode.runAction(SKAction.rotateByAngle(0.0, duration: 0.1))
+                
+                selectedNode = touchedNode as! SKSpriteNode
+                
+                if touchedNode == sunSpriteNode || touchedNode == moonSpriteNode {
+                    let firstRotationAction = SKAction.rotateByAngle(degToRad(-4.0), duration: 0.1)
+                    let secondRotationAction = SKAction.rotateByAngle(0.0, duration: 0.1)
+                    let thirdRotationAction = SKAction.rotateByAngle(degToRad(4.0), duration: 0.1)
+                    
+                    let nodeSequence = SKAction.sequence([firstRotationAction, secondRotationAction, thirdRotationAction])
+                    selectedNode.runAction(SKAction.repeatActionForever(nodeSequence))
+                }
+                
+            }
+        }
+    }
+    
+    func degToRad(degree: Double) -> CGFloat {
+        return CGFloat(degree / 180.0 * M_PI)
     }
 }
