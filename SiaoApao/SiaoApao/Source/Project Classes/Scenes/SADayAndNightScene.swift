@@ -15,12 +15,11 @@ class SADayAndNightScene: SABaseScene {
     
     // MARK: - Points
     var startYPosition: CGFloat = 605.0
-    var finishYposition: CGFloat? = 360.0
+    var finishYposition: CGFloat = 360.0
     
     // MARK: - Properties
     var sunSpriteNode: SKSpriteNode?
     var moonSpriteNode: SKSpriteNode?
-    var squareSpriteNode: SKSpriteNode?
     var selectedNode = SKSpriteNode()
 
 
@@ -28,14 +27,23 @@ class SADayAndNightScene: SABaseScene {
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         
+        /* Init Properties */
         sunSpriteNode = self.childNodeWithName("sun") as? SKSpriteNode
         moonSpriteNode = self.childNodeWithName("moon") as? SKSpriteNode
-        squareSpriteNode = self.childNodeWithName("square") as? SKSpriteNode
-        squareSpriteNode?.userInteractionEnabled = false
         
+        /* Set Init Position */
+        let sunInitPosition = CGPoint(x: (sunSpriteNode?.position.x)!, y: startYPosition)
+        sunSpriteNode?.position = sunInitPosition
+        
+        let moonInitPosition = CGPoint(x: (moonSpriteNode?.position.x)!, y: finishYposition)
+        moonSpriteNode?.position = moonInitPosition
+        
+        
+        /* Add gesture*/
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SADayAndNightScene.handlePanFrom))
         self.view!.addGestureRecognizer(gestureRecognizer)
     }
+    
     
     
     // MARK: - Gesture Actions
@@ -62,11 +70,16 @@ class SADayAndNightScene: SABaseScene {
     }
     
     func panForTranslation(translation: CGPoint) {
-        let position = selectedNode.position
+        let selectedNodePosition = selectedNode.position
         print("Change y: \(position)");
-
         if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
-            selectedNode.position = CGPoint(x: position.x, y: position.y + translation.y)
+            
+            var nonSelectedNode = selectedNode == sunSpriteNode ? moonSpriteNode : sunSpriteNode
+            let notSelectedNodePosition = selectedNode.position
+
+            
+            selectedNode.position = CGPoint(x: selectedNodePosition.x, y: selectedNodePosition.y + translation.y)
+            nonSelectedNode?.position = CGPoint()
         }
     }
     
@@ -91,7 +104,6 @@ class SADayAndNightScene: SABaseScene {
                     let nodeSequence = SKAction.sequence([firstRotationAction, secondRotationAction, thirdRotationAction])
                     selectedNode.runAction(SKAction.repeatActionForever(nodeSequence))
                 }
-                
             }
         }
     }
