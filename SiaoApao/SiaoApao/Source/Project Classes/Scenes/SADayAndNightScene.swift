@@ -74,12 +74,11 @@ class SADayAndNightScene: SABaseScene {
         print("Change y: \(position)");
         if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
             
-            var nonSelectedNode = selectedNode == sunSpriteNode ? moonSpriteNode : sunSpriteNode
+            let nonSelectedNode = selectedNode == sunSpriteNode ? moonSpriteNode : sunSpriteNode
             let notSelectedNodePosition = selectedNode.position
-
             
             selectedNode.position = CGPoint(x: selectedNodePosition.x, y: selectedNodePosition.y + translation.y)
-            nonSelectedNode?.position = CGPoint()
+            nonSelectedNode?.position = CGPoint(x:notSelectedNodePosition.x, y: notSelectedNodePosition.y + translation.y)
         }
     }
     
