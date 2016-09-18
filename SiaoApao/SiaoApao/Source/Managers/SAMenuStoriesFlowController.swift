@@ -26,7 +26,7 @@ class SAMenuStoriesFlowController: NSObject {
     // MARK: - Navigation
     
     func showMenu(){
-        self.navigationController.popViewControllerAnimated(true)
+        self.navigationController.popViewController(animated: true)
     }
     
     func showGames(){

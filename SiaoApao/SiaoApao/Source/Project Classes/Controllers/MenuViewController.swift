@@ -31,25 +31,25 @@ class MenuViewController: UIViewController {
     
     // MARK: - Navigation
     
-    @IBAction func showStories(sender: AnyObject) {
+    @IBAction func showStories(_ sender: AnyObject) {
         flowController.showStories()
     }
     
-    @IBAction func showGames(sender: AnyObject) {
+    @IBAction func showGames(_ sender: AnyObject) {
         flowController.showGames()
     }
     
-    @IBAction func showCharacters(sender: AnyObject) {
+    @IBAction func showCharacters(_ sender: AnyObject) {
         flowController.showCharacters()
         
     }
     
     // MARK: - Language
     
-    @IBAction func changeLanguageToEnglish(sender: AnyObject) {
+    @IBAction func changeLanguageToEnglish(_ sender: AnyObject) {
     }
     
-    @IBAction func changeLanguageToSpanish(sender: AnyObject) {
+    @IBAction func changeLanguageToSpanish(_ sender: AnyObject) {
         
     }
     

@@ -24,22 +24,22 @@ class SAMenuGamesViewController: UIViewController {
     
     // MARK: Actions
     
-    @IBAction func showGameBubbles(sender: AnyObject) {
+    @IBAction func showGameBubbles(_ sender: AnyObject) {
     }
     
-    @IBAction func showGameCatchTheWorld(sender: AnyObject) {
+    @IBAction func showGameCatchTheWorld(_ sender: AnyObject) {
     }
     
-    @IBAction func showGameRideTheTurtles(sender: AnyObject) {
+    @IBAction func showGameRideTheTurtles(_ sender: AnyObject) {
     }
     
-    @IBAction func showGameDanceWithTyro(sender: AnyObject) {
+    @IBAction func showGameDanceWithTyro(_ sender: AnyObject) {
         
     }
     
     // MARK: Navigation
     
-    @IBAction func back(sender: AnyObject) {
+    @IBAction func back(_ sender: AnyObject) {
         flowController.back()
     }
     

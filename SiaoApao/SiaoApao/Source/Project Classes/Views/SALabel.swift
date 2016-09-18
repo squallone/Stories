@@ -11,16 +11,16 @@ import UIKit
 class SALabel: UILabel {
     
     var outlineWidth: CGFloat = 1
-    var outlineColor: UIColor = UIColor.whiteColor()
+    var outlineColor: UIColor = UIColor.white
     
-    override func drawTextInRect(rect: CGRect) {
+    override func drawText(in rect: CGRect) {
         
         let strokeTextAttributes = [
             NSStrokeColorAttributeName : outlineColor,
             NSStrokeWidthAttributeName : -1 * outlineWidth,
-            ]
+            ] as [String : Any]
         
         self.attributedText = NSAttributedString(string: self.text ?? "", attributes: strokeTextAttributes)
-        super.drawTextInRect(rect)
+        super.drawText(in: rect)
     }
 }

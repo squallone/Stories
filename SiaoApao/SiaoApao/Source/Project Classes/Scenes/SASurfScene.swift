@@ -10,8 +10,8 @@ import SpriteKit
 
 class SASurfScene: SABaseScene {
     /* Setup your scene here */
-    override func didMoveToView(view: SKView) {
-        super.didMoveToView(view)
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
     }
     
     

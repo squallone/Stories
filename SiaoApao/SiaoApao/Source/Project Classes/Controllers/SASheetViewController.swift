@@ -15,7 +15,7 @@ class SASheetViewController: UIViewController {
         super.viewDidLoad()
         
         /* Init self.view to suport scence, beacuse this viewController is not use XIB */
-        self.view = SKView(frame: UIScreen.mainScreen().bounds)
+        self.view = SKView(frame: UIScreen.main.bounds)
         
         
         if let scene = SADayAndNightScene(fileNamed:"SADayAndNightScene") {
@@ -29,7 +29,7 @@ class SASheetViewController: UIViewController {
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .aspectFill
             
             skView.presentScene(scene)
         }

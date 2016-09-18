@@ -24,36 +24,36 @@ class SAMenuStoriesViewController: UIViewController {
     
     // MARK: Stories
     
-    @IBAction func showBeforeGoinTobed(sender: AnyObject) {
+    @IBAction func showBeforeGoinTobed(_ sender: AnyObject) {
         
         let testViewController = SASheetViewController()
         // Present ViewController
-        self.presentViewController(testViewController, animated: true, completion: nil)
+        self.present(testViewController, animated: true, completion: nil)
     }
     
     
-    @IBAction func showDinnerAroundTheWorld(sender: AnyObject) {
+    @IBAction func showDinnerAroundTheWorld(_ sender: AnyObject) {
         
     }
     
     
-    @IBAction func showTheStoryBehindTheWorld(sender: AnyObject) {
+    @IBAction func showTheStoryBehindTheWorld(_ sender: AnyObject) {
     
     }
     
     // MARK: - Navigation
     
-    @IBAction func showGames(sender: AnyObject) {
+    @IBAction func showGames(_ sender: AnyObject) {
         flowController.showGames()
     }
     
     
-    @IBAction func showCharacters(sender: AnyObject) {
+    @IBAction func showCharacters(_ sender: AnyObject) {
         flowController.showCharacters()
         
     }
     
-    @IBAction func showMenu(sender: AnyObject) {
+    @IBAction func showMenu(_ sender: AnyObject) {
         flowController.showMenu()
         
     }

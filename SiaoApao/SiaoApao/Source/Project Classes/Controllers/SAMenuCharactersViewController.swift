@@ -19,24 +19,24 @@ class SAMenuCharactersViewController: UIViewController {
     
     // MARK: - Navigation
     
-    @IBAction func back(sender: AnyObject) {
+    @IBAction func back(_ sender: AnyObject) {
         
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func pressApao(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func pressSia(sender: AnyObject) {
+    @IBAction func pressApao(_ sender: AnyObject) {
         
     }
     
-    @IBAction func presstyro(sender: AnyObject) {
+    @IBAction func pressSia(_ sender: AnyObject) {
+        
+    }
+    
+    @IBAction func presstyro(_ sender: AnyObject) {
         
         
     }
-    @IBAction func pressGalileo(sender: AnyObject) {
+    @IBAction func pressGalileo(_ sender: AnyObject) {
     }
     
 }

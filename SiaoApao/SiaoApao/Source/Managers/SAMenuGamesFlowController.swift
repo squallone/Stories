@@ -26,7 +26,7 @@ class SAMenuGamesFlowController: NSObject {
     // MARK: - Navigation
     
     func back(){
-        self.navigationController.popViewControllerAnimated(true)
+        self.navigationController.popViewController(animated: true)
     }
     
 }

@@ -24,12 +24,12 @@ class SADayAndNightScene: SABaseScene {
 
 
     /* Setup your scene here */
-    override func didMoveToView(view: SKView) {
-        super.didMoveToView(view)
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
         
         /* Init Properties */
-        sunSpriteNode = self.childNodeWithName("sun") as? SKSpriteNode
-        moonSpriteNode = self.childNodeWithName("moon") as? SKSpriteNode
+        sunSpriteNode = self.childNode(withName: "sun") as? SKSpriteNode
+        moonSpriteNode = self.childNode(withName: "moon") as? SKSpriteNode
         
         /* Set Init Position */
         let sunInitPosition = CGPoint(x: (sunSpriteNode?.position.x)!, y: startYPosition)
@@ -48,20 +48,20 @@ class SADayAndNightScene: SABaseScene {
     
     // MARK: - Gesture Actions
     
-    func handlePanFrom(recognizer: UIPanGestureRecognizer) {
-        if recognizer.state == .Began {
+    func handlePanFrom(_ recognizer: UIPanGestureRecognizer) {
+        if recognizer.state == .began {
             print("Began");
-            var touchLocation = recognizer.locationInView(recognizer.view)
-            touchLocation = self.convertPointToView(touchLocation)
+            var touchLocation = recognizer.location(in: recognizer.view)
+            touchLocation = self.convertPoint(toView: touchLocation)
             
             self.selectetNodeForTouch(touchLocation)
-        } else if recognizer.state == .Changed {
-            var translationPoint = recognizer.translationInView(recognizer.view!)
+        } else if recognizer.state == .changed {
+            var translationPoint = recognizer.translation(in: recognizer.view!)
             translationPoint = CGPoint(x: translationPoint.x, y: -translationPoint.y)
         
             self.panForTranslation(translationPoint)
-            recognizer.setTranslation(CGPointZero, inView: recognizer.view)
-        } else if recognizer.state == .Ended {
+            recognizer.setTranslation(CGPoint.zero, in: recognizer.view)
+        } else if recognizer.state == .ended {
             print("End");
             if selectedNode != sunSpriteNode || selectedNode != moonSpriteNode {
             
@@ -69,7 +69,7 @@ class SADayAndNightScene: SABaseScene {
         }
     }
     
-    func panForTranslation(translation: CGPoint) {
+    func panForTranslation(_ translation: CGPoint) {
         let selectedNodePosition = selectedNode.position
         print("Change y: \(position)");
         if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
@@ -83,31 +83,31 @@ class SADayAndNightScene: SABaseScene {
     }
     
     
-    func selectetNodeForTouch(touchLocation: CGPoint) {
+    func selectetNodeForTouch(_ touchLocation: CGPoint) {
         // Get Touched node
-        let touchedNode = self.nodeAtPoint(touchLocation)
+        let touchedNode = self.atPoint(touchLocation)
         
         if touchedNode is SKSpriteNode {
             
             if !selectedNode.isEqual(touchedNode) {
                 selectedNode.removeAllActions()
-                selectedNode.runAction(SKAction.rotateByAngle(0.0, duration: 0.1))
+                selectedNode.run(SKAction.rotate(byAngle: 0.0, duration: 0.1))
                 
                 selectedNode = touchedNode as! SKSpriteNode
                 
                 if touchedNode == sunSpriteNode || touchedNode == moonSpriteNode {
-                    let firstRotationAction = SKAction.rotateByAngle(degToRad(-4.0), duration: 0.1)
-                    let secondRotationAction = SKAction.rotateByAngle(0.0, duration: 0.1)
-                    let thirdRotationAction = SKAction.rotateByAngle(degToRad(4.0), duration: 0.1)
+                    let firstRotationAction = SKAction.rotate(byAngle: degToRad(-4.0), duration: 0.1)
+                    let secondRotationAction = SKAction.rotate(byAngle: 0.0, duration: 0.1)
+                    let thirdRotationAction = SKAction.rotate(byAngle: degToRad(4.0), duration: 0.1)
                     
                     let nodeSequence = SKAction.sequence([firstRotationAction, secondRotationAction, thirdRotationAction])
-                    selectedNode.runAction(SKAction.repeatActionForever(nodeSequence))
+                    selectedNode.run(SKAction.repeatForever(nodeSequence))
                 }
             }
         }
     }
     
-    func degToRad(degree: Double) -> CGFloat {
+    func degToRad(_ degree: Double) -> CGFloat {
         return CGFloat(degree / 180.0 * M_PI)
     }
 }

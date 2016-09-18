@@ -40,10 +40,10 @@ class SAMenuFlowController: NSObject {
         let navigationController = UINavigationController(rootViewController: menuViewController)
         
         // Hide navigation bar
-        navigationController.navigationBar.hidden = true
+        navigationController.navigationBar.isHidden = true
         
         // Present ViewController
-        self.controller.presentViewController(navigationController, animated: true, completion: nil)
+        self.controller.present(navigationController, animated: true, completion: nil)
     }
     
     func showStories(){

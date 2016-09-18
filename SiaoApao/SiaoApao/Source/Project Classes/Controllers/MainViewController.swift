@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
         // Controller and NavigationController
@@ -24,10 +24,10 @@ class MainViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: menuViewController)
         
         // Hide navigation bar
-        navigationController.navigationBar.hidden = true
+        navigationController.navigationBar.isHidden = true
         
         // Present ViewController
-        self.presentViewController(navigationController, animated: true, completion: nil)
+        self.present(navigationController, animated: true, completion: nil)
         
     }
     

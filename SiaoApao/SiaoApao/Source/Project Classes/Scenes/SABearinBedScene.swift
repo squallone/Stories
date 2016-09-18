@@ -10,8 +10,8 @@ import SpriteKit
 
 class SABearinBedScene: SABaseScene {
     
-    override func didMoveToView(view: SKView) {
-        super.didMoveToView(view)
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
         
     }
     
