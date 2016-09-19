@@ -10,6 +10,8 @@ import SpriteKit
 
 class SABaseScene: SKScene {
     
+    public var nextButton: SKSpriteNode?
+
     override func didMove(to view: SKView) {
         
         // Back button
@@ -24,11 +26,12 @@ class SABaseScene: SKScene {
         
         // Next button
         
-        let nextButton = SKSpriteNode(imageNamed: "RightArrow")
-        nextButton.name = "next"
-        nextButton.position = CGPoint(x: size.width-65, y: 65)
-        nextButton.zPosition = 10
-        addChild(nextButton)
+        nextButton = SKSpriteNode(imageNamed: "RightArrow")
+        nextButton?.name = "next"
+        nextButton?.position = CGPoint(x: size.width-65, y: 65)
+        nextButton?.zPosition = 10
+        nextButton?.isUserInteractionEnabled = false
+        addChild(nextButton!)
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")

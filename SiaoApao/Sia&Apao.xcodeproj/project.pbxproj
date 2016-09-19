@@ -27,6 +27,7 @@
 		926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926289A71D7F7F4D00F253FF /* LaunchScreen.storyboard */; };
 		926289B41D7F7F4D00F253FF /* SiaoApaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289B31D7F7F4D00F253FF /* SiaoApaoTests.swift */; };
 		926289BF1D7F7F4D00F253FF /* SiaoApaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */; };
+		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
 		92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */; };
 		F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */; };
@@ -103,6 +104,7 @@
 		926289BA1D7F7F4D00F253FF /* SiaoApaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiaoApaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiaoApaoUITests.swift; sourceTree = "<group>"; };
 		926289C01D7F7F4D00F253FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
 		92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
 		F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToothbrushScene.swift; sourceTree = "<group>"; };
@@ -286,6 +288,14 @@
 			path = SiaoApaoUITests;
 			sourceTree = "<group>";
 		};
+		92841DDA1D8F282E00735AC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		92CEFE701D825A1F00F04105 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +346,7 @@
 		F220ED621D7F8C4B00D98278 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				92841DDA1D8F282E00735AC8 /* Extensions */,
 				F220ED721D7F938900D98278 /* helpers.swift */,
 			);
 			name = Helpers;
@@ -617,6 +628,7 @@
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
 				F220ED6F1D7F935500D98278 /* view.swift in Sources */,
 				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
+				92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */,
 				F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */,
 				F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */,
 				F220ED6D1D7F934E00D98278 /* model.swift in Sources */,
