@@ -17,8 +17,6 @@ class SADayAndNightScene: SABaseScene {
     var startYPosition: CGFloat = 605.0
     var finishYposition: CGFloat = 360.0
     
-    // MARK: - Colors
-    
     // MARK: - Properties
     var sunSpriteNode: SKSpriteNode?
     var moonSpriteNode: SKSpriteNode?
@@ -58,12 +56,11 @@ class SADayAndNightScene: SABaseScene {
         
     }
     
-    
     // MARK: - Gesture Actions
     
     func handlePanFrom(_ recognizer: UIPanGestureRecognizer) {
         if recognizer.state == .began {
-            print("Began");
+            /* Get Touch Location */
             var touchLocation = recognizer.location(in: recognizer.view)
             touchLocation = self.convertPoint(toView: touchLocation)
             
@@ -77,8 +74,6 @@ class SADayAndNightScene: SABaseScene {
         } else if recognizer.state == .ended {
             print("End");
             if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
-                /* Remove bounce action */
-                //selectedNode.removeAllActions()
                 
                 /* Get Not selectedNode*/
                 let notSelectedNode = selectedNode == sunSpriteNode ? moonSpriteNode : sunSpriteNode
@@ -91,6 +86,14 @@ class SADayAndNightScene: SABaseScene {
                 if yNodePosition < threshold {
                     selectedNodeYPosition = finishYposition
                     nonSelectNodeYPosition = startYPosition
+                    
+                    if selectedNode == sunSpriteNode {
+                        print("Shhow next Button")
+                    } else{
+                        print("Hide next Button")
+
+                    }
+                    
                 } else {
                     selectedNodeYPosition = startYPosition
                     nonSelectNodeYPosition = finishYposition
@@ -99,10 +102,13 @@ class SADayAndNightScene: SABaseScene {
                 let selectedNodeMoveAction = SKAction.moveTo(y: selectedNodeYPosition, duration: 0.1)
                 selectedNode.run(selectedNodeMoveAction, completion: {
                     self.updateBackgraoundNodeColor()
+                    self.selectedNode.removeAllActions()
                 })
                 
                 let nonSelectedNodeMoveAction = SKAction.moveTo(y: nonSelectNodeYPosition, duration: 0.1)
-                notSelectedNode?.run(nonSelectedNodeMoveAction)
+                notSelectedNode?.run(nonSelectedNodeMoveAction, completion: {
+                    notSelectedNode?.removeAllActions()
+                })
             }
         }
     }
@@ -146,11 +152,6 @@ class SADayAndNightScene: SABaseScene {
         }
     }
     
-    /* Method to transform degrees in Radians */
-    func degToRad(_ degree: Double) -> CGFloat {
-        return CGFloat(degree / 180.0 * M_PI)
-    }
-    
     /* Method To calculate the color in the Y Position of Son */
     func backgroundColor(y: CGFloat, typeColor: SATypeColor) -> SKColor {
         var redComponent: CGFloat
@@ -174,6 +175,7 @@ class SADayAndNightScene: SABaseScene {
 
     }
     
+    /* Method To Update backgroud node */
     func updateBackgraoundNodeColor() {
         let selectedNodePosition = sunSpriteNode?.position
 

@@ -28,6 +28,7 @@
 		926289B41D7F7F4D00F253FF /* SiaoApaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289B31D7F7F4D00F253FF /* SiaoApaoTests.swift */; };
 		926289BF1D7F7F4D00F253FF /* SiaoApaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */; };
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
+		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
 		92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */; };
 		F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */; };
@@ -105,6 +106,7 @@
 		926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiaoApaoUITests.swift; sourceTree = "<group>"; };
 		926289C01D7F7F4D00F253FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
+		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
 		92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
 		F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToothbrushScene.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */,
+				92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
+				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				F220ED731D7F938900D98278 /* helpers.swift in Sources */,
 			);

@@ -30,7 +30,6 @@ class SABaseScene: SKScene {
         nextButton?.name = "next"
         nextButton?.position = CGPoint(x: size.width-65, y: 65)
         nextButton?.zPosition = 10
-        nextButton?.isUserInteractionEnabled = false
         addChild(nextButton!)
         
         // Title bar
