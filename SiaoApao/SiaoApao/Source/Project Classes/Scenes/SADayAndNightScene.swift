@@ -53,7 +53,6 @@ class SADayAndNightScene: SABaseScene {
         /* Init BackGround node */
         selectedNode = sunSpriteNode as SKSpriteNode!
         self.updateBackgraoundNodeColor()
-        
     }
     
     // MARK: - Gesture Actions

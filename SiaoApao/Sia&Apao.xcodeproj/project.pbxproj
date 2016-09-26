@@ -31,6 +31,8 @@
 		927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5B91D9897DE00BB8212 /* zipper.wav */; };
 		927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BB1D9897FE00BB8212 /* wave.wav */; };
 		927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BF1D98B6CE00BB8212 /* liquid.wav */; };
+		927AF5C21D98C18C00BB8212 /* walk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5C11D98C18C00BB8212 /* walk.wav */; };
+		927AF5C41D98D7CC00BB8212 /* tired.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5C31D98D7CC00BB8212 /* tired.aiff */; };
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
@@ -113,6 +115,8 @@
 		927AF5B91D9897DE00BB8212 /* zipper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zipper.wav; sourceTree = "<group>"; };
 		927AF5BB1D9897FE00BB8212 /* wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wave.wav; sourceTree = "<group>"; };
 		927AF5BF1D98B6CE00BB8212 /* liquid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = liquid.wav; sourceTree = "<group>"; };
+		927AF5C11D98C18C00BB8212 /* walk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = walk.wav; sourceTree = "<group>"; };
+		927AF5C31D98D7CC00BB8212 /* tired.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = tired.aiff; sourceTree = "<group>"; };
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				927AF5C31D98D7CC00BB8212 /* tired.aiff */,
+				927AF5C11D98C18C00BB8212 /* walk.wav */,
 				927AF5BF1D98B6CE00BB8212 /* liquid.wav */,
 				927AF5BB1D9897FE00BB8212 /* wave.wav */,
 				927AF5B91D9897DE00BB8212 /* zipper.wav */,
@@ -603,10 +609,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */,
+				927AF5C21D98C18C00BB8212 /* walk.wav in Resources */,
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
+				927AF5C41D98D7CC00BB8212 /* tired.aiff in Resources */,
 				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
