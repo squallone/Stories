@@ -30,6 +30,7 @@
 		927AF5B71D98639400BB8212 /* SKAction+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AF5B61D98639400BB8212 /* SKAction+Custom.swift */; };
 		927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5B91D9897DE00BB8212 /* zipper.wav */; };
 		927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BB1D9897FE00BB8212 /* wave.wav */; };
+		927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BF1D98B6CE00BB8212 /* liquid.wav */; };
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
@@ -111,6 +112,7 @@
 		927AF5B61D98639400BB8212 /* SKAction+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Custom.swift"; sourceTree = "<group>"; };
 		927AF5B91D9897DE00BB8212 /* zipper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zipper.wav; sourceTree = "<group>"; };
 		927AF5BB1D9897FE00BB8212 /* wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wave.wav; sourceTree = "<group>"; };
+		927AF5BF1D98B6CE00BB8212 /* liquid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = liquid.wav; sourceTree = "<group>"; };
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				927AF5BF1D98B6CE00BB8212 /* liquid.wav */,
 				927AF5BB1D9897FE00BB8212 /* wave.wav */,
 				927AF5B91D9897DE00BB8212 /* zipper.wav */,
 			);
@@ -608,6 +611,7 @@
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
+				927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
 				923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */,
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
