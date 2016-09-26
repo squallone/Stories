@@ -72,7 +72,6 @@ class SADayAndNightScene: SABaseScene {
             self.panForTranslation(translationPoint)
             recognizer.setTranslation(CGPoint.zero, in: recognizer.view)
         } else if recognizer.state == .ended {
-            print("End");
             if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
                 
                 /* Get Not selectedNode*/
@@ -81,7 +80,6 @@ class SADayAndNightScene: SABaseScene {
                 let yNodePosition = selectedNode.position.y
                 var selectedNodeYPosition: CGFloat
                 var nonSelectNodeYPosition: CGFloat
-                print("End y: \(selectedNode.position)");
 
                 if yNodePosition < threshold {
                     selectedNodeYPosition = finishYposition
@@ -116,7 +114,6 @@ class SADayAndNightScene: SABaseScene {
     func panForTranslation(_ translation: CGPoint) {
         if selectedNode == sunSpriteNode || selectedNode == moonSpriteNode {
             let selectedNodePosition = selectedNode.position
-            print("Change y: \(selectedNodePosition)");
             
             let notSelectedNode = selectedNode == sunSpriteNode ? moonSpriteNode : sunSpriteNode
             let notSelectedNodePosition = notSelectedNode?.position
@@ -140,13 +137,8 @@ class SADayAndNightScene: SABaseScene {
                 
                 if (!selectedNode.hasActions()) {
                     /* Create Bounce Action */
-                    let bounceDuration = 0.2
-                    let scaleAction = SKAction.scale(by: 1.1, duration: bounceDuration)
-                    let reversedAcion = scaleAction.reversed()
-                    
-                    /* Create Squence action and repeat it forever */
-                    let nodeSequence = SKAction.sequence([scaleAction, reversedAcion])
-                    selectedNode.run(SKAction.repeatForever(nodeSequence))
+                    let bounceAction = SKAction.bounce(to: 1.1, duration: 0.2)
+                    selectedNode.run(SKAction.repeatForever(bounceAction))
                 }
             }
         }

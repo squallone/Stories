@@ -27,6 +27,9 @@
 		926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926289A71D7F7F4D00F253FF /* LaunchScreen.storyboard */; };
 		926289B41D7F7F4D00F253FF /* SiaoApaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289B31D7F7F4D00F253FF /* SiaoApaoTests.swift */; };
 		926289BF1D7F7F4D00F253FF /* SiaoApaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */; };
+		927AF5B71D98639400BB8212 /* SKAction+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AF5B61D98639400BB8212 /* SKAction+Custom.swift */; };
+		927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5B91D9897DE00BB8212 /* zipper.wav */; };
+		927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BB1D9897FE00BB8212 /* wave.wav */; };
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
@@ -105,6 +108,9 @@
 		926289BA1D7F7F4D00F253FF /* SiaoApaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiaoApaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		926289BE1D7F7F4D00F253FF /* SiaoApaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiaoApaoUITests.swift; sourceTree = "<group>"; };
 		926289C01D7F7F4D00F253FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		927AF5B61D98639400BB8212 /* SKAction+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Custom.swift"; sourceTree = "<group>"; };
+		927AF5B91D9897DE00BB8212 /* zipper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zipper.wav; sourceTree = "<group>"; };
+		927AF5BB1D9897FE00BB8212 /* wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wave.wav; sourceTree = "<group>"; };
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 		926289991D7F7F4D00F253FF /* SiaoApao */ = {
 			isa = PBXGroup;
 			children = (
+				927AF5B81D9897DE00BB8212 /* Sounds */,
 				9262899A1D7F7F4D00F253FF /* AppDelegate.swift */,
 				F220ED681D7F8C6B00D98278 /* Constants.swift */,
 				F220ED611D7F8C4B00D98278 /* Assets */,
@@ -290,11 +297,22 @@
 			path = SiaoApaoUITests;
 			sourceTree = "<group>";
 		};
+		927AF5B81D9897DE00BB8212 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				927AF5BB1D9897FE00BB8212 /* wave.wav */,
+				927AF5B91D9897DE00BB8212 /* zipper.wav */,
+			);
+			name = Sounds;
+			path = Source/Sounds;
+			sourceTree = "<group>";
+		};
 		92841DDA1D8F282E00735AC8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */,
 				92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */,
+				927AF5B61D98639400BB8212 /* SKAction+Custom.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +614,8 @@
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
+				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
+				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
 				F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */,
@@ -642,6 +662,7 @@
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
 				923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
+				927AF5B71D98639400BB8212 /* SKAction+Custom.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
 				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,
