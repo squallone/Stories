@@ -35,6 +35,7 @@
 		927AF5C41D98D7CC00BB8212 /* tired.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5C31D98D7CC00BB8212 /* tired.aiff */; };
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
+		92852BDC1D9E1BE400037566 /* laughing.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 92852BDB1D9E1BE400037566 /* laughing.aiff */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
 		92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */; };
 		F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */; };
@@ -119,6 +120,7 @@
 		927AF5C31D98D7CC00BB8212 /* tired.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = tired.aiff; sourceTree = "<group>"; };
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
+		92852BDB1D9E1BE400037566 /* laughing.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = laughing.aiff; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
 		92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
 		F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToothbrushScene.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				92852BDB1D9E1BE400037566 /* laughing.aiff */,
 				927AF5C31D98D7CC00BB8212 /* tired.aiff */,
 				927AF5C11D98C18C00BB8212 /* walk.wav */,
 				927AF5BF1D98B6CE00BB8212 /* liquid.wav */,
@@ -608,6 +611,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92852BDC1D9E1BE400037566 /* laughing.aiff in Resources */,
 				924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */,
 				927AF5C21D98C18C00BB8212 /* walk.wav in Resources */,
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
