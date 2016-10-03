@@ -17,7 +17,7 @@ class SAPortraitScene: SABaseScene {
     var photoGirlAnimation: SKAction?
     var photoGirlTwoAnimation: SKAction?
     let zipperSound: SKAction = SKAction.playSoundFileNamed(
-        "zipper.wav", waitForCompletion: true)
+        "tired.wav", waitForCompletion: true)
     
     
     /* Setup your scene here */

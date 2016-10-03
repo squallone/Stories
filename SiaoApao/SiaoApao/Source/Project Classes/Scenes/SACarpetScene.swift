@@ -16,6 +16,8 @@ class SACarpetScene: SABaseScene {
     let stepNumber: NSInteger = 7
     
     var backgroundMusicPlayer: AVAudioPlayer!
+    let tiredSound: SKAction = SKAction.playSoundFileNamed(
+        "tired.wav", waitForCompletion: true)
 
     
     /* Setup your scene here */
@@ -63,6 +65,7 @@ class SACarpetScene: SABaseScene {
                             print("Finish")
                             let finalImage = UIImage.init(named: "TiredDragon")
                             self.dragonNode?.texture = SKTexture.init(image: finalImage!)
+                            self.dragonNode?.run(self.tiredSound)
 
                         })
                         print("Show next Button")
