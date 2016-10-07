@@ -55,10 +55,13 @@
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
+		F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */; };
+		F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */; };
 		F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */; };
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
 		F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */; };
+		F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */; };
 		F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */; };
 		F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */; };
 		F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D601FC1D7FE4F3006B2AE7 /* BaseViewController.swift */; };
@@ -140,10 +143,14 @@
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
+		F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.otf"; sourceTree = "<group>"; };
+		F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
 		F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesViewController.swift; sourceTree = "<group>"; };
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
 		F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesFlowController.swift; sourceTree = "<group>"; };
+		F2B9F4081DA614C400B94545 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKOutlinedLabelNode.swift; sourceTree = "<group>"; };
 		F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuStoriesViewController.swift; sourceTree = "<group>"; };
 		F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuStoriesViewController.xib; sourceTree = "<group>"; };
 		F2D601FC1D7FE4F3006B2AE7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/BaseViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +377,7 @@
 		F220ED611D7F8C4B00D98278 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F2AB0B971DA4BDCB00A78260 /* Fonts */,
 				F220ED741D7F939D00D98278 /* asset.swift */,
 			);
 			name = Assets;
@@ -389,6 +397,7 @@
 		F220ED631D7F8C4B00D98278 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */,
 				F220ED701D7F936200D98278 /* library.swift */,
 			);
 			name = Libraries;
@@ -463,6 +472,24 @@
 				F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */,
 			);
 			name = Globes;
+			sourceTree = "<group>";
+		};
+		F2AB0B971DA4BDCB00A78260 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F2AB0B981DA4BDCB00A78260 /* MyriadPro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F2AB0B981DA4BDCB00A78260 /* MyriadPro */ = {
+			isa = PBXGroup;
+			children = (
+				F2B9F4081DA614C400B94545 /* MyriadPro-Bold.otf */,
+				F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */,
+				F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */,
+			);
+			path = MyriadPro;
 			sourceTree = "<group>";
 		};
 		F2B66E971D81227900652249 /* MenuGames */ = {
@@ -617,6 +644,7 @@
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */,
+				F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
 				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
@@ -628,6 +656,7 @@
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
+				F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */,
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
 				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
@@ -679,6 +708,7 @@
 				923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
 				927AF5B71D98639400BB8212 /* SKAction+Custom.swift in Sources */,
+				F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
 				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,

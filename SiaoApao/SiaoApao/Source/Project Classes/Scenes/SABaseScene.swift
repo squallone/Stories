@@ -11,11 +11,12 @@ import SpriteKit
 class SABaseScene: SKScene {
     
     public var nextButton: SKSpriteNode?
-
+    public var titleLabel: SKLabelNode!
+    
     override func didMove(to view: SKView) {
         
         // Back button
-        if !self .isKind(of: SADayAndNightScene.self) {
+        if !self.isKind(of: SADayAndNightScene.self) {
             
             let backButton = SKSpriteNode(imageNamed: "LeftArrow")
             backButton.name = "back"
@@ -25,7 +26,6 @@ class SABaseScene: SKScene {
         }
         
         // Next button
-        
         nextButton = SKSpriteNode(imageNamed: "RightArrow")
         nextButton?.name = "next"
         nextButton?.position = CGPoint(x: size.width-65, y: 65)
@@ -38,6 +38,24 @@ class SABaseScene: SKScene {
         titleBar.setScale(1.17)
         titleBar.zPosition = 10
         addChild(titleBar)
+        
+//        titleLabel = MKOutlinedLabelNode(fontNamed: "MyriadPro-Regular", fontSize: 36)
+//        titleLabel.position = CGPoint(x: size.width / 2, y: 50)
+//        titleLabel.zPosition = 15
+//        titleLabel.borderColor = UIColor.yellow
+//        titleLabel.borderWidth = 0.7
+//        titleLabel.fontColor = UIColor.white
+//        titleLabel.outlinedText = "Title"
+//        addChild(titleLabel)
+        
+        titleLabel = SKLabelNode(text: "")
+        titleLabel.position = CGPoint(x: size.width / 2, y: 50)
+        titleLabel.zPosition = 15
+        titleLabel.fontName = "MyriadPro-Bold"
+        titleLabel.fontColor = UIColor.white
+        addChild(titleLabel)
+
+        
     }
     
     

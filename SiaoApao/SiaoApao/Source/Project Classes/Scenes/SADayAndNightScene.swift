@@ -18,6 +18,12 @@ class SADayAndNightScene: SABaseScene {
     var finishYposition: CGFloat = 360.0
     
     // MARK: - Properties
+    
+    var label1SpriteNode: SKLabelNode!
+    var label2SpriteNode: SKLabelNode!
+    var label3SpriteNode: SKLabelNode!
+    var label4SpriteNode: SKLabelNode!
+
     var sunSpriteNode: SKSpriteNode?
     var moonSpriteNode: SKSpriteNode?
     var skyBackgroundNode: SKSpriteNode?
@@ -34,10 +40,18 @@ class SADayAndNightScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        /* Title description */
+        titleLabel.text = "Pull the sun down and make the moon rise"
+        
         /* Init Properties */
-        sunSpriteNode = self.childNode(withName: "sun") as? SKSpriteNode
-        moonSpriteNode = self.childNode(withName: "moon") as? SKSpriteNode
+        sunSpriteNode     = self.childNode(withName: "sun") as? SKSpriteNode
+        moonSpriteNode    = self.childNode(withName: "moon") as? SKSpriteNode
         skyBackgroundNode = self.childNode(withName: "SkyBackground") as? SKSpriteNode
+        
+        
+        /* Label Properties */
+        label1SpriteNode = self.childNode(withName: "label1") as! SKLabelNode!
+        label1SpriteNode.fontName = "Arial-Narrow-Bold"
         
         /* Set Init Position */
         let sunInitPosition = CGPoint(x: (sunSpriteNode?.position.x)!, y: startYPosition)
