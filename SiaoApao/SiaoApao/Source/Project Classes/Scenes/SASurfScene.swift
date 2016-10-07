@@ -28,6 +28,9 @@ class SASurfScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        /* Title description */
+        titleLabel.text = "Calm the turles, tap of them"
+        
         playBackgroundMusic(filename: "wave.wav")
         
         /* Init properties */

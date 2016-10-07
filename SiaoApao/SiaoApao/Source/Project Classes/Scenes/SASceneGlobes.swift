@@ -12,6 +12,8 @@ class SASceneGlobes: SABaseScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        
+     
+        /* Title description */
+        titleLabel.text = "Pop the Bubbles"
     }
 }
