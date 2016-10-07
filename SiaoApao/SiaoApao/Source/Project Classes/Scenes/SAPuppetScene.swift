@@ -14,7 +14,13 @@ class SAPuppetScene: SABaseScene {
     // MARK: - Properties
     private var puppetSpriteNode: SKSpriteNode?
     private var smileShapeNode: SKShapeNode!
+    private var tralingAreaNode: SKSpriteNode?
+    private var leadingAreaNode: SKSpriteNode?
+    private var tralingArrowNode: SKSpriteNode?
+    private var leadingArrowNode: SKSpriteNode?
+    
     private var numberTick: CGFloat = 10
+
     
     let laughSound: SKAction = SKAction.playSoundFileNamed(
         "laughing.wav", waitForCompletion: true)
@@ -27,13 +33,18 @@ class SAPuppetScene: SABaseScene {
         
         /* Init Properties */
         puppetSpriteNode = self.childNode(withName: "puppet") as? SKSpriteNode
+        tralingAreaNode = self.childNode(withName: "tralingArea") as? SKSpriteNode
+        leadingAreaNode = self.childNode(withName: "leadingArea") as? SKSpriteNode
+        tralingArrowNode = self.childNode(withName: "lateralRightArrow") as? SKSpriteNode
+        leadingArrowNode = self.childNode(withName: "lateralLeftArrow") as? SKSpriteNode
         
         /* Create the smile */
         self.createSmile(with: 1)
         
         /* Create Bounce Action */
-        let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
-        puppetSpriteNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
+        let bounceAction = SKAction.bounce(to: 1.05, duration: 0.2)
+        tralingArrowNode?.run(SKAction.repeatForever(bounceAction))
+        leadingArrowNode?.run(SKAction.repeatForever(bounceAction))
         
         /* Add gesture*/
         let upGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SAPuppetScene.handleSwipe(from:)))

@@ -37,6 +37,7 @@
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
 		928FBF1D1DA774B100664630 /* hey.wav in Resources */ = {isa = PBXBuildFile; fileRef = 928FBF1C1DA774B100664630 /* hey.wav */; };
+		928FBF1F1DA77AF900664630 /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 928FBF1E1DA77AF900664630 /* pop.wav */; };
 		92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */; };
 		92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */; };
 		F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */; };
@@ -126,6 +127,7 @@
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
 		928FBF1C1DA774B100664630 /* hey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hey.wav; sourceTree = "<group>"; };
+		928FBF1E1DA77AF900664630 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
 		92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
 		F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToothbrushScene.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				928FBF1E1DA77AF900664630 /* pop.wav */,
 				928FBF1C1DA774B100664630 /* hey.wav */,
 				924F68B81DA205F900CC8DDD /* tired.wav */,
 				921D07C31DA2026A00A4FC39 /* laughing.wav */,
@@ -667,6 +670,7 @@
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
 				921D07C41DA2026A00A4FC39 /* laughing.wav in Resources */,
+				928FBF1F1DA77AF900664630 /* pop.wav in Resources */,
 				F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

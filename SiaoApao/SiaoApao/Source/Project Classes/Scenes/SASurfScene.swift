@@ -20,7 +20,10 @@ class SASurfScene: SABaseScene {
     var splashTwoNode: SKSpriteNode?
     var splashTreeNode: SKSpriteNode?
     
+    // MARK: - Sounds
     var backgroundMusicPlayer: AVAudioPlayer!
+    let popSound: SKAction = SKAction.playSoundFileNamed(
+        "pop.wav", waitForCompletion: true)
     
     let numberOfTouchToStop: NSInteger = 5
 
@@ -84,6 +87,9 @@ class SASurfScene: SABaseScene {
                 if selectTortoiseNode == tortoiseNode || selectTortoiseNode == tortoiseTwoNode {
                     /* Get the action Key */
                     let actionKey = selectTortoiseNode == tortoiseNode ? "moving" : "movingTwo"
+                    
+                    selectTortoiseNode.run(popSound)
+                    
                     
                     /* Get the node action */
                     if let nodeAction = selectTortoiseNode.action(forKey: actionKey) {
