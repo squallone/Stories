@@ -21,6 +21,8 @@ class SASurfScene: SABaseScene {
     var splashTreeNode: SKSpriteNode?
     
     var backgroundMusicPlayer: AVAudioPlayer!
+    
+    let numberOfTouchToStop: NSInteger = 5
 
     /* Setup your scene here */
     override func didMove(to view: SKView) {
@@ -77,10 +79,18 @@ class SASurfScene: SABaseScene {
                 }
             
                 if selectTortoiseNode == tortoiseNode || selectTortoiseNode == tortoiseTwoNode {
+                    /* Get the action Key */
                     let actionKey = selectTortoiseNode == tortoiseNode ? "moving" : "movingTwo"
                     
+                    /* Get the node action */
                     if let nodeAction = selectTortoiseNode.action(forKey: actionKey) {
-                        nodeAction.speed = nodeAction.speed == 0 ? 1 : 0
+                        /* Calculate the speedProportion */
+                        let speedProportion = 1 / CGFloat(numberOfTouchToStop)
+                        let actualSpeed = Double(round(10 * nodeAction.speed) / 10)
+                        let newSpeed = CGFloat(actualSpeed) - speedProportion
+                        if newSpeed >= 0 {
+                            nodeAction.speed = newSpeed
+                        }
                     }
                     
                     if self.checkTortoisePause() {

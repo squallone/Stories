@@ -21,6 +21,8 @@ class SADayAndNightScene: SABaseScene {
     var sunSpriteNode: SKSpriteNode?
     var moonSpriteNode: SKSpriteNode?
     var skyBackgroundNode: SKSpriteNode?
+    var downArrowNode: SKSpriteNode?
+    var upArrowNode: SKSpriteNode?
     var selectedNode = SKSpriteNode()
     
     // MARK: - Colors
@@ -38,6 +40,8 @@ class SADayAndNightScene: SABaseScene {
         sunSpriteNode = self.childNode(withName: "sun") as? SKSpriteNode
         moonSpriteNode = self.childNode(withName: "moon") as? SKSpriteNode
         skyBackgroundNode = self.childNode(withName: "SkyBackground") as? SKSpriteNode
+        upArrowNode = self.childNode(withName: "upArrow") as? SKSpriteNode
+        downArrowNode = self.childNode(withName: "downArrow") as? SKSpriteNode
         
         /* Set Init Position */
         let sunInitPosition = CGPoint(x: (sunSpriteNode?.position.x)!, y: startYPosition)
@@ -53,6 +57,10 @@ class SADayAndNightScene: SABaseScene {
         /* Init BackGround node */
         selectedNode = sunSpriteNode as SKSpriteNode!
         self.updateBackgraoundNodeColor()
+        
+        /* Bounce action */
+        let bounceAction = SKAction.bounce(to: 1.05, duration: 0.2)
+        downArrowNode?.run(SKAction.repeatForever(bounceAction), withKey: "moving")
     }
     
     // MARK: - Gesture Actions
@@ -64,6 +72,8 @@ class SADayAndNightScene: SABaseScene {
             touchLocation = self.convertPoint(toView: touchLocation)
             
             self.selectetNodeForTouch(touchLocation)
+            
+            
         } else if recognizer.state == .changed {
             var translationPoint = recognizer.translation(in: recognizer.view!)
             translationPoint = CGPoint(x: translationPoint.x, y: -translationPoint.y)
@@ -85,10 +95,15 @@ class SADayAndNightScene: SABaseScene {
                     nonSelectNodeYPosition = startYPosition
                     
                     if selectedNode == sunSpriteNode {
-                        print("Shhow next Button")
+                        print("Show next Button")
                     } else{
+                        /* Show Arrows */
+                        downArrowNode?.removeAllActions()
+                        let fadeOutAction = SKAction.fadeIn(withDuration: 0.5)
+                        downArrowNode?.run(fadeOutAction)
+                        upArrowNode?.run(fadeOutAction)
+                        
                         print("Hide next Button")
-
                     }
                     
                 } else {
@@ -139,6 +154,11 @@ class SADayAndNightScene: SABaseScene {
                     let bounceAction = SKAction.bounce(to: 1.1, duration: 0.2)
                     selectedNode.run(SKAction.repeatForever(bounceAction))
                 }
+                
+                /* Hidde Arrows */
+                let fadeOutAction = SKAction.fadeOut(withDuration: 0.5)
+                downArrowNode?.run(fadeOutAction)
+                upArrowNode?.run(fadeOutAction)
             }
         }
     }

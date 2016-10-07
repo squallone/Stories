@@ -12,13 +12,17 @@ class SAPortraitScene: SABaseScene {
     // MARK: - Properties
     var photoGirl: SKSpriteNode?
     var photoGirlTwo: SKSpriteNode?
+    var ballonNode: SKSpriteNode?
     
     // MARK: - Action
-    var photoGirlAnimation: SKAction?
-    var photoGirlTwoAnimation: SKAction?
-    let zipperSound: SKAction = SKAction.playSoundFileNamed(
-        "tired.wav", waitForCompletion: true)
+    var photoGirlNumberTouch: NSInteger = 2
+    var photoGirlTwoNumberTouch: NSInteger = 2
     
+    
+    let zipperSound: SKAction = SKAction.playSoundFileNamed(
+        "zipper.wav", waitForCompletion: true)
+    let heySound: SKAction = SKAction.playSoundFileNamed(
+        "hey.wav", waitForCompletion: true)
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
@@ -27,28 +31,15 @@ class SAPortraitScene: SABaseScene {
         /* Init properties */
         photoGirl = self.childNode(withName: "photoGirl") as? SKSpriteNode
         photoGirlTwo = self.childNode(withName: "photoGirlTwo") as? SKSpriteNode
+        ballonNode = self.childNode(withName: "ballon") as? SKSpriteNode
         
         /* Create Bounce Action */
         let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
-        photoGirl?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
-        photoGirlTwo?.run(SKAction.repeatForever(bounceAction), withKey:"movingTwo")
-    
-
-       // 1
-        var textures:[SKTexture] = []
-        var texturesTwo:[SKTexture] = []
-        // 2
-        for i in 2...3 {
-            textures.append(SKTexture(imageNamed: "PhotoGirl\(i)"))
-            texturesTwo.append(SKTexture(imageNamed: "PhotoGirlTwo\(i)"))
-        }
+        photoGirl?.run(SKAction.repeatForever(bounceAction))
+        photoGirlTwo?.run(SKAction.repeatForever(bounceAction))
         
-        // 4
-        photoGirlAnimation = SKAction.animate(with: textures,
-                                              timePerFrame: 0.2)
-        photoGirlTwoAnimation = SKAction.animate(with: texturesTwo,
-                                                 timePerFrame: 0.2)
-        
+        /* Hidde ballon node */
+        ballonNode?.alpha = 0.0
     }
     
     
@@ -69,14 +60,42 @@ class SAPortraitScene: SABaseScene {
                 }
                 
                 if selectPhotoNode == photoGirl || selectPhotoNode == photoGirlTwo {
-                    let animationAction = selectPhotoNode == photoGirl ? photoGirlAnimation : photoGirlTwoAnimation
+                    let animationTouches = selectPhotoNode == photoGirl ? photoGirlNumberTouch : photoGirlTwoNumberTouch
+                    var photoImageName = selectPhotoNode == photoGirl ? "PhotoGirl" : "PhotoGirlTwo"
+                    
                     if (selectPhotoNode.hasActions()) {
                         selectPhotoNode.removeAllActions()
-                        let groupAction = SKAction.group([animationAction!,zipperSound])
-                        selectPhotoNode.run(groupAction)
                         
+                        if animationTouches > 0 {
+                            let character = animationTouches == 2 ? "2": "3"
+                            photoImageName.append(character)
+                            
+                            let newTexture = SKTexture.init(imageNamed: photoImageName)
+                            let photoGirlAnimation = SKAction.setTexture(newTexture)
+                            
+                            let groupAction = SKAction.group([photoGirlAnimation,zipperSound])
+                            selectPhotoNode.run(groupAction, completion: { 
+                                if (animationTouches > 1) {
+                                    let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
+                                    selectPhotoNode.run(SKAction.repeatForever(bounceAction))
+                                }
+                            })
+                            
+                            /* Update Photo Touches */
+                            if selectPhotoNode == photoGirl {
+                                photoGirlNumberTouch = photoGirlNumberTouch - 1
+                            } else {
+                                photoGirlTwoNumberTouch = photoGirlTwoNumberTouch - 1
+                            }
+                        }
+
                         if self.checkPortraitIsTapped() {
+                            let fadeInAction = SKAction.fadeIn(withDuration: 1.0)
+                            let sequence = SKAction.group([heySound, fadeInAction])
+                            ballonNode?.run(sequence)
+                            
                             print("Show next Button")
+                            
                         } else {
                             print("Hide next Button")
                         }
@@ -89,15 +108,15 @@ class SAPortraitScene: SABaseScene {
     /* Check if both portrats is in finish  */
     func checkPortraitIsTapped() -> Bool {
         
-        var firsPortraitIsTapped: Bool = true
-        var secondPortraitIsTapped: Bool = true
+        var firsPortraitIsTapped: Bool = false
+        var secondPortraitIsTapped: Bool = false
         
-        if (photoGirl?.action(forKey: "moving")) != nil {
-            firsPortraitIsTapped = false
+        if photoGirlNumberTouch == 0 {
+            firsPortraitIsTapped = true
         }
         
-        if (photoGirlTwo?.action(forKey: "movingTwo")) != nil {
-            secondPortraitIsTapped = false
+        if photoGirlTwoNumberTouch == 0 {
+            secondPortraitIsTapped = true
         }
         
         let allTortoiseIsPause = (firsPortraitIsTapped && secondPortraitIsTapped)
