@@ -20,6 +20,15 @@
 		924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924012A71D8265C6005B4087 /* SASurfScene.swift */; };
 		9241096C1D828FB1009523F9 /* SABookScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241096B1D828FB1009523F9 /* SABookScene.swift */; };
 		9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9241096D1D828FF0009523F9 /* SABookScene.sks */; };
+		9242DC271DA9D4D100868886 /* SAKissBedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC261DA9D4D100868886 /* SAKissBedScene.swift */; };
+		9242DC2A1DA9D56F00868886 /* SAKissBedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC291DA9D56F00868886 /* SAKissBedScene.sks */; };
+		9242DC2D1DA9D94D00868886 /* SASwitchScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC2C1DA9D94D00868886 /* SASwitchScene.sks */; };
+		9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC2E1DA9DA3000868886 /* SASwitchScene.swift */; };
+		9242DC321DA9DB3E00868886 /* SAMoonSleepScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC311DA9DB3E00868886 /* SAMoonSleepScene.swift */; };
+		9242DC341DA9DBBA00868886 /* SAMoonSleepScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */; };
+		9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC361DA9E0D500868886 /* SAEndScene.sks */; };
+		9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC381DA9E0ED00868886 /* SAEndScene.swift */; };
+		9242DC3B1DA9E1AC00868886 /* dance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC3A1DA9E1AC00868886 /* dance.mp3 */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
 		924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */; };
 		924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */; };
@@ -104,6 +113,15 @@
 		924012A71D8265C6005B4087 /* SASurfScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASurfScene.swift; sourceTree = "<group>"; };
 		9241096B1D828FB1009523F9 /* SABookScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABookScene.swift; sourceTree = "<group>"; };
 		9241096D1D828FF0009523F9 /* SABookScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SABookScene.sks; sourceTree = "<group>"; };
+		9242DC261DA9D4D100868886 /* SAKissBedScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKissBedScene.swift; sourceTree = "<group>"; };
+		9242DC291DA9D56F00868886 /* SAKissBedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAKissBedScene.sks; sourceTree = "<group>"; };
+		9242DC2C1DA9D94D00868886 /* SASwitchScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASwitchScene.sks; sourceTree = "<group>"; };
+		9242DC2E1DA9DA3000868886 /* SASwitchScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASwitchScene.swift; sourceTree = "<group>"; };
+		9242DC311DA9DB3E00868886 /* SAMoonSleepScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMoonSleepScene.swift; sourceTree = "<group>"; };
+		9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAMoonSleepScene.sks; sourceTree = "<group>"; };
+		9242DC361DA9E0D500868886 /* SAEndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAEndScene.sks; sourceTree = "<group>"; };
+		9242DC381DA9E0ED00868886 /* SAEndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEndScene.swift; sourceTree = "<group>"; };
+		9242DC3A1DA9E1AC00868886 /* dance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dance.mp3; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
 		924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPortraitScene.swift; sourceTree = "<group>"; };
 		924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPortraitScene.sks; sourceTree = "<group>"; };
@@ -243,6 +261,51 @@
 			name = Book;
 			sourceTree = "<group>";
 		};
+		9242DC241DA9D42100868886 /* BearinBedScene */ = {
+			isa = PBXGroup;
+			children = (
+				F2008F661D8295380056A22B /* SABearinBedScene.sks */,
+				F2008F641D82951D0056A22B /* SABearinBedScene.swift */,
+			);
+			name = BearinBedScene;
+			sourceTree = "<group>";
+		};
+		9242DC251DA9D44500868886 /* Kiss */ = {
+			isa = PBXGroup;
+			children = (
+				9242DC261DA9D4D100868886 /* SAKissBedScene.swift */,
+				9242DC291DA9D56F00868886 /* SAKissBedScene.sks */,
+			);
+			name = Kiss;
+			sourceTree = "<group>";
+		};
+		9242DC2B1DA9D89200868886 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				9242DC2E1DA9DA3000868886 /* SASwitchScene.swift */,
+				9242DC2C1DA9D94D00868886 /* SASwitchScene.sks */,
+			);
+			name = Switch;
+			sourceTree = "<group>";
+		};
+		9242DC301DA9DA8800868886 /* MoonSleep */ = {
+			isa = PBXGroup;
+			children = (
+				9242DC311DA9DB3E00868886 /* SAMoonSleepScene.swift */,
+				9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */,
+			);
+			name = MoonSleep;
+			sourceTree = "<group>";
+		};
+		9242DC351DA9DFA600868886 /* End */ = {
+			isa = PBXGroup;
+			children = (
+				9242DC381DA9E0ED00868886 /* SAEndScene.swift */,
+				9242DC361DA9E0D500868886 /* SAEndScene.sks */,
+			);
+			name = End;
+			sourceTree = "<group>";
+		};
 		9242E1B31D8053370025A172 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +382,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9242DC3A1DA9E1AC00868886 /* dance.mp3 */,
 				928FBF1E1DA77AF900664630 /* pop.wav */,
 				928FBF1C1DA774B100664630 /* hey.wav */,
 				924F68B81DA205F900CC8DDD /* tired.wav */,
@@ -356,8 +420,11 @@
 				9241096A1D828D85009523F9 /* Book */,
 				9205CE271D82946300CC06F0 /* Fishbowl */,
 				F2008F611D828D410056A22B /* ToothbrushScene */,
-				F2008F641D82951D0056A22B /* SABearinBedScene.swift */,
-				F2008F661D8295380056A22B /* SABearinBedScene.sks */,
+				9242DC241DA9D42100868886 /* BearinBedScene */,
+				9242DC251DA9D44500868886 /* Kiss */,
+				9242DC2B1DA9D89200868886 /* Switch */,
+				9242DC301DA9DA8800868886 /* MoonSleep */,
+				9242DC351DA9DFA600868886 /* End */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -374,8 +441,8 @@
 		F2008F611D828D410056A22B /* ToothbrushScene */ = {
 			isa = PBXGroup;
 			children = (
-				F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */,
 				F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */,
+				F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */,
 			);
 			name = ToothbrushScene;
 			sourceTree = "<group>";
@@ -650,21 +717,26 @@
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */,
+				9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */,
 				F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
 				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
+				9242DC341DA9DBBA00868886 /* SAMoonSleepScene.sks in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
 				927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
 				923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */,
+				9242DC2A1DA9D56F00868886 /* SAKissBedScene.sks in Resources */,
+				9242DC2D1DA9D94D00868886 /* SASwitchScene.sks in Resources */,
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
 				F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */,
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
 				928FBF1D1DA774B100664630 /* hey.wav in Resources */,
+				9242DC3B1DA9E1AC00868886 /* dance.mp3 in Resources */,
 				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
@@ -699,8 +771,10 @@
 				F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */,
 				F2B66E991D8126AF00652249 /* SALabel.swift in Sources */,
 				F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */,
+				9242DC271DA9D4D100868886 /* SAKissBedScene.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
 				9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */,
+				9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */,
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
 				F220ED6F1D7F935500D98278 /* view.swift in Sources */,
 				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
@@ -719,6 +793,7 @@
 				F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
+				9242DC321DA9DB3E00868886 /* SAMoonSleepScene.swift in Sources */,
 				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
 				9205CE2B1D82953D00CC06F0 /* SAFishbowlScene.swift in Sources */,
@@ -729,6 +804,7 @@
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
 				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
+				9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */,
 				F220ED731D7F938900D98278 /* helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
