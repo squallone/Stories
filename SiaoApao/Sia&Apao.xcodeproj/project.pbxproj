@@ -28,7 +28,8 @@
 		9242DC341DA9DBBA00868886 /* SAMoonSleepScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */; };
 		9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC361DA9E0D500868886 /* SAEndScene.sks */; };
 		9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC381DA9E0ED00868886 /* SAEndScene.swift */; };
-		9242DC3B1DA9E1AC00868886 /* dance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC3A1DA9E1AC00868886 /* dance.mp3 */; };
+		9242DC3B1DA9E1AC00868886 /* dance.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC3A1DA9E1AC00868886 /* dance.wav */; };
+		9242DC3D1DAAAAFC00868886 /* SKNode+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
 		924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */; };
 		924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */; };
@@ -121,7 +122,8 @@
 		9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAMoonSleepScene.sks; sourceTree = "<group>"; };
 		9242DC361DA9E0D500868886 /* SAEndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAEndScene.sks; sourceTree = "<group>"; };
 		9242DC381DA9E0ED00868886 /* SAEndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEndScene.swift; sourceTree = "<group>"; };
-		9242DC3A1DA9E1AC00868886 /* dance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dance.mp3; sourceTree = "<group>"; };
+		9242DC3A1DA9E1AC00868886 /* dance.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dance.wav; sourceTree = "<group>"; };
+		9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Aspect.swift"; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
 		924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPortraitScene.swift; sourceTree = "<group>"; };
 		924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPortraitScene.sks; sourceTree = "<group>"; };
@@ -382,7 +384,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				9242DC3A1DA9E1AC00868886 /* dance.mp3 */,
+				9242DC3A1DA9E1AC00868886 /* dance.wav */,
 				928FBF1E1DA77AF900664630 /* pop.wav */,
 				928FBF1C1DA774B100664630 /* hey.wav */,
 				924F68B81DA205F900CC8DDD /* tired.wav */,
@@ -402,6 +404,7 @@
 				92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */,
 				92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */,
 				927AF5B61D98639400BB8212 /* SKAction+Custom.swift */,
+				9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -736,7 +739,7 @@
 				F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */,
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
 				928FBF1D1DA774B100664630 /* hey.wav in Resources */,
-				9242DC3B1DA9E1AC00868886 /* dance.mp3 in Resources */,
+				9242DC3B1DA9E1AC00868886 /* dance.wav in Resources */,
 				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
@@ -799,6 +802,7 @@
 				9205CE2B1D82953D00CC06F0 /* SAFishbowlScene.swift in Sources */,
 				F220ED711D7F936200D98278 /* library.swift in Sources */,
 				F220ED751D7F939D00D98278 /* asset.swift in Sources */,
+				9242DC3D1DAAAAFC00868886 /* SKNode+Aspect.swift in Sources */,
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,

@@ -12,6 +12,8 @@ class SALivingRoomScene: SABaseScene {
     
     // MARK: - Properties
     var milkNode: SKSpriteNode?
+    let maxNumberTexture: Int = 6
+    var countTexture: Int = 0
     
     let liquidSound: SKAction = SKAction.playSoundFileNamed(
         "liquid.wav", waitForCompletion: true)
@@ -38,21 +40,31 @@ class SALivingRoomScene: SABaseScene {
             if touchedNode is SKSpriteNode {
                 
                 if touchedNode == milkNode  {
+                    /* Remove action */
+                    touchedNode.removeAction(forKey: "moving")
 
-                    if (touchedNode.hasActions()) {
-                        touchedNode.removeAllActions()
-                        
-                        let animationDuration = 1.0
-                        let animationAction = SKAction.customAction(withDuration: animationDuration, actionBlock: { (node, duration) in
-                            node.alpha = 1 - duration / CGFloat(animationDuration)
-                        })
-                        
-                        let groupAction = SKAction.group([animationAction, liquidSound])
-                        touchedNode.run(groupAction)
-                        print("Show next Button")
-                    } else {
-                        print("Hide next Button")
+                    if !touchedNode.hasActions() {
+                        countTexture = countTexture + 1
+                        if countTexture <= maxNumberTexture {
+                            
+                            /* Create new texture */
+                            let photoImageName = "milk\(countTexture)"
+                            let newTexture = SKTexture.init(imageNamed: photoImageName)
+                            
+                            /* Set new texture */
+                            let milkTextureAction = SKAction.setTexture(newTexture, resize: true)
 
+                            let groupAction = SKAction.group([milkTextureAction,liquidSound])
+                            touchedNode.run(groupAction, completion: { 
+                                touchedNode.removeAllActions()
+                            })
+
+                            print("No Show next Button")
+
+                        } else {
+                            print("Show next Button")
+
+                        }
                     }
                 }
             }

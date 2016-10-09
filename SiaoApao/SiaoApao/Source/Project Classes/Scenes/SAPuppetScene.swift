@@ -10,7 +10,6 @@ import SpriteKit
 
 class SAPuppetScene: SABaseScene {
     
-    
     // MARK: - Properties
     private var puppetSpriteNode: SKSpriteNode?
     private var smileShapeNode: SKShapeNode!
@@ -20,6 +19,7 @@ class SAPuppetScene: SABaseScene {
     private var leadingArrowNode: SKSpriteNode?
     
     private var numberTick: CGFloat = 10
+    private var currentSmileValue: CGFloat = 1
 
     
     let laughSound: SKAction = SKAction.playSoundFileNamed(
@@ -39,7 +39,7 @@ class SAPuppetScene: SABaseScene {
         leadingArrowNode = self.childNode(withName: "lateralLeftArrow") as? SKSpriteNode
         
         /* Create the smile */
-        self.createSmile(with: 1)
+        self.createSmile(with: currentSmileValue)
         
         /* Create Bounce Action */
         let bounceAction = SKAction.bounce(to: 1.05, duration: 0.2)
@@ -53,7 +53,7 @@ class SAPuppetScene: SABaseScene {
     
     // MARK: Public methods
     // NOTE: Value -1 to 1
-    func createSmile(with value:CGFloat) {
+    func createSmile(with value: CGFloat) {
         /* remove smile */
         smileShapeNode?.removeFromParent()
         
@@ -91,20 +91,31 @@ class SAPuppetScene: SABaseScene {
             
             
         } else if recognizer.state == .ended {
-            if (numberTick > 0 && selectedNode == puppetSpriteNode) {
+           
+            if (selectedNode == tralingAreaNode || selectedNode == leadingAreaNode) {
                 
-                puppetSpriteNode?.run(laughSound, withKey: "laungAction")
+                /* The minimum value*/
+                if currentSmileValue > -1 {
+                    puppetSpriteNode?.run(laughSound, withKey: "laungAction")
+                    
+                    /* Calculate the unit value */
+                    let changeRate = (2.0 / numberTick)
+                    currentSmileValue = currentSmileValue - changeRate
+                    print("currentSmileValue \(currentSmileValue)")
 
-                /* Calculate the unit value */
-                let unitValue = 1.0 - (2.0 / numberTick)
-                createSmile(with: unitValue)
-                
-                /* Update number of tick */
-                numberTick = numberTick - 1
+                    createSmile(with: currentSmileValue)
+                    
+                    print("Not show Next Button")
+                } else {
+                    /* HideArrows */
+                    let fadeOutAction = SKAction.fadeOut(withDuration: 1.0)
+                    tralingArrowNode?.run(fadeOutAction)
+                    leadingArrowNode?.run(fadeOutAction)
+                    print("show Next Button")
+                }
             }
         }
     }
-
     
     func selectetNodeForTouch(_ touchLocation: CGPoint) {
         // Get Touched node

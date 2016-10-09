@@ -13,12 +13,16 @@ class SACarpetScene: SABaseScene {
     
     // MARK: - Properties
     var dragonNode: SKSpriteNode?
-    let stepNumber: NSInteger = 7
+    var carpetNode: SKSpriteNode?
+    let stepNumber: Int = 7
+    var numberOfTouches: Int = 5;
+    var danceAction: SKAction!
     
     var backgroundMusicPlayer: AVAudioPlayer!
     let tiredSound: SKAction = SKAction.playSoundFileNamed(
         "tired.wav", waitForCompletion: true)
-
+    ///let danceSound: SKAction = SKAction.playSoundFileNamed(
+    //    "dance.wav", waitForCompletion: false)
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
@@ -26,10 +30,25 @@ class SACarpetScene: SABaseScene {
         
         /* Init properties */
         dragonNode = self.childNode(withName: "dragon") as? SKSpriteNode
+        carpetNode = self.childNode(withName: "carpet") as? SKSpriteNode
         
         /* Create Bounce Action */
         let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
         dragonNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
+        
+        /* Create Dacen Action */
+        /* Create step Action*/
+        let stepSequence = SKAction.sequence([SKAction.rotate(byAngle: degToRad(-2.0), duration: 0.1),
+                                              SKAction.moveBy(x: 5, y: 0, duration: 0.1),
+                                              SKAction.rotate(byAngle: 0.0, duration: 0.1),
+                                              SKAction.moveBy(x: 5, y: 0, duration: 0.1),
+                                              SKAction.rotate(byAngle: degToRad(2.0), duration: 0.1),
+                                              SKAction.moveBy(x: 5, y: 0, duration: 0.1)])
+        let groupAction = SKAction.repeat(stepSequence, count: stepNumber)
+        let groupActionReversed =  SKAction.repeat(stepSequence.reversed(), count: stepNumber)
+        
+        danceAction = SKAction.repeatForever(SKAction.sequence([groupAction,
+                                                                groupActionReversed]))
         
     }
     
@@ -44,34 +63,41 @@ class SACarpetScene: SABaseScene {
                 
                 if touchedNode == dragonNode  {
                     
-                    if (touchedNode.hasActions()) {
+                    if ((touchedNode.action(forKey: "dace")) == nil) {
                         touchedNode.removeAllActions()
                         
-                        /* Create step Action*/
-                        let stepSequence = SKAction.sequence([SKAction.rotate(byAngle: degToRad(-2.0), duration: 0.1),
-                                                              SKAction.moveBy(x: 5, y: 0, duration: 0.1),
-                                                              SKAction.rotate(byAngle: 0.0, duration: 0.1),
-                                                              SKAction.moveBy(x: 5, y: 0, duration: 0.1),
-                                                              SKAction.rotate(byAngle: degToRad(2.0), duration: 0.1),
-                                                              SKAction.moveBy(x: 5, y: 0, duration: 0.1)])
+                        self.playBackgroundMusic(filename: "dance.wav")
+                        dragonNode?.run(danceAction, withKey: "dace")
                         
-                        /* Crate Group Action */
-                        let groupAction = SKAction.repeat(stepSequence, count: stepNumber)
-                        
-                        /* step walkSound */
-                        self.playBackgroundMusic(filename: "walk.wav")
-                        
-                        dragonNode?.run(groupAction, completion: {
-                            print("Finish")
-                            let finalImage = UIImage.init(named: "TiredDragon")
-                            self.dragonNode?.texture = SKTexture.init(image: finalImage!)
-                            self.dragonNode?.run(self.tiredSound)
-
+                        let actionVelocity = SKAction.wait(forDuration: 2.0)
+                        carpetNode?.run(actionVelocity, completion: {
+                            self.dragonNode?.isPaused = true
+                            self.backgroundMusicPlayer.pause()
                         })
-                        print("Show next Button")
+
                     } else {
-                        print("Hide next Button")
                         
+                        if numberOfTouches > 0 {
+                            carpetNode?.removeAllActions()
+                            backgroundMusicPlayer.play()
+                            dragonNode?.isPaused = false
+                            
+                            let actionVelocity =  SKAction.wait(forDuration: 2.0)
+                            carpetNode?.run(actionVelocity, completion: {
+                                self.dragonNode?.isPaused = true
+                                self.backgroundMusicPlayer.pause()
+                                
+                                self.numberOfTouches = self.numberOfTouches - 1
+                                
+                                if self.numberOfTouches == 0 {
+                                    //dragonNode?.removeAllActions()
+                                    let finalImage = UIImage.init(named: "TiredDragon")
+                                    self.dragonNode?.texture = SKTexture.init(image: finalImage!)
+                                    self.dragonNode?.run(self.tiredSound)
+                                    print("Show next button")
+                                }
+                            })
+                        }
                     }
                 }
             }
@@ -88,7 +114,7 @@ class SACarpetScene: SABaseScene {
         
         do {
             try backgroundMusicPlayer = AVAudioPlayer(contentsOf: url)
-            backgroundMusicPlayer.numberOfLoops = stepNumber * 2
+            backgroundMusicPlayer.numberOfLoops = -1
             backgroundMusicPlayer.prepareToPlay()
             backgroundMusicPlayer.play()
         } catch {
