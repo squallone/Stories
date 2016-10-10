@@ -30,6 +30,7 @@
 		9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC381DA9E0ED00868886 /* SAEndScene.swift */; };
 		9242DC3B1DA9E1AC00868886 /* dance.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC3A1DA9E1AC00868886 /* dance.wav */; };
 		9242DC3D1DAAAAFC00868886 /* SKNode+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */; };
+		9242DC3F1DAAD56A00868886 /* CGFloat+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
 		924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */; };
 		924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */; };
@@ -124,6 +125,7 @@
 		9242DC381DA9E0ED00868886 /* SAEndScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEndScene.swift; sourceTree = "<group>"; };
 		9242DC3A1DA9E1AC00868886 /* dance.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dance.wav; sourceTree = "<group>"; };
 		9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Aspect.swift"; sourceTree = "<group>"; };
+		9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Action.swift"; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
 		924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPortraitScene.swift; sourceTree = "<group>"; };
 		924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPortraitScene.sks; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */,
 				927AF5B61D98639400BB8212 /* SKAction+Custom.swift */,
 				9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */,
+				9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				F220ED6D1D7F934E00D98278 /* model.swift in Sources */,
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
+				9242DC3F1DAAD56A00868886 /* CGFloat+Action.swift in Sources */,
 				9241096C1D828FB1009523F9 /* SABookScene.swift in Sources */,
 				F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */,
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
