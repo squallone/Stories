@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -85,10 +86,23 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-ay-1g5" userLabel="Corner">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="117" id="ajS-5Z-0i7"/>
+                        <constraint firstAttribute="height" constant="117" id="uV7-GT-Gwc"/>
+                        <constraint firstAttribute="width" secondItem="IFx-ay-1g5" secondAttribute="height" multiplier="1:1" id="xhB-m1-0MH"/>
+                    </constraints>
+                    <state key="normal" image="logo_corner"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="OYj-Mt-lnO"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="IFx-ay-1g5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9IE-8R-z2m"/>
                 <constraint firstItem="DbU-f8-N4g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C1G-iK-Okv"/>
+                <constraint firstAttribute="trailing" secondItem="IFx-ay-1g5" secondAttribute="trailing" id="D9V-Sg-7Mr"/>
                 <constraint firstAttribute="bottom" secondItem="DbU-f8-N4g" secondAttribute="bottom" id="Lxl-1a-XAE"/>
                 <constraint firstItem="DbU-f8-N4g" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VGf-yl-Mmi"/>
                 <constraint firstAttribute="trailing" secondItem="DbU-f8-N4g" secondAttribute="trailing" id="npn-eL-QZ4"/>
@@ -99,5 +113,6 @@
     <resources>
         <image name="biography_back" width="1366" height="1024"/>
         <image name="character_galileo" width="326" height="344"/>
+        <image name="logo_corner" width="168" height="168"/>
     </resources>
 </document>
