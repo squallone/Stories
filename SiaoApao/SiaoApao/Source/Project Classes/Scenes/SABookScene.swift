@@ -35,7 +35,7 @@ class SABookScene: SABaseScene {
         }
         
         /* Add gesture*/
-        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SADayAndNightScene.handlePanFrom))
+        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SABookScene.handlePanFrom))
         self.view!.addGestureRecognizer(gestureRecognizer)
 
     }
