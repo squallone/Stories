@@ -36,6 +36,7 @@
 		924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */; };
 		924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */; };
 		924F68B91DA205F900CC8DDD /* tired.wav in Resources */ = {isa = PBXBuildFile; fileRef = 924F68B81DA205F900CC8DDD /* tired.wav */; };
+		9256CB2F1DAB42A800AB4332 /* kiss.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9256CB2E1DAB42A800AB4332 /* kiss.wav */; };
 		9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9262899A1D7F7F4D00F253FF /* AppDelegate.swift */; };
 		926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926289A51D7F7F4D00F253FF /* Assets.xcassets */; };
 		926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926289A71D7F7F4D00F253FF /* LaunchScreen.storyboard */; };
@@ -136,6 +137,7 @@
 		924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPortraitScene.swift; sourceTree = "<group>"; };
 		924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPortraitScene.sks; sourceTree = "<group>"; };
 		924F68B81DA205F900CC8DDD /* tired.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tired.wav; sourceTree = "<group>"; };
+		9256CB2E1DAB42A800AB4332 /* kiss.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kiss.wav; sourceTree = "<group>"; };
 		926289971D7F7F4C00F253FF /* SiaoApao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiaoApao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9262899A1D7F7F4D00F253FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926289A51D7F7F4D00F253FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9256CB2E1DAB42A800AB4332 /* kiss.wav */,
 				9242DC401DAB18F000868886 /* brush.wav */,
 				9242DC3A1DA9E1AC00868886 /* dance.wav */,
 				928FBF1E1DA77AF900664630 /* pop.wav */,
@@ -770,6 +773,7 @@
 				924F68B91DA205F900CC8DDD /* tired.wav in Resources */,
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
+				9256CB2F1DAB42A800AB4332 /* kiss.wav in Resources */,
 				9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */,
 				9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */,
 				F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */,
