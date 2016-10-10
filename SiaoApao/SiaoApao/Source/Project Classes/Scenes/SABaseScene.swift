@@ -10,8 +10,12 @@ import SpriteKit
 
 class SABaseScene: SKScene {
     
+    // MARK: - Properties
+    
     public var nextButton: SKSpriteNode?
     public var titleLabel: SKLabelNode!
+    
+    // MARK: - Actions
     
     override func didMove(to view: SKView) {
         
@@ -39,146 +43,171 @@ class SABaseScene: SKScene {
         titleBar.zPosition = 10
         addChild(titleBar)
         
-//        titleLabel = MKOutlinedLabelNode(fontNamed: "MyriadPro-Regular", fontSize: 36)
-//        titleLabel.position = CGPoint(x: size.width / 2, y: 50)
-//        titleLabel.zPosition = 15
-//        titleLabel.borderColor = UIColor.yellow
-//        titleLabel.borderWidth = 0.7
-//        titleLabel.fontColor = UIColor.white
-//        titleLabel.outlinedText = "Title"
-//        addChild(titleLabel)
-        
         titleLabel = SKLabelNode(text: "")
         titleLabel.position = CGPoint(x: size.width / 2, y: 50)
         titleLabel.zPosition = 15
         titleLabel.fontName = "MyriadPro-Bold"
         titleLabel.fontColor = UIColor.white
         addChild(titleLabel)
-
-        
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
         if let location = touches.first?.location(in: self) {
             let touchedNode = atPoint(location)
+            changeScene(action: touchedNode.name!)
             
-            if touchedNode.name == "next" {
-                
-                let transition = SKTransition.reveal(with: .left, duration: 0.8)
-                
-                
-                if self.isKind(of: SADayAndNightScene.self) {
-                    if let nextScene = SASceneGlobes(fileNamed:"SASceneGlobes"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SASceneGlobes.self){
-                    if let nextScene = SASurfScene(fileNamed:"SASurfScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SASurfScene.self){
-                    if let nextScene = SAPortraitScene(fileNamed:"SAPortraitScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SAPortraitScene.self){
-                    if let nextScene = SAPuppetScene(fileNamed:"SAPuppetScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SAPuppetScene.self){
-                    if let nextScene = SALivingRoomScene(fileNamed:"SALivingRoomScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SALivingRoomScene.self){
-                    if let nextScene = SACarpetScene(fileNamed:"SACarpetScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SACarpetScene.self){
-                    if let nextScene = SABookScene(fileNamed:"SABookScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SABookScene.self){
-                    if let nextScene = ToothbrushScene(fileNamed:"ToothbrushScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: ToothbrushScene.self){
-                    if let nextScene = SAFishbowlScene(fileNamed:"SAFishbowlScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SAFishbowlScene.self){
-                    if let nextScene = SABearinBedScene(fileNamed:"SABearinBedScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }
-                
-            }else if touchedNode.name  == "back"{
-                
-                let transition = SKTransition.reveal(with: .right, duration: 0.8)
-                
-                if self.isKind(of: SASceneGlobes.self) {
-                    if let nextScene = SADayAndNightScene(fileNamed:"SADayAndNightScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SASurfScene.self){
-                    if let nextScene = SASceneGlobes(fileNamed:"SASceneGlobes"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SAPortraitScene.self){
-                    if let nextScene = SASurfScene(fileNamed:"SASurfScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SAPuppetScene.self){
-                    if let nextScene = SALivingRoomScene(fileNamed:"SALivingRoomScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SALivingRoomScene.self){
-                    if let nextScene = SAPuppetScene(fileNamed:"SAPuppetScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SACarpetScene.self){
-                    if let nextScene = SALivingRoomScene(fileNamed:"SALivingRoomScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SABookScene.self){
-                    if let nextScene = SACarpetScene(fileNamed:"SACarpetScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: ToothbrushScene.self){
-                    if let nextScene = SABookScene(fileNamed:"SABookScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SAFishbowlScene.self){
-                    if let nextScene = ToothbrushScene(fileNamed:"ToothbrushScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }else if self.isKind(of: SABearinBedScene.self){
-                    if let nextScene = SAFishbowlScene(fileNamed:"SAFishbowlScene"){
-                        nextScene.scaleMode = .aspectFill
-                        scene?.view?.presentScene(nextScene, transition: transition)
-                    }
-                }
-            }
         }
     }
     
+}
+
+extension SABaseScene{
+    
+    func changeScene(action: String){
+        
+        let transitionNext = SKTransition.reveal(with: .left, duration: 0.8)
+        let transitionBack = SKTransition.reveal(with: .right, duration: 0.8)
+
+        switch self {
+        case is SADayAndNightScene:
+            if action == "next"{
+                if let nextScene = SASceneGlobes(fileNamed:"SASceneGlobes"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }
+            break
+        case is SASceneGlobes:
+            if action == "next"{
+                if let nextScene = SASurfScene(fileNamed:"SASurfScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SADayAndNightScene(fileNamed:"SADayAndNightScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SASurfScene:
+            if action == "next"{
+                if let nextScene = SAPortraitScene(fileNamed:"SAPortraitScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SASceneGlobes(fileNamed:"SASceneGlobes"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SAPortraitScene:
+            if action == "next"{
+                if let nextScene = SAPuppetScene(fileNamed:"SAPuppetScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SASurfScene(fileNamed:"SASurfScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SAPuppetScene:
+            if action == "next"{
+                if let nextScene = SALivingRoomScene(fileNamed:"SALivingRoomScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SAPortraitScene(fileNamed:"SAPortraitScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SALivingRoomScene:
+            if action == "next"{
+                if let nextScene = SACarpetScene(fileNamed:"SACarpetScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SAPuppetScene(fileNamed:"SAPuppetScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SACarpetScene:
+            if action == "next"{
+                if let nextScene = SABookScene(fileNamed:"SABookScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SALivingRoomScene(fileNamed:"SALivingRoomScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SABookScene:
+            if action == "next"{
+                if let nextScene = ToothbrushScene(fileNamed:"ToothbrushScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+
+            }else if action == "back"{
+                if let nextScene = SACarpetScene(fileNamed:"SACarpetScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is ToothbrushScene:
+            if action == "next"{
+                if let nextScene = SAFishbowlScene(fileNamed:"SAFishbowlScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SABookScene(fileNamed:"SABookScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SAFishbowlScene:
+            if action == "next"{
+                if let nextScene = SABearinBedScene(fileNamed:"SABearinBedScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = ToothbrushScene(fileNamed:"ToothbrushScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SABearinBedScene:
+           if action == "back"{
+                if let nextScene = SAFishbowlScene(fileNamed:"SAFishbowlScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        default:
+            break
+        }
+        
+    }
 }
