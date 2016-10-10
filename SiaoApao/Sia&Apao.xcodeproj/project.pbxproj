@@ -31,6 +31,7 @@
 		9242DC3B1DA9E1AC00868886 /* dance.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC3A1DA9E1AC00868886 /* dance.wav */; };
 		9242DC3D1DAAAAFC00868886 /* SKNode+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */; };
 		9242DC3F1DAAD56A00868886 /* CGFloat+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */; };
+		9242DC411DAB18F000868886 /* brush.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC401DAB18F000868886 /* brush.wav */; };
 		9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E1B41D80538C0025A172 /* SASheetViewController.swift */; };
 		924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */; };
 		924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */; };
@@ -126,6 +127,7 @@
 		9242DC3A1DA9E1AC00868886 /* dance.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dance.wav; sourceTree = "<group>"; };
 		9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+Aspect.swift"; sourceTree = "<group>"; };
 		9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Action.swift"; sourceTree = "<group>"; };
+		9242DC401DAB18F000868886 /* brush.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = brush.wav; sourceTree = "<group>"; };
 		9242E1B41D80538C0025A172 /* SASheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASheetViewController.swift; sourceTree = "<group>"; };
 		924E1CEB1D826EAF00A50AA0 /* SAPortraitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPortraitScene.swift; sourceTree = "<group>"; };
 		924E1CF11D826F4600A50AA0 /* SAPortraitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAPortraitScene.sks; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9242DC401DAB18F000868886 /* brush.wav */,
 				9242DC3A1DA9E1AC00868886 /* dance.wav */,
 				928FBF1E1DA77AF900664630 /* pop.wav */,
 				928FBF1C1DA774B100664630 /* hey.wav */,
@@ -718,6 +721,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				924012A61D8264E5005B4087 /* SASurfScene.sks in Resources */,
+				9242DC411DAB18F000868886 /* brush.wav in Resources */,
 				927AF5C21D98C18C00BB8212 /* walk.wav in Resources */,
 				924F68B91DA205F900CC8DDD /* tired.wav in Resources */,
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
