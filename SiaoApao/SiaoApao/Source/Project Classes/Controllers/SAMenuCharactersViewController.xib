@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SAMenuCharactersViewController" customModule="SiaoApao" customModuleProvider="target">
@@ -15,66 +16,72 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainMenu" translatesAutoresizingMaskIntoConstraints="NO" id="EvI-oJ-nGl">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainMenu" translatesAutoresizingMaskIntoConstraints="NO" id="EvI-oJ-nGl"/>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-0u-MMw">
-                    <rect key="frame" x="192" y="71" width="224" height="224"/>
+                    <frame key="frameInset" minX="192" minY="71" width="224" height="224"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="character_apao"/>
                     <connections>
                         <action selector="pressApao:" destination="-1" eventType="touchUpInside" id="8JW-Di-fVm"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7n-bh-72J">
-                    <rect key="frame" x="507" y="71" width="224" height="224"/>
+                    <frame key="frameInset" minX="507" minY="71" width="224" height="224"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="character_sia"/>
                     <connections>
                         <action selector="pressSia:" destination="-1" eventType="touchUpInside" id="uZY-up-oaR"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVf-O5-tzy">
-                    <rect key="frame" x="187" y="432" width="229" height="224"/>
+                    <frame key="frameInset" minX="187" minY="432" width="229" height="224"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="character_tyro"/>
                     <connections>
                         <action selector="presstyro:" destination="-1" eventType="touchUpInside" id="tCg-vE-NLC"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-Mq-mom">
-                    <rect key="frame" x="541" y="462" width="218" height="229"/>
+                    <frame key="frameInset" minX="541" minY="462" width="218" height="229"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="character_galileo"/>
                     <connections>
                         <action selector="pressGalileo:" destination="-1" eventType="touchUpInside" id="mMR-H5-8RC"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_apao" translatesAutoresizingMaskIntoConstraints="NO" id="ymK-mN-Cmr">
-                    <rect key="frame" x="338" y="111" width="112" height="60"/>
+                    <frame key="frameInset" minX="338" minY="111" width="112" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_sia" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-qQ-RTv">
-                    <rect key="frame" x="666" y="116" width="72" height="38"/>
+                    <frame key="frameInset" minX="666" minY="116" width="72" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_galileo" translatesAutoresizingMaskIntoConstraints="NO" id="iE9-C0-buR">
-                    <rect key="frame" x="661" y="475" width="136" height="73"/>
+                    <frame key="frameInset" minX="661" minY="475" width="136" height="73"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="label_tyro" translatesAutoresizingMaskIntoConstraints="NO" id="2hd-gG-fXu">
-                    <rect key="frame" x="329" y="456" width="102" height="56"/>
+                    <frame key="frameInset" minX="329" minY="456" width="102" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-ay-ybO" userLabel="Corner">
-                    <rect key="frame" x="899" y="8" width="117" height="117"/>
+                    <frame key="frameInset" minX="899" minY="8" width="117" height="117"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="logo_corner"/>
                     <connections>
                         <action selector="back:" destination="-1" eventType="touchUpInside" id="JZc-PD-WWd"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="EvI-oJ-nGl" secondAttribute="bottom" id="9RZ-SW-CKD"/>
                 <constraint firstAttribute="trailing" secondItem="EvI-oJ-nGl" secondAttribute="trailing" id="aFi-7C-edf"/>
                 <constraint firstItem="EvI-oJ-nGl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aN5-Wh-48Y"/>
                 <constraint firstItem="EvI-oJ-nGl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xmu-eq-mmF"/>
             </constraints>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>

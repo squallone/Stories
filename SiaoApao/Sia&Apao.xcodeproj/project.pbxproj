@@ -66,6 +66,8 @@
 		F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED771D7F975600D98278 /* MenuViewController.xib */; };
 		F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED7D1D7F981700D98278 /* MainViewController.swift */; };
 		F220ED801D7F981700D98278 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED7E1D7F981700D98278 /* MainViewController.xib */; };
+		F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242671D1DAB092600708A54 /* BiographyViewController.swift */; };
+		F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F242671E1DAB092600708A54 /* BiographyViewController.xib */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
@@ -83,6 +85,7 @@
 		F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D601FF1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib */; };
 		F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D602031D7FE87D006B2AE7 /* SAMenuFlowController.swift */; };
 		F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D602051D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift */; };
+		F38B1C914B70A94DAE6DABAC /* Pods_SiaoApao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29F7CF553B7A7803AB09452 /* Pods_SiaoApao.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +157,9 @@
 		928FBF1E1DA77AF900664630 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
 		92CEFE721D825A7500F04105 /* SADayAndNightScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SADayAndNightScene.sks; sourceTree = "<group>"; };
 		92CEFE741D825A9000F04105 /* SADayAndNightScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SADayAndNightScene.swift; sourceTree = "<group>"; };
+		D29F7CF553B7A7803AB09452 /* Pods_SiaoApao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiaoApao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E196891EAC7FC10075C9EA4D /* Pods-SiaoApao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiaoApao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SiaoApao/Pods-SiaoApao.debug.xcconfig"; sourceTree = "<group>"; };
+		EF632E8E9511E8B83083732D /* Pods-SiaoApao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiaoApao.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiaoApao/Pods-SiaoApao.release.xcconfig"; sourceTree = "<group>"; };
 		F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToothbrushScene.swift; sourceTree = "<group>"; };
 		F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ToothbrushScene.sks; sourceTree = "<group>"; };
 		F2008F641D82951D0056A22B /* SABearinBedScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABearinBedScene.swift; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 		F220ED771D7F975600D98278 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		F220ED7D1D7F981700D98278 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F220ED7E1D7F981700D98278 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F242671D1DAB092600708A54 /* BiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
+		F242671E1DAB092600708A54 /* BiographyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyViewController.xib; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38B1C914B70A94DAE6DABAC /* Pods_SiaoApao.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +345,8 @@
 				926289B21D7F7F4D00F253FF /* SiaoApaoTests */,
 				926289BD1D7F7F4D00F253FF /* SiaoApaoUITests */,
 				926289981D7F7F4C00F253FF /* Products */,
+				95896A728574F2A95D2EC65A /* Pods */,
+				C099387FF0C90B4F66E696A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -352,7 +363,6 @@
 		926289991D7F7F4D00F253FF /* SiaoApao */ = {
 			isa = PBXGroup;
 			children = (
-				927AF5B81D9897DE00BB8212 /* Sounds */,
 				9262899A1D7F7F4D00F253FF /* AppDelegate.swift */,
 				F220ED681D7F8C6B00D98278 /* Constants.swift */,
 				F220ED611D7F8C4B00D98278 /* Assets */,
@@ -400,7 +410,7 @@
 				927AF5B91D9897DE00BB8212 /* zipper.wav */,
 			);
 			name = Sounds;
-			path = Source/Sounds;
+			path = ../Sounds;
 			sourceTree = "<group>";
 		};
 		92841DDA1D8F282E00735AC8 /* Extensions */ = {
@@ -447,6 +457,23 @@
 			name = DayAndNight;
 			sourceTree = "<group>";
 		};
+		95896A728574F2A95D2EC65A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E196891EAC7FC10075C9EA4D /* Pods-SiaoApao.debug.xcconfig */,
+				EF632E8E9511E8B83083732D /* Pods-SiaoApao.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C099387FF0C90B4F66E696A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D29F7CF553B7A7803AB09452 /* Pods_SiaoApao.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2008F611D828D410056A22B /* ToothbrushScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +486,7 @@
 		F220ED611D7F8C4B00D98278 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				927AF5B81D9897DE00BB8212 /* Sounds */,
 				F2AB0B971DA4BDCB00A78260 /* Fonts */,
 				F220ED741D7F939D00D98278 /* asset.swift */,
 			);
@@ -502,6 +530,7 @@
 		F220ED651D7F8C4B00D98278 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F24267211DAB092E00708A54 /* Biography */,
 				F220ED811D7F981C00D98278 /* MainViewController */,
 				F220ED7A1D7F979700D98278 /* MenuController */,
 				F2D601FB1D7FE498006B2AE7 /* MenuStories */,
@@ -545,6 +574,15 @@
 				F220ED7E1D7F981700D98278 /* MainViewController.xib */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		F24267211DAB092E00708A54 /* Biography */ = {
+			isa = PBXGroup;
+			children = (
+				F242671D1DAB092600708A54 /* BiographyViewController.swift */,
+				F242671E1DAB092600708A54 /* BiographyViewController.xib */,
+			);
+			name = Biography;
 			sourceTree = "<group>";
 		};
 		F272BBC01D8267B4003E55D1 /* Globes */ = {
@@ -619,9 +657,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 926289C31D7F7F4D00F253FF /* Build configuration list for PBXNativeTarget "SiaoApao" */;
 			buildPhases = (
+				2DE7A79998428BC5AA8CCED5 /* [CP] Check Pods Manifest.lock */,
 				926289931D7F7F4C00F253FF /* Sources */,
 				926289941D7F7F4C00F253FF /* Frameworks */,
 				926289951D7F7F4C00F253FF /* Resources */,
+				D3D194DAA8A85D28E62A2D7B /* [CP] Embed Pods Frameworks */,
+				95496FD70EBB6A98CB075496 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -751,6 +792,7 @@
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
+				F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */,
 				921D07C41DA2026A00A4FC39 /* laughing.wav in Resources */,
 				928FBF1F1DA77AF900664630 /* pop.wav in Resources */,
 				F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */,
@@ -773,6 +815,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DE7A79998428BC5AA8CCED5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95496FD70EBB6A98CB075496 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SiaoApao/Pods-SiaoApao-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3D194DAA8A85D28E62A2D7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SiaoApao/Pods-SiaoApao-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		926289931D7F7F4C00F253FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -782,6 +872,7 @@
 				F2B66E991D8126AF00652249 /* SALabel.swift in Sources */,
 				F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */,
 				9242DC271DA9D4D100868886 /* SAKissBedScene.swift in Sources */,
+				F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
 				9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */,
 				9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */,
@@ -954,6 +1045,7 @@
 		};
 		926289C41D7F7F4D00F253FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E196891EAC7FC10075C9EA4D /* Pods-SiaoApao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -968,6 +1060,7 @@
 		};
 		926289C51D7F7F4D00F253FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF632E8E9511E8B83083732D /* Pods-SiaoApao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
