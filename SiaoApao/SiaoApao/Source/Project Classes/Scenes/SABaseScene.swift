@@ -198,8 +198,47 @@ extension SABaseScene{
             }
             break
         case is SABearinBedScene:
-           if action == "back"{
+            if action == "next" {
+                if let nextScene = SAKissBedScene(fileNamed:"SAKissBedScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
                 if let nextScene = SAFishbowlScene(fileNamed:"SAFishbowlScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SAKissBedScene:
+            if action == "next" {
+                if let nextScene = SASwitchScene(fileNamed:"SASwitchScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SABearinBedScene(fileNamed:"SABearinBedScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SASwitchScene:
+            if action == "next" {
+                if let nextScene = SAMoonSleepScene(fileNamed:"SAKissMoonSleepScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionNext)
+                }
+            }else if action == "back"{
+                if let nextScene = SAKissBedScene(fileNamed:"SAKissBedScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
+            break
+        case is SAMoonSleepScene:
+            if action == "next" {
+                if let nextScene = SAEndScene(fileNamed:"SAEndScene"){
                     nextScene.scaleMode = .aspectFill
                     scene?.view?.presentScene(nextScene, transition: transitionBack)
                 }

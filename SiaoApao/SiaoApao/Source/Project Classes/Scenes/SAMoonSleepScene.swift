@@ -8,6 +8,6 @@
 
 import SpriteKit
 
-class SAMoonSleepScene: SKScene {
+class SAMoonSleepScene: SABaseScene {
 
 }
