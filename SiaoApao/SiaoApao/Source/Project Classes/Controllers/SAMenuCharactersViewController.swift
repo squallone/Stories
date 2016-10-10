@@ -10,33 +10,38 @@ import UIKit
 
 class SAMenuCharactersViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var flowController: SACharactersFlowController!
+    
     // MARK: - View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        flowController = SACharactersFlowController(navigationController: self.navigationController)        
     }
     
     // MARK: - Navigation
     
     @IBAction func back(_ sender: AnyObject) {
-        
-        self.navigationController?.popViewController(animated: true)
+        flowController.back()
     }
     
     @IBAction func pressApao(_ sender: AnyObject) {
-        
+        flowController.showBiography(character: "")
     }
     
     @IBAction func pressSia(_ sender: AnyObject) {
-        
+        flowController.showBiography(character: "")
+
     }
     
     @IBAction func presstyro(_ sender: AnyObject) {
-        
-        
-    }
-    @IBAction func pressGalileo(_ sender: AnyObject) {
+        flowController.showBiography(character: "")
     }
     
+    @IBAction func pressGalileo(_ sender: AnyObject) {
+        flowController.showBiography(character: "")
+    }    
 }

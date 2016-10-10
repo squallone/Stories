@@ -68,6 +68,7 @@
 		F220ED801D7F981700D98278 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED7E1D7F981700D98278 /* MainViewController.xib */; };
 		F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242671D1DAB092600708A54 /* BiographyViewController.swift */; };
 		F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F242671E1DAB092600708A54 /* BiographyViewController.xib */; };
+		F24267231DAB2F5F00708A54 /* SACharactersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
@@ -176,6 +177,7 @@
 		F220ED7E1D7F981700D98278 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F242671D1DAB092600708A54 /* BiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
 		F242671E1DAB092600708A54 /* BiographyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyViewController.xib; sourceTree = "<group>"; };
+		F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACharactersFlowController.swift; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
@@ -531,11 +533,11 @@
 			isa = PBXGroup;
 			children = (
 				F24267211DAB092E00708A54 /* Biography */,
-				F220ED811D7F981C00D98278 /* MainViewController */,
-				F220ED7A1D7F979700D98278 /* MenuController */,
-				F2D601FB1D7FE498006B2AE7 /* MenuStories */,
-				F2D602021D7FE5AA006B2AE7 /* MenuCharacters */,
-				F2B66E971D81227900652249 /* MenuGames */,
+				F220ED811D7F981C00D98278 /* Main */,
+				F220ED7A1D7F979700D98278 /* Menu */,
+				F2D601FB1D7FE498006B2AE7 /* Stories */,
+				F2D602021D7FE5AA006B2AE7 /* Characters */,
+				F2B66E971D81227900652249 /* Games */,
 				9242E1B31D8053370025A172 /* Sheet */,
 			);
 			path = Controllers;
@@ -558,22 +560,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F220ED7A1D7F979700D98278 /* MenuController */ = {
+		F220ED7A1D7F979700D98278 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				F220ED761D7F975600D98278 /* MenuViewController.swift */,
 				F220ED771D7F975600D98278 /* MenuViewController.xib */,
 			);
-			name = MenuController;
+			name = Menu;
 			sourceTree = "<group>";
 		};
-		F220ED811D7F981C00D98278 /* MainViewController */ = {
+		F220ED811D7F981C00D98278 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				F220ED7D1D7F981700D98278 /* MainViewController.swift */,
 				F220ED7E1D7F981700D98278 /* MainViewController.xib */,
 			);
-			name = MainViewController;
+			name = Main;
 			sourceTree = "<group>";
 		};
 		F24267211DAB092E00708A54 /* Biography */ = {
@@ -612,13 +614,13 @@
 			path = MyriadPro;
 			sourceTree = "<group>";
 		};
-		F2B66E971D81227900652249 /* MenuGames */ = {
+		F2B66E971D81227900652249 /* Games */ = {
 			isa = PBXGroup;
 			children = (
 				F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */,
 				F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */,
 			);
-			name = MenuGames;
+			name = Games;
 			sourceTree = "<group>";
 		};
 		F2D601F41D7FD3E4006B2AE7 /* Managers */ = {
@@ -627,27 +629,28 @@
 				F2D602031D7FE87D006B2AE7 /* SAMenuFlowController.swift */,
 				F2D602051D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift */,
 				F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */,
+				F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */,
 			);
 			name = Managers;
 			path = Source/Managers;
 			sourceTree = "<group>";
 		};
-		F2D601FB1D7FE498006B2AE7 /* MenuStories */ = {
+		F2D601FB1D7FE498006B2AE7 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
 				F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */,
 				F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */,
 			);
-			name = MenuStories;
+			name = Stories;
 			sourceTree = "<group>";
 		};
-		F2D602021D7FE5AA006B2AE7 /* MenuCharacters */ = {
+		F2D602021D7FE5AA006B2AE7 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
 				F2D601FE1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift */,
 				F2D601FF1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib */,
 			);
-			name = MenuCharacters;
+			name = Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -900,6 +903,7 @@
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
 				9205CE2B1D82953D00CC06F0 /* SAFishbowlScene.swift in Sources */,
 				F220ED711D7F936200D98278 /* library.swift in Sources */,
+				F24267231DAB2F5F00708A54 /* SACharactersFlowController.swift in Sources */,
 				F220ED751D7F939D00D98278 /* asset.swift in Sources */,
 				9242DC3D1DAAAAFC00868886 /* SKNode+Aspect.swift in Sources */,
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
