@@ -48,6 +48,7 @@
 		927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BB1D9897FE00BB8212 /* wave.wav */; };
 		927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5BF1D98B6CE00BB8212 /* liquid.wav */; };
 		927AF5C21D98C18C00BB8212 /* walk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927AF5C11D98C18C00BB8212 /* walk.wav */; };
+		927D64811DAD291A00576BAA /* cricket.wav in Resources */ = {isa = PBXBuildFile; fileRef = 927D64801DAD291A00576BAA /* cricket.wav */; };
 		92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */; };
 		92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */; };
 		928FBF1D1DA774B100664630 /* hey.wav in Resources */ = {isa = PBXBuildFile; fileRef = 928FBF1C1DA774B100664630 /* hey.wav */; };
@@ -156,6 +157,7 @@
 		927AF5BB1D9897FE00BB8212 /* wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wave.wav; sourceTree = "<group>"; };
 		927AF5BF1D98B6CE00BB8212 /* liquid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = liquid.wav; sourceTree = "<group>"; };
 		927AF5C11D98C18C00BB8212 /* walk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = walk.wav; sourceTree = "<group>"; };
+		927D64801DAD291A00576BAA /* cricket.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cricket.wav; sourceTree = "<group>"; };
 		92841DDB1D8F2AC100735AC8 /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		92841DDD1D8F817A00735AC8 /* SKScene+CommonOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKScene+CommonOperations.swift"; sourceTree = "<group>"; };
 		928FBF1C1DA774B100664630 /* hey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hey.wav; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 		927AF5B81D9897DE00BB8212 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				927D64801DAD291A00576BAA /* cricket.wav */,
 				924C804A1DAB4BB7001CEDE8 /* switch.wav */,
 				9256CB2E1DAB42A800AB4332 /* kiss.wav */,
 				9242DC401DAB18F000868886 /* brush.wav */,
@@ -798,6 +801,7 @@
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
 				928FBF1D1DA774B100664630 /* hey.wav in Resources */,
 				9242DC3B1DA9E1AC00868886 /* dance.wav in Resources */,
+				927D64811DAD291A00576BAA /* cricket.wav in Resources */,
 				924C804B1DAB4BB7001CEDE8 /* switch.wav in Resources */,
 				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,

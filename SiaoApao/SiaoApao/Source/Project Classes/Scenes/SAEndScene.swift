@@ -8,6 +8,6 @@
 
 import SpriteKit
 
-class SAEndScene: SKScene {
+class SAEndScene: SABaseScene {
 
 }
