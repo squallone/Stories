@@ -6,6 +6,7 @@ target 'SiaoApao' do
   pod 'Alamofire', '~> 4.0'
   pod 'RealmSwift'
   pod 'VHUD'
+  pod 'AlamofireObjectMapper', '~> 4.0'
 end
 
 post_install do |installer|
