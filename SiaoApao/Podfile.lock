@@ -5,16 +5,19 @@ PODS:
   - Realm/Headers (2.0.2)
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
+  - VHUD (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - RealmSwift
+  - VHUD
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
+  VHUD: 6033e474cb4f8e1abd13ee1d2687eb044df95b05
 
-PODFILE CHECKSUM: 4f12b34593541fd4bc5fad68184dc5f2b9fb8727
+PODFILE CHECKSUM: 452e2a8c2c7ef91f46d3853158967d7f972bb104
 
 COCOAPODS: 1.1.0.rc.2
