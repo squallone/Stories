@@ -24,6 +24,9 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let string = "scene_dress_instructions".localized
+        
+        print("\(string)")
         
         flowController = SAMenuFlowController(navigationController: self.navigationController)
         
