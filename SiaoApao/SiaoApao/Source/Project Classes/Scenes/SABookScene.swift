@@ -19,6 +19,8 @@ class SABookScene: SABaseScene {
     let popSound: SKAction = SKAction.playSoundFileNamed(
         "pop.wav", waitForCompletion: true)
     
+    var playableRect: CGRect?
+
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
@@ -27,6 +29,14 @@ class SABookScene: SABaseScene {
         /* Init Properties */
         bookNode = self.childNode(withName: "book") as? SKSpriteNode
         
+        /* Define the playableRect */
+        playableRect = CGRect(x: 0, y: 130,
+                              width: size.width,
+                              height: size.height - 130)
+        
+        debugDrawPlayableArea()
+        
+        
         var indexValue = 0
         for _ in 1...numbeOfTotalLetter {
             /* Create the total letter*/
@@ -34,16 +44,13 @@ class SABookScene: SABaseScene {
             indexValue += 1;
         }
         
+  
+        
         /* Add gesture*/
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SABookScene.handlePanFrom))
         self.view!.addGestureRecognizer(gestureRecognizer)
 
     }
-    
-//    override func didEvaluateActions() {
-//        checkCollisions()
-//    }
-    
     
     /* Method To calculate the color in the Y Position of Son */
     func createRandomLabel(identifier: Int) {
@@ -57,10 +64,10 @@ class SABookScene: SABaseScene {
         letterLabelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
         letterLabelNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         letterLabelNode.position = CGPoint(
-            x: CGFloat.random(min: (self.view?.frame)!.minX + 50,
-                              max: (self.view?.frame)!.maxX - 50),
-            y: CGFloat.random(min: (self.view?.frame)!.minY + 50,
-                              max: (self.view?.frame)!.maxY - 50))
+            x: CGFloat.random(min: (playableRect?.minX)! + 50,
+                              max: (playableRect?.maxX)! - 50),
+            y: CGFloat.random(min: (playableRect?.minY)! + 50,
+                              max: (playableRect?.maxY)! - 50))
         letterLabelNode.zPosition = 50
         addChild(letterLabelNode)
 
@@ -145,7 +152,6 @@ class SABookScene: SABaseScene {
         }
     }
     
-    
     func panForTranslation(_ translation: CGPoint) {
         if selectedNode is SKLabelNode {
             let selectedNodePosition = selectedNode.position
@@ -155,16 +161,14 @@ class SABookScene: SABaseScene {
         }
     }
     
-    // MARK: - Local Method
-//    func checkCollisions() {
-//        //var hitLetter: [SKLabelNode] = []
-//        enumerateChildNodes(withName: "letter") { (node, _ ) in
-//            let letter = node as! SKLabelNode
-//            if letter.frame.intersects((self.bookNode?.frame)!) {
-//                print("Colisoon")
-//
-//            }
-//        }
-//    }
-    
+    func debugDrawPlayableArea() {
+        let shape = SKShapeNode()
+        let path = CGMutablePath()
+        
+        path.addRect(playableRect!)
+        shape.path = path
+        shape.strokeColor = SKColor.red
+        shape.lineWidth = 5.0
+        addChild(shape)
+    }
 }
