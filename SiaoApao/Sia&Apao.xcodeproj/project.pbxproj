@@ -61,6 +61,7 @@
 		F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2008F661D8295380056A22B /* SABearinBedScene.sks */; };
 		F20780CD1DAE0F15007E39DE /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20780CC1DAE0F15007E39DE /* Language.swift */; };
 		F20FEF8E1DB169E700FF940B /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8D1DB169E700FF940B /* String+Localized.swift */; };
+		F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8F1DB16C4200FF940B /* RealmManager.swift */; };
 		F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED681D7F8C6B00D98278 /* Constants.swift */; };
 		F220ED6F1D7F935500D98278 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED6E1D7F935500D98278 /* view.swift */; };
 		F220ED751D7F939D00D98278 /* asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED741D7F939D00D98278 /* asset.swift */; };
@@ -173,6 +174,7 @@
 		F2008F661D8295380056A22B /* SABearinBedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SABearinBedScene.sks; sourceTree = "<group>"; };
 		F20780CC1DAE0F15007E39DE /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F20FEF8D1DB169E700FF940B /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		F20FEF8F1DB16C4200FF940B /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		F220ED681D7F8C6B00D98278 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
 		F220ED6E1D7F935500D98278 /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		F220ED741D7F939D00D98278 /* asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asset.swift; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				F20780CA1DAE0B90007E39DE /* Flow Control */,
+				F20FEF8F1DB16C4200FF940B /* RealmManager.swift */,
 			);
 			name = Managers;
 			path = Source/Managers;
@@ -910,6 +913,7 @@
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
 				9242DC3F1DAAD56A00868886 /* CGFloat+Action.swift in Sources */,
+				F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */,
 				9241096C1D828FB1009523F9 /* SABookScene.swift in Sources */,
 				F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */,
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,

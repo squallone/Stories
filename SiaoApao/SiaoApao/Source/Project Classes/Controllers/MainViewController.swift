@@ -22,19 +22,8 @@ class MainViewController: UIViewController {
         Alamofire.request(URL).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
             switch response.result{
             case .success(let languages):
-             
-                do {
-                    let realm = try! Realm()
-                    try realm.write {
-                        for language in languages {
-                            realm.add(language, update: true)
-                            print("Updated \(language.code) language succesfully")
-                        }
-                    }
-                } catch let error as NSError {
-                    print("Realm write error: \(error)")
-                    //TODO: Handle error
-                }
+                
+                RealmManager.saveLanguages(languages)
                 
             case .failure(let error):
                 print("Alamofire error: \(error)")
