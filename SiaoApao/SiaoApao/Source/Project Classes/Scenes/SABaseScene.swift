@@ -56,8 +56,9 @@ class SABaseScene: SKScene {
         
         if let location = touches.first?.location(in: self) {
             let touchedNode = atPoint(location)
-            changeScene(action: touchedNode.name!)
-            
+            if (touchedNode.name != nil) {
+                changeScene(action: touchedNode.name!)
+            }
         }
     }
     
