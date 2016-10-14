@@ -37,7 +37,6 @@ class SADayAndNightScene: SABaseScene {
         case downTypeColor
     }
 
-
     /* Setup your scene here */
     override func didMove(to view: SKView) {
         super.didMove(to: view)
