@@ -10,6 +10,14 @@ import UIKit
 
 class SAMenuGamesViewController: UIViewController {
     
+    // MARK: - @IBOutlet
+    
+    @IBOutlet weak var lblHome: UILabel!
+    @IBOutlet weak var lblLanguage: UILabel!
+    @IBOutlet weak var lblEnglish: UILabel!
+    @IBOutlet weak var lblSpanish: UILabel!
+    @IBOutlet weak var dropDownView: UIView!
+    
     // MARK: Properties
     
     var flowController: SAMenuGamesFlowController!

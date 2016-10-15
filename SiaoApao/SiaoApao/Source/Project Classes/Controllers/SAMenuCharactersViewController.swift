@@ -10,8 +10,18 @@ import UIKit
 
 class SAMenuCharactersViewController: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - IBOutlets
+
+    // Menu labels
+    @IBOutlet weak var lblHome: UILabel!
+    @IBOutlet weak var lblLanguage: UILabel!
+    @IBOutlet weak var lblEnglish: UILabel!
+    @IBOutlet weak var lblSpanish: UILabel!
     
+    // View
+    @IBOutlet weak var dropDownView: UIView!
+    
+    // MARK: - Properties
     var flowController: SACharactersFlowController!
     
     // MARK: - View life cycle
@@ -34,7 +44,6 @@ class SAMenuCharactersViewController: UIViewController {
     
     @IBAction func pressSia(_ sender: AnyObject) {
         flowController.showBiography(character: "")
-
     }
     
     @IBAction func presstyro(_ sender: AnyObject) {

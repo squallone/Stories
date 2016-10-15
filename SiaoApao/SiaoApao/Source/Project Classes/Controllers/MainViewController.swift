@@ -17,34 +17,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let URL = "https://jsonblob.com/api/blob/57fdc4f3e4b0bcac9f7e12eb"
+        let URL = "https://jsonblob.com/api/blob/5800350ee4b0bcac9f7f01bd"
         
         Alamofire.request(URL).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
-            
             switch response.result{
             case .success(let languages):
                 
-                do {
-                    let realm = try! Realm()
-                    try realm.write {
-                        for language in languages {
-                            realm.add(language, update: true)
-                            print("added")
-                        }
-                    }
-                } catch let error as NSError {
-                    print(error)
-                    //TODO: Handle error
-                }
+                RealmManager.saveLanguages(languages)
                 
             case .failure(let error):
-                print(error)
+                print("Alamofire error: \(error)")
                 
             }
-            
-            
-            
         }
     }
     

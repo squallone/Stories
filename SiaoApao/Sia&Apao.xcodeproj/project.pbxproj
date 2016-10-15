@@ -60,11 +60,10 @@
 		F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F641D82951D0056A22B /* SABearinBedScene.swift */; };
 		F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2008F661D8295380056A22B /* SABearinBedScene.sks */; };
 		F20780CD1DAE0F15007E39DE /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20780CC1DAE0F15007E39DE /* Language.swift */; };
+		F20FEF8E1DB169E700FF940B /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8D1DB169E700FF940B /* String+Localized.swift */; };
+		F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8F1DB16C4200FF940B /* RealmManager.swift */; };
 		F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED681D7F8C6B00D98278 /* Constants.swift */; };
-		F220ED6D1D7F934E00D98278 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED6C1D7F934E00D98278 /* model.swift */; };
 		F220ED6F1D7F935500D98278 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED6E1D7F935500D98278 /* view.swift */; };
-		F220ED711D7F936200D98278 /* library.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED701D7F936200D98278 /* library.swift */; };
-		F220ED731D7F938900D98278 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED721D7F938900D98278 /* helpers.swift */; };
 		F220ED751D7F939D00D98278 /* asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED741D7F939D00D98278 /* asset.swift */; };
 		F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED761D7F975600D98278 /* MenuViewController.swift */; };
 		F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED771D7F975600D98278 /* MenuViewController.xib */; };
@@ -75,6 +74,7 @@
 		F24267231DAB2F5F00708A54 /* SACharactersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
+		F2A115CC1DB0700500602128 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A115CB1DB0700500602128 /* Character.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
 		F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */; };
 		F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */; };
@@ -82,6 +82,7 @@
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
 		F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */; };
+		F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */; };
 		F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */; };
 		F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */; };
 		F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */; };
@@ -173,11 +174,10 @@
 		F2008F641D82951D0056A22B /* SABearinBedScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABearinBedScene.swift; sourceTree = "<group>"; };
 		F2008F661D8295380056A22B /* SABearinBedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SABearinBedScene.sks; sourceTree = "<group>"; };
 		F20780CC1DAE0F15007E39DE /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		F20FEF8D1DB169E700FF940B /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		F20FEF8F1DB16C4200FF940B /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		F220ED681D7F8C6B00D98278 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
-		F220ED6C1D7F934E00D98278 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		F220ED6E1D7F935500D98278 /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
-		F220ED701D7F936200D98278 /* library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = library.swift; sourceTree = "<group>"; };
-		F220ED721D7F938900D98278 /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		F220ED741D7F939D00D98278 /* asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asset.swift; sourceTree = "<group>"; };
 		F220ED761D7F975600D98278 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F220ED771D7F975600D98278 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +188,7 @@
 		F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACharactersFlowController.swift; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
+		F2A115CB1DB0700500602128 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
 		F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.otf"; sourceTree = "<group>"; };
 		F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
 		F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesFlowController.swift; sourceTree = "<group>"; };
+		F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
 		F2B9F4081DA614C400B94545 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKOutlinedLabelNode.swift; sourceTree = "<group>"; };
 		F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuStoriesViewController.swift; sourceTree = "<group>"; };
@@ -434,6 +436,8 @@
 				927AF5B61D98639400BB8212 /* SKAction+Custom.swift */,
 				9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */,
 				9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */,
+				F20FEF8D1DB169E700FF940B /* String+Localized.swift */,
+				F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -522,7 +526,6 @@
 			isa = PBXGroup;
 			children = (
 				92841DDA1D8F282E00735AC8 /* Extensions */,
-				F220ED721D7F938900D98278 /* helpers.swift */,
 			);
 			name = Helpers;
 			path = Source/Helpers;
@@ -532,7 +535,6 @@
 			isa = PBXGroup;
 			children = (
 				F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */,
-				F220ED701D7F936200D98278 /* library.swift */,
 			);
 			name = Libraries;
 			path = Source/Libraries;
@@ -568,8 +570,8 @@
 		F220ED661D7F8C4B00D98278 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F220ED6C1D7F934E00D98278 /* model.swift */,
 				F20780CC1DAE0F15007E39DE /* Language.swift */,
+				F2A115CB1DB0700500602128 /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -650,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				F20780CA1DAE0B90007E39DE /* Flow Control */,
+				F20FEF8F1DB16C4200FF940B /* RealmManager.swift */,
 			);
 			name = Managers;
 			path = Source/Managers;
@@ -906,13 +909,14 @@
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
 				F220ED6F1D7F935500D98278 /* view.swift in Sources */,
 				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
+				F2A115CC1DB0700500602128 /* Character.swift in Sources */,
 				92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */,
 				F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */,
 				F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */,
-				F220ED6D1D7F934E00D98278 /* model.swift in Sources */,
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
 				9242DC3F1DAAD56A00868886 /* CGFloat+Action.swift in Sources */,
+				F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */,
 				9241096C1D828FB1009523F9 /* SABookScene.swift in Sources */,
 				F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */,
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
@@ -926,17 +930,17 @@
 				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
 				9205CE2B1D82953D00CC06F0 /* SAFishbowlScene.swift in Sources */,
-				F220ED711D7F936200D98278 /* library.swift in Sources */,
 				F24267231DAB2F5F00708A54 /* SACharactersFlowController.swift in Sources */,
 				F220ED751D7F939D00D98278 /* asset.swift in Sources */,
 				9242DC3D1DAAAAFC00868886 /* SKNode+Aspect.swift in Sources */,
+				F20FEF8E1DB169E700FF940B /* String+Localized.swift in Sources */,
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
 				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
+				F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */,
-				F220ED731D7F938900D98278 /* helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

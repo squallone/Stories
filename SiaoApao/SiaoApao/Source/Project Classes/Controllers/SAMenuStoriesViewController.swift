@@ -10,15 +10,46 @@ import UIKit
 
 class SAMenuStoriesViewController: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - @IBOutlet
     
+    @IBOutlet weak var lblStories: UILabel!
+    @IBOutlet weak var lblGames: UILabel!
+    @IBOutlet weak var lblCharacters: UILabel!
+    
+    // Menu labels
+    @IBOutlet weak var lblHome: UILabel!
+    @IBOutlet weak var lblLanguage: UILabel!
+    @IBOutlet weak var lblEnglish: UILabel!
+    @IBOutlet weak var lblSpanish: UILabel!
+    
+    // View
+    @IBOutlet weak var dropDownView: UIView!
+    
+    // MARK: - Properties
+
     var flowController: SAMenuStoriesFlowController!
     
     // MARK: View fife cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         flowController = SAMenuStoriesFlowController(navigationController: self.navigationController)
+        self.updateLocalizableStrings()
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableStrings(){
+        
+        self.lblGames.text      = "games".localized
+        self.lblStories.text    = "stories".localized
+        self.lblCharacters.text = "characters".localized
+        
+        self.lblHome.text       = "Home"
+        self.lblLanguage.text   = "Language"
+        self.lblEnglish.text    = "English"
+        self.lblSpanish.text    = "Spanish"
         
     }
     
