@@ -12,15 +12,23 @@ class SABookScene: SABaseScene {
     
     // MARK: - Properties
     var bookNode: SKSpriteNode?
+    var bookGirlsNode: SKSpriteNode?
+    var armchairNode: SKSpriteNode?
     var selectedNode = SKNode()
-    var previousLabelNode: SKLabelNode?
-    var numbeOfTotalLetter = 12
+    var numbeOfTotalLetter = 10
     
+    // MARK: - PopSound
     let popSound: SKAction = SKAction.playSoundFileNamed(
         "pop.wav", waitForCompletion: true)
     
     var playableRect: CGRect?
-
+    let letterMovePointsPerSec: CGFloat = 280.0
+    
+    var letterLabelNodeList: [SKLabelNode] = []
+    var velocityNodeList: [CGPoint] = []
+    var lastUpdateTimeList: [TimeInterval] = []
+    var dtList: [TimeInterval] = []
+    
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
@@ -28,28 +36,42 @@ class SABookScene: SABaseScene {
         
         /* Init Properties */
         bookNode = self.childNode(withName: "book") as? SKSpriteNode
+        bookGirlsNode = self.childNode(withName: "bookGirls") as? SKSpriteNode
+        armchairNode = self.childNode(withName: "armchair") as? SKSpriteNode
         
         /* Define the playableRect */
         playableRect = CGRect(x: 0, y: 130,
                               width: size.width,
                               height: size.height - 130)
         
-        debugDrawPlayableArea()
-        
-        
-        var indexValue = 0
-        for _ in 1...numbeOfTotalLetter {
-            /* Create the total letter*/
-            createRandomLabel(identifier: indexValue)
-            indexValue += 1;
-        }
-        
-  
-        
+        //debugDrawPlayableArea()
+        /* Create the label start with zero */
+        createRandomLabel(identifier: 0)
+
         /* Add gesture*/
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SABookScene.handlePanFrom))
         self.view!.addGestureRecognizer(gestureRecognizer)
-
+    }
+    
+    /* Override uopdate method */
+    override func update(_ currentTime: TimeInterval) {
+        
+        for (index,letterNode) in letterLabelNodeList.enumerated() {
+            if lastUpdateTimeList[index] > 0 {
+                dtList[index] = currentTime - lastUpdateTimeList[index]
+            } else {
+                dtList[index] = 0
+            }
+            lastUpdateTimeList[index] = currentTime
+            
+            
+            moveSprite(velocity: velocityNodeList[index],
+                       letterNode: letterNode,
+                       into: index)
+            
+            boundsCheck(letterNode,
+                        into: index)
+        }
     }
     
     /* Method To calculate the color in the Y Position of Son */
@@ -59,21 +81,46 @@ class SABookScene: SABaseScene {
         letterLabelNode.name = "letter"
         
         letterLabelNode.text = randomStringWithLength(len: 0)
-        letterLabelNode.fontSize = 80
+        letterLabelNode.fontSize = 85
         letterLabelNode.fontColor = UIColor.black
         letterLabelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
         letterLabelNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         letterLabelNode.position = CGPoint(
-            x: CGFloat.random(min: (playableRect?.minX)! + 50,
-                              max: (playableRect?.maxX)! - 50),
-            y: CGFloat.random(min: (playableRect?.minY)! + 50,
-                              max: (playableRect?.maxY)! - 50))
+            x: CGFloat.random(min: (bookGirlsNode?.frame.minX)!,
+                              max: (bookGirlsNode?.frame.maxX)!),
+            y: (armchairNode?.frame.maxY)!)
+    
         letterLabelNode.zPosition = 50
         addChild(letterLabelNode)
+        
+        /* Add arrays */
+        letterLabelNodeList.append(letterLabelNode)
+        velocityNodeList.append(CGPoint.zero)
+        lastUpdateTimeList.append(0)
+        dtList.append(0)
+        
+        
+        /* Appear Action */
+        letterLabelNode.setScale(0.1)
+        let appearAction = SKAction.scale(to: 1, duration: 1)
+        letterLabelNode.run(appearAction) {
+            
+            let randomPoint = CGPoint(x: CGFloat.random(min: (self.playableRect?.minX)! + 50,
+                                                        max: (self.playableRect?.maxX)! - 50),
+                                      y: CGFloat.random(min: (self.playableRect?.minY)! + 50,
+                                                        max: (self.playableRect?.maxY)! - 50))
 
-        /* Add Bounce action */
-        let bounceAction = SKAction.bounce(to: 1.1, duration: 0.2)
-        letterLabelNode.run(SKAction.repeatForever(bounceAction))
+            let velocity = self.move(letterLabelNode, to: randomPoint)
+            
+            /* Update Velocity */
+            self.velocityNodeList[identifier] = velocity
+            
+            /* Add new letter */
+            if identifier < self.numbeOfTotalLetter {
+                let newIdentifier = identifier + 1
+                self.createRandomLabel(identifier: newIdentifier)
+            }
+        }
     }
     
     /* Create the random Strig */
@@ -111,19 +158,15 @@ class SABookScene: SABaseScene {
             recognizer.setTranslation(CGPoint.zero, in: recognizer.view)
 
         } else if recognizer.state == .ended {
-            if previousLabelNode != nil {
-                /* Add Bounce action */
-                let bounceAction = SKAction.bounce(to: 1.1, duration: 0.2)
-                previousLabelNode?.run(SKAction.repeatForever(bounceAction))
-            }
             
             if selectedNode is SKLabelNode {
                 if selectedNode.frame.intersects((self.bookNode?.frame)!) {
                     selectedNode.run(popSound, completion: {
+                        
                         self.selectedNode.removeFromParent()
                         
                         self.numbeOfTotalLetter -= 1
-                        if self.numbeOfTotalLetter == 0 {
+                        if self.numbeOfTotalLetter < 0 {
                             print("Show Next Button")
                         }
                     })
@@ -142,13 +185,11 @@ class SABookScene: SABaseScene {
         selectedNode = touchedNode
         
         if touchedNode is SKLabelNode {
-            if !selectedNode.isEqual(touchedNode) {
-                touchedNode.removeAllActions()
-                previousLabelNode = touchedNode as? SKLabelNode
-
-                print("ayuda \(touchedNode.name)")
-                
-            }
+            
+            touchedNode.removeAllActions()
+            
+            let indexNode = letterLabelNodeList.index(of: touchedNode as! SKLabelNode)
+            self.velocityNodeList[indexNode!] = CGPoint.zero
         }
     }
     
@@ -171,4 +212,53 @@ class SABookScene: SABaseScene {
         shape.lineWidth = 5.0
         addChild(shape)
     }
+    
+    func move(_ letterNode: SKLabelNode, to location: CGPoint) -> CGPoint {
+        let offset = CGPoint(x: location.x - letterNode.position.x,
+                             y: location.y - letterNode.position.y)
+        let length = sqrt(
+            Double(offset.x * offset.x + offset.y * offset.y))
+        let direction = CGPoint(x: offset.x / CGFloat(length),
+                                y: offset.y / CGFloat(length))
+        let velocity = CGPoint(x: direction.x * letterMovePointsPerSec,
+                               y: direction.y * letterMovePointsPerSec)
+        return velocity
+    }
+    
+    
+    func boundsCheck(_ letterNode: SKLabelNode, into index: Int) {
+        let bottomLeft = CGPoint(x: 0,
+                                 y: playableRect!.minY)
+        let topRight = CGPoint(x: size.width,
+                               y: playableRect!.maxY)
+        
+            if letterNode.position.x <= bottomLeft.x {
+                letterNode.position.x = bottomLeft.x
+                velocityNodeList[index].x = -velocityNodeList[index].x
+            }
+            if letterNode.position.x >= topRight.x {
+                letterNode.position.x = topRight.x
+                velocityNodeList[index].x = -velocityNodeList[index].x
+            }
+            if letterNode.position.y <= bottomLeft.y {
+                letterNode.position.y = bottomLeft.y
+                velocityNodeList[index].y = -velocityNodeList[index].y
+            }
+            if letterNode.position.y >= topRight.y {
+                letterNode.position.y = topRight.y
+                velocityNodeList[index].y = -velocityNodeList[index].y
+            }
+    }
+    
+    func moveSprite(velocity: CGPoint, letterNode: SKLabelNode, into index: Int) {
+            // 1
+            let amountToMove = CGPoint(x: velocity.x * CGFloat(dtList[index]),
+                                       y: velocity.y * CGFloat(dtList[index]))
+
+        // 2
+            letterNode.position = CGPoint(
+                x: letterNode.position.x + amountToMove.x,
+                y: letterNode.position.y + amountToMove.y)
+    }
+    
 }
