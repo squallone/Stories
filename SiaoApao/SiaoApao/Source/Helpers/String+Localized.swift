@@ -29,9 +29,6 @@ extension String{
         guard let labelFound = label else{
             return ""
         }
-        
         return labelFound
-
     }
-    
 }

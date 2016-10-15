@@ -31,8 +31,5 @@ class Character: Object, Mappable {
         phrase      <- map["phrase"]
         food        <- map["food"]
         biography   <- map["biography"]
-
     }
-    
-    
 }

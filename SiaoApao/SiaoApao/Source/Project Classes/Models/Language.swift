@@ -11,10 +11,11 @@ import RealmSwift
 
 class Language: Object, Mappable {
     
+    // MARK: Properties
+    
     dynamic var name        = ""
     dynamic var code        = ""
     var characters = List<Character>()
-    
     private dynamic var labelsData: NSData?
     
     var labels: [String: String] {
@@ -47,8 +48,8 @@ class Language: Object, Mappable {
     
     func mapping(map: Map) {
         
-        name        <- map["language"]
-        code        <- map["code"]
+        name  <- map["language"]
+        code  <- map["code"]
         
         let transform = TransformOf<NSData, [String: String]>(fromJSON: { (value: [String: String]?) -> NSData? in
             do {
@@ -63,8 +64,7 @@ class Language: Object, Mappable {
             }
             
             }, toJSON: { (value: NSData?) -> [String: String]? in
-                // transform value from Int? to String?
-                
+                // transform value from NSData? to [String: String]?
                 return nil
         })
         

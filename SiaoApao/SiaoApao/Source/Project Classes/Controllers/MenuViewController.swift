@@ -12,10 +12,10 @@ class MenuViewController: UIViewController {
     
     // MARK: - @IBOutlet
     
-    @IBOutlet weak var btnStories: UIButton!
-    @IBOutlet weak var btnGames: UIButton!
-    @IBOutlet weak var btnCharacters: UIButton!
-    
+    @IBOutlet weak var lblStories: UILabel!
+    @IBOutlet weak var lblGames: UILabel!
+    @IBOutlet weak var lblcharacters: UILabel!
+        
     // MARK: - Properties
     
     var flowController: SAMenuFlowController!
@@ -24,11 +24,30 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let string = "scene_dress_instructions".localized
-        
-        print("\(string)")
-        
         flowController = SAMenuFlowController(navigationController: self.navigationController)
+        
+        //self.setupUI()
+        self.updateLocalizableStrings()
+    }
+    
+    // MARK: - UI
+    
+    func setupUI(){
+        
+        self.lblGames.layer.borderWidth         = 1.0
+        self.lblStories.layer.borderWidth       = 1.0
+        self.lblcharacters.layer.borderWidth    = 1.0
+        
+        self.lblGames.layer.borderColor      = UIColor.colorMenuLabels.cgColor
+        self.lblStories.layer.borderColor    = UIColor.colorMenuLabels.cgColor
+        self.lblcharacters.layer.borderColor = UIColor.colorMenuLabels.cgColor
+    }
+    
+    // MARK: - Labels
+    func updateLocalizableStrings(){
+        self.lblGames.text      = "games".localized
+        self.lblStories.text    = "stories".localized
+        self.lblcharacters.text = "characters".localized
         
     }
     
@@ -55,5 +74,4 @@ class MenuViewController: UIViewController {
     @IBAction func changeLanguageToSpanish(_ sender: AnyObject) {
         
     }
-    
 }

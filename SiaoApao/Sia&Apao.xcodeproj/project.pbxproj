@@ -82,6 +82,7 @@
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
 		F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */; };
+		F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */; };
 		F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */; };
 		F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */; };
 		F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */; };
@@ -195,6 +196,7 @@
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
 		F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesFlowController.swift; sourceTree = "<group>"; };
+		F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
 		F2B9F4081DA614C400B94545 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKOutlinedLabelNode.swift; sourceTree = "<group>"; };
 		F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuStoriesViewController.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				9242DC3C1DAAAAFC00868886 /* SKNode+Aspect.swift */,
 				9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */,
 				F20FEF8D1DB169E700FF940B /* String+Localized.swift */,
+				F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -935,6 +938,7 @@
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
 				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
+				F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */,
 			);
