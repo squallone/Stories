@@ -90,7 +90,7 @@ class SABookScene: SABaseScene {
                               max: (bookGirlsNode?.frame.maxX)!),
             y: (armchairNode?.frame.maxY)!)
     
-        letterLabelNode.zPosition = 50
+        letterLabelNode.zPosition = -5
         addChild(letterLabelNode)
         
         /* Add arrays */
@@ -120,6 +120,14 @@ class SABookScene: SABaseScene {
                 let newIdentifier = identifier + 1
                 self.createRandomLabel(identifier: newIdentifier)
             }
+            
+            /* Action Sprite to change z position */
+            let waitAction = SKAction.wait(forDuration: 0.5)
+            let zPositionAction = SKAction.run({
+                letterLabelNode.zPosition = 1
+            })
+              let sequence = SKAction.sequence([waitAction, zPositionAction])
+            letterLabelNode.run(sequence)
         }
     }
     
