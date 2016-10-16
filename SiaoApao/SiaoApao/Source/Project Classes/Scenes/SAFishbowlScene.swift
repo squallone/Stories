@@ -26,6 +26,8 @@ class SAFishbowlScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init properties */
         fishNode = self.childNode(withName: "fish") as? SKSpriteNode
         caveNode = self.childNode(withName: "cave") as? SKSpriteNode
@@ -40,6 +42,18 @@ class SAFishbowlScene: SABaseScene {
         bidirectionalArrow?.run(SKAction.repeatForever(bounceAction))
         
         caveAction = SKAction.move(by: CGVector(dx:1.0, dy:0.0), duration: 1.0)
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_goodnight_galileo_instructions".localized
+        label1.text = "scene_goodnight_galileo_text1".localized
+        label2.text = "scene_goodnight_galileo_text2".localized
+        label3.text = "scene_goodnight_galileo_text3".localized
+        label4.text = "scene_goodnight_galileo_text4".localized
     }
     
     func handlePanFrom(_ recognizer: UIPanGestureRecognizer) {

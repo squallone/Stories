@@ -24,9 +24,11 @@ class SAPortraitScene: SABaseScene {
     let heySound: SKAction = SKAction.playSoundFileNamed(
         "hey.wav", waitForCompletion: true)
     
-    /* Setup your scene here */
-    override func didMove(to view: SKView) {
+
+   override func didMove(to view: SKView) {
         super.didMove(to: view)
+        
+        self.updateLocalizableString()
         
         /* Init properties */
         photoGirl = self.childNode(withName: "photoGirl") as? SKSpriteNode
@@ -40,6 +42,18 @@ class SAPortraitScene: SABaseScene {
         
         /* Hidde ballon node */
         ballonNode?.alpha = 0.0
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_dress_instructions".localized
+        label1.text = "scene_dress_text1".localized
+        label2.text = "scene_dress_text2".localized
+        label3.text = "scene_dress_text3".localized
+        label4.text = "scene_dress_text4".localized
     }
     
     

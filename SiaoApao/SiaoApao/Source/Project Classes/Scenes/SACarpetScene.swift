@@ -21,12 +21,12 @@ class SACarpetScene: SABaseScene {
     var backgroundMusicPlayer: AVAudioPlayer!
     let tiredSound: SKAction = SKAction.playSoundFileNamed(
         "tired.wav", waitForCompletion: true)
-    ///let danceSound: SKAction = SKAction.playSoundFileNamed(
-    //    "dance.wav", waitForCompletion: false)
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        
+        self.updateLocalizableString()
         
         /* Init properties */
         dragonNode = self.childNode(withName: "dragon") as? SKSpriteNode
@@ -52,6 +52,17 @@ class SACarpetScene: SABaseScene {
         
     }
     
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_dance_instructions".localized
+        label1.text = "scene_dance_text1".localized
+        label2.text = "scene_dance_text2".localized
+        label3.text = "scene_dance_text3".localized
+        label4.text = "scene_dance_text4".localized
+    }
     
     // MARK: - Gesture Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

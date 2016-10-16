@@ -21,6 +21,8 @@ class SASwitchScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init properties */
         switchNode = self.childNode(withName: "switch") as? SKSpriteNode
         darkNode = self.childNode(withName: "dark") as? SKSpriteNode
@@ -31,6 +33,18 @@ class SASwitchScene: SABaseScene {
         
         /* Init Alpha*/
         darkNode?.alpha = 0.0
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_turnoff_light_instructions".localized
+        label1.text = "scene_turnoff_light_text1".localized
+        label2.text = "scene_turnoff_light_text2".localized
+        label3.text = "scene_turnoff_light_text3".localized
+        label4.text = "scene_turnoff_light_text4".localized
     }
     
     // MARK: - Gesture Actions

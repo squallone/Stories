@@ -28,6 +28,8 @@ class SABearinBedScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init properties */
         bearNode = self.childNode(withName: "bear") as? SKSpriteNode
         dialogNode = self.childNode(withName: "dialog") as? SKSpriteNode
@@ -42,6 +44,18 @@ class SABearinBedScene: SABaseScene {
         
         /* Hide dialogNode */
         dialogNode?.alpha = 0
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_cuddle_orli_instructions".localized
+        label1.text = "scene_cuddle_orli_text1".localized
+        label2.text = "scene_cuddle_orli_text2".localized
+        label3.text = "scene_cuddle_orli_text3".localized
+        label4.text = "scene_cuddle_orli_text4".localized
     }
     
     // MARK: - Gesture Actions

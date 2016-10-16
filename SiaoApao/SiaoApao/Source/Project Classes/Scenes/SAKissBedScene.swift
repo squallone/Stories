@@ -20,6 +20,8 @@ class SAKissBedScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init properties */
         girlsNode = self.childNode(withName: "girls") as? SKSpriteNode
         
@@ -27,6 +29,19 @@ class SAKissBedScene: SABaseScene {
         let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
         girlsNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
     }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_kiss_apao_instructions".localized
+        label1.text = "scene_kiss_apao_text1".localized
+        label2.text = "scene_kiss_apao_text2".localized
+        label3.text = "scene_kiss_apao_text3".localized
+        label4.text = "scene_kiss_apao_text4".localized
+    }
+    
     
     // MARK: - Gesture Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

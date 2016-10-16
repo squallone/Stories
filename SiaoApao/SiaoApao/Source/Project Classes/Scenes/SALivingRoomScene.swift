@@ -22,6 +22,8 @@ class SALivingRoomScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init properties */
         milkNode = self.childNode(withName: "milk") as? SKSpriteNode
         
@@ -30,6 +32,17 @@ class SALivingRoomScene: SABaseScene {
         milkNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
     }
     
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_milk_instructions".localized
+        label1.text = "scene_milk_text1".localized
+        label2.text = "scene_milk_text2".localized
+        label3.text = "scene_milk_text3".localized
+        label4.text = "scene_milk_text4".localized
+    }
     
     // MARK: - Gesture Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

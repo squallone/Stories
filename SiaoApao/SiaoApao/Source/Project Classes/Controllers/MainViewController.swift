@@ -19,21 +19,27 @@ class MainViewController: UIViewController {
         
         let URL = "https://jsonblob.com/api/blob/5800350ee4b0bcac9f7f01bd"
         
+        HUD.show()
+        
         Alamofire.request(URL).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
             switch response.result{
             case .success(let languages):
                 
                 RealmManager.saveLanguages(languages)
+                HUD.hide()
+                self.showMainMenu()
                 
             case .failure(let error):
                 print("Alamofire error: \(error)")
-                
+                HUD.hide()
+
             }
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+     // MARK: - Navigation
+     
+    func showMainMenu(){
         
         // Controller and NavigationController
         let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
@@ -46,21 +52,5 @@ class MainViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+ 
 }

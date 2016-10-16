@@ -28,6 +28,8 @@ class ToothbrushScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init properties */
         bubblesGirlNode = self.childNode(withName: "bubbles1") as? SKSpriteNode
         bubblesGirlTwoNode = self.childNode(withName: "bubbles2") as? SKSpriteNode
@@ -36,6 +38,18 @@ class ToothbrushScene: SABaseScene {
         let bounceAction = SKAction.bounce(to: 1.05, duration: 0.2)
         bubblesGirlNode?.run(SKAction.repeatForever(bounceAction))
         bubblesGirlTwoNode?.run(SKAction.repeatForever(bounceAction))
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_brush_teeth_instructions".localized
+        label1.text = "scene_brush_teeth_text1".localized
+        label2.text = "scene_brush_teeth_text2".localized
+        label3.text = "scene_brush_teeth_text3".localized
+        label4.text = "scene_brush_teeth_text4".localized
     }
     
     // MARK: - Gesture Actions

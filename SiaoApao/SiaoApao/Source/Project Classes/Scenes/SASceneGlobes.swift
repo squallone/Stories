@@ -19,9 +19,7 @@ class SASceneGlobes: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
      
-        /* Title description */
-        titleLabel.text = "Pop the Bubbles"
-        
+        self.updateLocalizableString()
   
         /* Add bubble animation */
         enumerateChildNodes(withName: "bubble") { (node, stop) in
@@ -66,6 +64,16 @@ class SASceneGlobes: SABaseScene {
         
     }
     
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_bubbles_instructions".localized
+        label1.text = "scene_bubbles_text1".localized
+        label2.text = "scene_bubbles_text2".localized
+    }
     
     // MARK: - Gesture Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

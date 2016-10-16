@@ -91,6 +91,7 @@
 		F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D601FF1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib */; };
 		F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D602031D7FE87D006B2AE7 /* SAMenuFlowController.swift */; };
 		F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D602051D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift */; };
+		F2F9910C1DB2E307004200B6 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9910B1DB2E307004200B6 /* HUD.swift */; };
 		F38B1C914B70A94DAE6DABAC /* Pods_SiaoApao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29F7CF553B7A7803AB09452 /* Pods_SiaoApao.framework */; };
 /* End PBXBuildFile section */
 
@@ -206,6 +207,7 @@
 		F2D601FF1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuCharactersViewController.xib; sourceTree = "<group>"; };
 		F2D602031D7FE87D006B2AE7 /* SAMenuFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuFlowController.swift; sourceTree = "<group>"; };
 		F2D602051D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuStoriesFlowController.swift; sourceTree = "<group>"; };
+		F2F9910B1DB2E307004200B6 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,13 +236,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9205CE271D82946300CC06F0 /* Fishbowl */ = {
+		9205CE271D82946300CC06F0 /* Goodnight Galileo */ = {
 			isa = PBXGroup;
 			children = (
-				9205CE281D82951D00CC06F0 /* SAFishbowlScene.sks */,
 				9205CE2A1D82953D00CC06F0 /* SAFishbowlScene.swift */,
+				9205CE281D82951D00CC06F0 /* SAFishbowlScene.sks */,
 			);
-			name = Fishbowl;
+			name = "Goodnight Galileo";
 			sourceTree = "<group>";
 		};
 		923912E21D8279F5000FC33C /* Puppet */ = {
@@ -252,22 +254,22 @@
 			name = Puppet;
 			sourceTree = "<group>";
 		};
-		923912E71D8281DD000FC33C /* Carpet */ = {
+		923912E71D8281DD000FC33C /* Dance Tyro */ = {
 			isa = PBXGroup;
 			children = (
 				923912EF1D8288E1000FC33C /* SACarpetScene.swift */,
 				923912ED1D828829000FC33C /* SACarpetScene.sks */,
 			);
-			name = Carpet;
+			name = "Dance Tyro";
 			sourceTree = "<group>";
 		};
-		923912E81D8283B5000FC33C /* LivingRoom */ = {
+		923912E81D8283B5000FC33C /* Milk */ = {
 			isa = PBXGroup;
 			children = (
 				923912E91D8283D7000FC33C /* SALivingRoomScene.swift */,
 				923912EB1D828409000FC33C /* SALivingRoomScene.sks */,
 			);
-			name = LivingRoom;
+			name = Milk;
 			sourceTree = "<group>";
 		};
 		924012A41D8264AA005B4087 /* Surf */ = {
@@ -291,8 +293,8 @@
 		9242DC241DA9D42100868886 /* BearinBedScene */ = {
 			isa = PBXGroup;
 			children = (
-				F2008F661D8295380056A22B /* SABearinBedScene.sks */,
 				F2008F641D82951D0056A22B /* SABearinBedScene.swift */,
+				F2008F661D8295380056A22B /* SABearinBedScene.sks */,
 			);
 			name = BearinBedScene;
 			sourceTree = "<group>";
@@ -451,10 +453,10 @@
 				924012A41D8264AA005B4087 /* Surf */,
 				924E1CEA1D826E7600A50AA0 /* Portrait */,
 				923912E21D8279F5000FC33C /* Puppet */,
-				923912E81D8283B5000FC33C /* LivingRoom */,
-				923912E71D8281DD000FC33C /* Carpet */,
+				923912E81D8283B5000FC33C /* Milk */,
+				923912E71D8281DD000FC33C /* Dance Tyro */,
 				9241096A1D828D85009523F9 /* Book */,
-				9205CE271D82946300CC06F0 /* Fishbowl */,
+				9205CE271D82946300CC06F0 /* Goodnight Galileo */,
 				F2008F611D828D410056A22B /* ToothbrushScene */,
 				9242DC241DA9D42100868886 /* BearinBedScene */,
 				9242DC251DA9D44500868886 /* Kiss */,
@@ -494,8 +496,8 @@
 		F2008F611D828D410056A22B /* ToothbrushScene */ = {
 			isa = PBXGroup;
 			children = (
-				F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */,
 				F2008F5D1D828D2E0056A22B /* ToothbrushScene.swift */,
+				F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */,
 			);
 			name = ToothbrushScene;
 			sourceTree = "<group>";
@@ -526,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				92841DDA1D8F282E00735AC8 /* Extensions */,
+				F2F9910B1DB2E307004200B6 /* HUD.swift */,
 			);
 			name = Helpers;
 			path = Source/Helpers;
@@ -903,6 +906,7 @@
 				F20780CD1DAE0F15007E39DE /* Language.swift in Sources */,
 				9242DC271DA9D4D100868886 /* SAKissBedScene.swift in Sources */,
 				F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */,
+				F2F9910C1DB2E307004200B6 /* HUD.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
 				9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */,
 				9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */,

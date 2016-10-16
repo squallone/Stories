@@ -30,6 +30,8 @@ class SAPuppetScene: SABaseScene {
     /* Setup your scene here */
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+       
+        self.updateLocalizableString()
         
         /* Init Properties */
         puppetSpriteNode = self.childNode(withName: "puppet") as? SKSpriteNode
@@ -49,6 +51,18 @@ class SAPuppetScene: SABaseScene {
         /* Add gesture*/
         let upGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SAPuppetScene.handleSwipe(from:)))
         self.view!.addGestureRecognizer(upGestureRecognizer)
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_dress_instructions".localized
+        label1.text = "scene_tickle_text1".localized
+        label2.text = "scene_tickle_text2".localized
+        label3.text = "scene_tickle_text3".localized
+        label4.text = "scene_tickle_text4".localized
     }
     
     // MARK: Public methods

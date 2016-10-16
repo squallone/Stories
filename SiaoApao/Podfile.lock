@@ -3,28 +3,28 @@ PODS:
   - AlamofireObjectMapper (4.0.0):
     - Alamofire (~> 4.0)
     - ObjectMapper (~> 2.0)
+  - ARSLineProgress (2.0.0)
   - ObjectMapper (2.1.0)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
-  - VHUD (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
+  - ARSLineProgress (~> 2.0)
   - RealmSwift
-  - VHUD
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
+  ARSLineProgress: a20f4093d44802184cbc135bcd56259d6f12d002
   ObjectMapper: e5e0f8aef8590fc2ddcde7f27eddb255863ee6e9
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
-  VHUD: 6033e474cb4f8e1abd13ee1d2687eb044df95b05
 
-PODFILE CHECKSUM: 40e4a79c7e14e508a927a9090f1e1e6c89e3b4ea
+PODFILE CHECKSUM: 7e866185eb84efa3b697ca3d37ae1cc5f975c801
 
 COCOAPODS: 1.1.0.rc.2

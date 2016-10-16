@@ -26,13 +26,23 @@ class SASurfScene: SABaseScene {
         "pop.wav", waitForCompletion: true)
     
     let numberOfTouchToStop: NSInteger = 5
-
-    /* Setup your scene here */
-    override func didMove(to view: SKView) {
-        super.didMove(to: view)
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
         
         /* Title description */
-        titleLabel.text = "Calm the turles, tap of them"
+        titleLabel.text = "scene_turtles_instructions".localized
+        label1.text = "scene_turtles_text1".localized
+        label2.text = "scene_turtles_text2".localized
+        label3.text = "scene_turtles_text3".localized
+        label4.text = "scene_turtles_text4".localized
+    }
+
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+
+        self.updateLocalizableString()
         
         playBackgroundMusic(filename: "wave.wav")
         

@@ -5,7 +5,7 @@ use_frameworks!
 target 'SiaoApao' do
   pod 'Alamofire', '~> 4.0'
   pod 'RealmSwift'
-  pod 'VHUD'
+  pod 'ARSLineProgress', '~> 2.0'
   pod 'AlamofireObjectMapper', '~> 4.0'
 end
 

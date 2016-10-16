@@ -17,4 +17,8 @@ extension UIColor {
         return UIColor.color(redValue: 128.0, greenValue: 155.0, blueValue: 28, alpha: 1.0)
     }
     
+    class var colorLabels : UIColor{
+        return UIColor.color(redValue: 46.0, greenValue: 49.0, blueValue: 146.0, alpha: 1.0)
+    }
+    
 }

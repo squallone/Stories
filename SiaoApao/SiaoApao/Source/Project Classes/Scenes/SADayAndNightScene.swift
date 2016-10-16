@@ -18,11 +18,6 @@ class SADayAndNightScene: SABaseScene {
     var finishYposition: CGFloat = 360.0
     
     // MARK: - Properties
-    
-    var label1SpriteNode: SKLabelNode!
-    var label2SpriteNode: SKLabelNode!
-    var label3SpriteNode: SKLabelNode!
-    var label4SpriteNode: SKLabelNode!
 
     var sunSpriteNode: SKSpriteNode?
     var moonSpriteNode: SKSpriteNode?
@@ -41,8 +36,7 @@ class SADayAndNightScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
-        /* Title description */
-        titleLabel.text = "Pull the sun down and make the moon rise"
+        self.updateLocalizableString()
         
         /* Init Properties */
         sunSpriteNode     = self.childNode(withName: "sun") as? SKSpriteNode
@@ -50,11 +44,6 @@ class SADayAndNightScene: SABaseScene {
         skyBackgroundNode = self.childNode(withName: "SkyBackground") as? SKSpriteNode
         upArrowNode = self.childNode(withName: "upArrow") as? SKSpriteNode
         downArrowNode = self.childNode(withName: "downArrow") as? SKSpriteNode
-        
-        
-        /* Label Properties */
-        label1SpriteNode = self.childNode(withName: "label1") as! SKLabelNode!
-        label1SpriteNode.fontName = "Arial-Narrow-Bold"
         
         /* Set Init Position */
         let sunInitPosition = CGPoint(x: (sunSpriteNode?.position.x)!, y: startYPosition)
@@ -74,6 +63,18 @@ class SADayAndNightScene: SABaseScene {
         /* Bounce action */
         let bounceAction = SKAction.bounce(to: 1.05, duration: 0.2)
         downArrowNode?.run(SKAction.repeatForever(bounceAction), withKey: "moving")
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_day_night_instructions".localized
+        label1.text = "scene_day_night_text1".localized
+        label2.text = "scene_day_night_text2".localized
+        label3.text = "scene_day_night_text3".localized
+        label4.text = "scene_day_night_text4".localized
     }
     
     // MARK: - Gesture Actions

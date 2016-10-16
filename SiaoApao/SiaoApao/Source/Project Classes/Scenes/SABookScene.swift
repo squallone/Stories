@@ -34,6 +34,8 @@ class SABookScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         /* Init Properties */
         bookNode = self.childNode(withName: "book") as? SKSpriteNode
         bookGirlsNode = self.childNode(withName: "bookGirls") as? SKSpriteNode
@@ -51,6 +53,18 @@ class SABookScene: SABaseScene {
         /* Add gesture*/
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SABookScene.handlePanFrom))
         self.view!.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_read_book_instructions".localized
+        label1.text = "scene_read_book_text1".localized
+        label2.text = "scene_read_book_text2".localized
+        label3.text = "scene_read_book_text3".localized
+        label4.text = "scene_read_book_text4".localized
     }
     
     /* Override uopdate method */
