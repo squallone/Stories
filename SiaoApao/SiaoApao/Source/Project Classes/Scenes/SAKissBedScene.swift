@@ -38,8 +38,13 @@ class SAKissBedScene: SABaseScene {
                 if touchedNode == girlsNode  {
                     touchedNode.removeAllActions()
                     
+                    let newTexture = SKTexture.init(imageNamed: "KissGirl2")
+                    let newTextureAction = SKAction.setTexture(newTexture)
+                    
+                    let groupAction = SKAction.group([newTextureAction, kissSound])
+
                     /* Create the action */
-                    touchedNode.run(kissSound, completion: {
+                    touchedNode.run(groupAction, completion: {
                         print("show the next button")
                     })
                 }

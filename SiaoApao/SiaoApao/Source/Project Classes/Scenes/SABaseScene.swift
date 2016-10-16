@@ -250,7 +250,14 @@ extension SABaseScene{
                 }
             }
             break
-
+        case is SAEndScene:
+            /* There is not next Button */
+            if action == "back" {
+                if let nextScene = SAMoonSleepScene(fileNamed:"SAMoonSleepScene"){
+                    nextScene.scaleMode = .aspectFill
+                    scene?.view?.presentScene(nextScene, transition: transitionBack)
+                }
+            }
             
         default:
             break
