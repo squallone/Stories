@@ -6,15 +6,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="MyriadPro-Bold.otf">
+        <array key="MyriadPro-Bold.ttf">
             <string>MyriadPro-Bold</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="SiaoApao" customModuleProvider="target">
             <connections>
+                <outlet property="btnEnglish" destination="e8E-Vr-NSN" id="gad-0h-fs4"/>
+                <outlet property="btnSpanish" destination="i26-t3-hq9" id="TJG-UK-0Gz"/>
                 <outlet property="lblGames" destination="gat-eR-GcX" id="TGY-Jr-SOp"/>
-                <outlet property="lblStories" destination="Teo-Df-ySp" id="fWD-Ps-qS3"/>
+                <outlet property="lblLanguage" destination="Ieo-6p-Q4H" id="Pkt-pq-DQ4"/>
+                <outlet property="lblStories" destination="Teo-Df-ySp" id="ND8-jM-zWZ"/>
                 <outlet property="lblcharacters" destination="bnI-cK-UuR" id="g9n-uH-dgg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Wbx-gw-Cb7"/>
             </connections>
@@ -100,25 +103,35 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i26-t3-hq9">
                             <frame key="frameInset" minY="64" width="145" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="16"/>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
-                                <action selector="changeLanguageToEnglish:" destination="-1" eventType="touchUpInside" id="gKy-Ii-cma"/>
+                                <action selector="changeLanguageToSpanish" destination="-1" eventType="touchUpInside" id="RRs-E3-DXS"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-Vr-NSN">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8E-Vr-NSN" userLabel="Btn English">
                             <frame key="frameInset" minY="100" width="145" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="16"/>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
-                                <action selector="changeLanguageToSpanish:" destination="-1" eventType="touchUpInside" id="gBV-Ef-1vN"/>
+                                <action selector="changeLanguageToEnglish" destination="-1" eventType="touchUpInside" id="nVh-CR-SiF"/>
                             </connections>
                         </button>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieo-6p-Q4H">
+                            <frame key="frameInset" minY="8" width="152" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFC-WC-HjK" userLabel="Corner">
-                    <frame key="frameInset" minX="907" width="117" height="117"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="logo_corner"/>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -128,14 +141,14 @@
                 <constraint firstItem="SSn-Xg-Lh5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ckX-I4-u1o"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="22" y="26"/>
         </view>
     </objects>
     <resources>
         <image name="MainMenu" width="682" height="511"/>
         <image name="icon_siaapao" width="585" height="588"/>
         <image name="label_siaapa" width="339" height="178"/>
-        <image name="language_menu" width="251" height="198"/>
-        <image name="logo_corner" width="168" height="168"/>
+        <image name="language_menu" width="191" height="149"/>
         <image name="menu_back_characters" width="412" height="164"/>
         <image name="menu_back_games" width="262" height="201"/>
         <image name="menu_back_stories" width="376" height="182"/>

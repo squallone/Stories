@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SAMenuStoriesViewController: UIViewController {
+class SAMenuStoriesViewController: BaseViewController {
     
     // MARK: - @IBOutlet
     
@@ -34,7 +34,28 @@ class SAMenuStoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Navigation
         flowController = SAMenuStoriesFlowController(navigationController: self.navigationController)
+
+        // Hide menu
+        self.dropDownView.isHidden = true
+        
+        // Update recognizers
+        let tapHome = UITapGestureRecognizer(target: self, action:#selector(SAMenuStoriesViewController.goHome))
+        self.lblHome.addGestureRecognizer(tapHome)
+        
+        // Update recognizers
+        let tapEnglish = UITapGestureRecognizer(target: self, action:#selector(SAMenuStoriesViewController.changeLanguageToEnglish))
+        self.lblEnglish.addGestureRecognizer(tapEnglish)
+        
+        // Update recognizers
+        let tapSpanish = UITapGestureRecognizer(target: self, action:#selector(SAMenuStoriesViewController.changeLanguageToSpanish))
+        self.lblSpanish.addGestureRecognizer(tapSpanish)
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.updateLocalizableStrings()
     }
     
@@ -46,11 +67,10 @@ class SAMenuStoriesViewController: UIViewController {
         self.lblStories.text    = "stories".localized
         self.lblCharacters.text = "characters".localized
         
-        self.lblHome.text       = "Home"
-        self.lblLanguage.text   = "Language"
-        self.lblEnglish.text    = "English"
-        self.lblSpanish.text    = "Spanish"
-        
+        self.lblHome.text       = "home".localized
+        self.lblLanguage.text   = "language".localized
+        self.lblEnglish.text    = "english".localized
+        self.lblSpanish.text    = "spanish".localized
     }
     
     // MARK: Stories
@@ -85,9 +105,36 @@ class SAMenuStoriesViewController: UIViewController {
     }
     
     @IBAction func showMenu(_ sender: AnyObject) {
+        
+        self.dropDownView.isHidden = self.dropDownView.isHidden ? false : true
+
+    }
+    
+    // MARK: - Menu Actions
+    
+    func goHome(){
         flowController.showMenu()
+    }
+    
+    func changeLanguageToSpanish(){
+        
+        // Hide menu
+        self.dropDownView.isHidden = true
+        // Save language code
+        Language.saveCode(code: "ES")
+        // Update strings
+        self.updateLocalizableStrings()
         
     }
     
+    func changeLanguageToEnglish(){
+        
+        // Hide menu
+        self.dropDownView.isHidden = true
+        // Save language code
+        Language.saveCode(code: "EN")
+        // Update strings
+        self.updateLocalizableStrings()
+    }
     
 }

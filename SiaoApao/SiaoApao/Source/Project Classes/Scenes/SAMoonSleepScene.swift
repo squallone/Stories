@@ -27,6 +27,8 @@ class SAMoonSleepScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.updateLocalizableString()
+        
         moonNode = self.childNode(withName: "moon") as? SKSpriteNode
         darkNode = self.childNode(withName: "dark") as? SKSpriteNode
         
@@ -52,5 +54,17 @@ class SAMoonSleepScene: SABaseScene {
         run(sequenceAction) {
             print("Show next")
         }
+    }
+    
+    // MARK: - Labels
+    
+    func updateLocalizableString(){
+        
+        /* Title description */
+        titleLabel.text = "scene_sleeping_instructions".localized
+        label1.text = "scene_sleeping_text1".localized
+        label2.text = "scene_sleeping_text2".localized
+        label3.text = "scene_sleeping_text3".localized
+        label4.text = "scene_sleeping_text4".localized
     }
 }

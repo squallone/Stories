@@ -15,10 +15,14 @@ class SABaseScene: SKScene {
     public var nextButton: SKSpriteNode?
     public var titleLabel: SKLabelNode!
     
+    public var backgroundLabel: SKSpriteNode!
+
     public var label1: SKLabelNode!
     public var label2: SKLabelNode!
     public var label3: SKLabelNode!
     public var label4: SKLabelNode!
+    
+    let labelFontSize : CGFloat = 28.0
 
     // MARK: - Actions
     
@@ -30,38 +34,38 @@ class SABaseScene: SKScene {
     func addLabels(){
         
         label1 = SKLabelNode(text: "")
-        label1.position = CGPoint(x: 40, y: 717)
+        label1.position = CGPoint(x: 40, y: 710)
         label1.horizontalAlignmentMode = .left
         label1.zPosition = 13
-        label1.fontSize = 23
-        label1.fontName = "Arial-Bold"
+        label1.fontSize = labelFontSize
+        label1.fontName = "ArialNarrow-Bold"
         label1.fontColor = UIColor.colorLabels
         addChild(label1)
         
         label2 = SKLabelNode(text: "")
-        label2.position = CGPoint(x: 40, y: 687)
+        label2.position = CGPoint(x: 40, y: 675)
         label2.horizontalAlignmentMode = .left
         label2.zPosition = 13
-        label2.fontSize = 23
-        label2.fontName = "Arial-Bold"
+        label2.fontSize = labelFontSize
+        label2.fontName = "ArialNarrow-Bold"
         label2.fontColor = UIColor.colorLabels
         addChild(label2)
         
         label3 = SKLabelNode(text: "")
-        label3.position = CGPoint(x: 40, y: 657)
+        label3.position = CGPoint(x: 40, y: 640)
         label3.horizontalAlignmentMode = .left
         label3.zPosition = 13
-        label3.fontSize = 23
-        label3.fontName = "Arial-Bold"
+        label3.fontSize = labelFontSize
+        label3.fontName = "ArialNarrow-Bold"
         label3.fontColor = UIColor.colorLabels
         addChild(label3)
         
         label4 = SKLabelNode(text: "")
-        label4.position = CGPoint(x: 40, y: 627)
+        label4.position = CGPoint(x: 40, y: 605)
         label4.horizontalAlignmentMode = .left
         label4.zPosition = 13
-        label4.fontSize = 23
-        label4.fontName = "Arial-Bold"
+        label4.fontSize = labelFontSize
+        label4.fontName = "ArialNarrow-Bold"
         label4.fontColor = UIColor.colorLabels
         addChild(label4)
     }
@@ -93,9 +97,10 @@ class SABaseScene: SKScene {
         addChild(titleBar)
         
         titleLabel = SKLabelNode(text: "")
-        titleLabel.position = CGPoint(x: size.width / 2, y: 50)
+        titleLabel.position = CGPoint(x: size.width / 2, y: 55)
         titleLabel.zPosition = 13
         titleLabel.fontName = "MyriadPro-Bold"
+        titleLabel.fontSize = labelFontSize
         titleLabel.fontColor = UIColor.white
         addChild(titleLabel)
     }
@@ -110,7 +115,6 @@ class SABaseScene: SKScene {
             }
         }
     }
-    
 }
 
 extension SABaseScene{

@@ -88,17 +88,60 @@ class Language: Object, Mappable {
         return ["labels"]
     }
     
+    class func save(_ languages: [Language]){
+        
+        do {
+            let realm = try! Realm()
+            try realm.write {
+                for language in languages {
+                    realm.add(language, update: true)
+                    print("Updated \(language.code) language succesfully")
+                }
+            }
+        } catch let error as NSError {
+            print("Realm write error: \(error)")
+            //TODO: Handle error
+        }
+    }
+    
     
     // MARK: - Public methods
     
-    class func currentLanguage() -> Language?{
+    class func current() -> Language?{
+        
+        let code = UserDefaults.standard.string(forKey: "language_selected")
+        
+        guard let codeSelected = code else{
+            return nil
+        }
+        
+        return getLanguage(code: codeSelected)
+        
+    }
+    
+    class func getLanguage(code: String) -> Language?{
+        return self.getLanguage(code: code, save: true)
+    }
+    
+    class func getLanguage(code: String, save: Bool) -> Language? {
         
         let realm = try! Realm()
-        let language = realm.object(ofType: Language.self, forPrimaryKey: "EN")
+        let language = realm.object(ofType: Language.self, forPrimaryKey: code)
         
         guard let lang = language else{
             return nil
         }
+        
+        if(save){
+            self.saveCode(code: code)
+        }
+        
         return lang
+    }
+    
+    class func saveCode(code: String){
+    
+        UserDefaults.standard.set(code, forKey: "language_selected")
+
     }
 }

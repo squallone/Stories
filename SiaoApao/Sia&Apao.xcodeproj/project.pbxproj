@@ -63,7 +63,6 @@
 		F20FEF8E1DB169E700FF940B /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8D1DB169E700FF940B /* String+Localized.swift */; };
 		F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8F1DB16C4200FF940B /* RealmManager.swift */; };
 		F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED681D7F8C6B00D98278 /* Constants.swift */; };
-		F220ED6F1D7F935500D98278 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED6E1D7F935500D98278 /* view.swift */; };
 		F220ED751D7F939D00D98278 /* asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED741D7F939D00D98278 /* asset.swift */; };
 		F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ED761D7F975600D98278 /* MenuViewController.swift */; };
 		F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F220ED771D7F975600D98278 /* MenuViewController.xib */; };
@@ -72,12 +71,15 @@
 		F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242671D1DAB092600708A54 /* BiographyViewController.swift */; };
 		F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F242671E1DAB092600708A54 /* BiographyViewController.xib */; };
 		F24267231DAB2F5F00708A54 /* SACharactersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */; };
+		F2588EDC1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2588EDB1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf */; };
+		F2588EDE1DB4454400F2EF62 /* MyriadPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2588EDD1DB4454400F2EF62 /* MyriadPro-Bold.ttf */; };
+		F2588EE01DB445E100F2EF62 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588EDF1DB445E100F2EF62 /* MenuView.swift */; };
+		F2588EE21DB4460000F2EF62 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2588EE11DB4460000F2EF62 /* MenuView.xib */; };
+		F2588EE41DB4548E00F2EF62 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2A115CC1DB0700500602128 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A115CB1DB0700500602128 /* Character.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
-		F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */; };
-		F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */; };
 		F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */; };
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
@@ -178,7 +180,6 @@
 		F20FEF8D1DB169E700FF940B /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		F20FEF8F1DB16C4200FF940B /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		F220ED681D7F8C6B00D98278 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
-		F220ED6E1D7F935500D98278 /* view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		F220ED741D7F939D00D98278 /* asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asset.swift; sourceTree = "<group>"; };
 		F220ED761D7F975600D98278 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F220ED771D7F975600D98278 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -187,18 +188,20 @@
 		F242671D1DAB092600708A54 /* BiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
 		F242671E1DAB092600708A54 /* BiographyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyViewController.xib; sourceTree = "<group>"; };
 		F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACharactersFlowController.swift; sourceTree = "<group>"; };
+		F2588EDB1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArialNarrow-Bold.ttf"; sourceTree = "<group>"; };
+		F2588EDD1DB4454400F2EF62 /* MyriadPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.ttf"; sourceTree = "<group>"; };
+		F2588EDF1DB445E100F2EF62 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		F2588EE11DB4460000F2EF62 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2A115CB1DB0700500602128 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
-		F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Black.otf"; sourceTree = "<group>"; };
-		F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
 		F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesViewController.swift; sourceTree = "<group>"; };
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
 		F2B66E9A1D812E3B00652249 /* SAMenuGamesFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesFlowController.swift; sourceTree = "<group>"; };
 		F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
-		F2B9F4081DA614C400B94545 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKOutlinedLabelNode.swift; sourceTree = "<group>"; };
 		F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuStoriesViewController.swift; sourceTree = "<group>"; };
 		F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuStoriesViewController.xib; sourceTree = "<group>"; };
@@ -582,8 +585,9 @@
 		F220ED671D7F8C4B00D98278 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F220ED6E1D7F935500D98278 /* view.swift */,
 				F2B66E981D8126AF00652249 /* SALabel.swift */,
+				F2588EDF1DB445E100F2EF62 /* MenuView.swift */,
+				F2588EE11DB4460000F2EF62 /* MenuView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -635,9 +639,8 @@
 		F2AB0B981DA4BDCB00A78260 /* MyriadPro */ = {
 			isa = PBXGroup;
 			children = (
-				F2B9F4081DA614C400B94545 /* MyriadPro-Bold.otf */,
-				F2AB0B991DA4BDCB00A78260 /* MyriadPro-Black.otf */,
-				F2AB0B9A1DA4BDCB00A78260 /* MyriadPro-Regular.otf */,
+				F2588EDD1DB4454400F2EF62 /* MyriadPro-Bold.ttf */,
+				F2588EDB1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf */,
 			);
 			path = MyriadPro;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 			children = (
 				F20780CA1DAE0B90007E39DE /* Flow Control */,
 				F20FEF8F1DB16C4200FF940B /* RealmManager.swift */,
+				F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */,
 			);
 			name = Managers;
 			path = Source/Managers;
@@ -799,13 +803,14 @@
 				9256CB2F1DAB42A800AB4332 /* kiss.wav in Resources */,
 				9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */,
 				9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */,
-				F2AB0B9C1DA4BDCB00A78260 /* MyriadPro-Regular.otf in Resources */,
+				F2588EDE1DB4454400F2EF62 /* MyriadPro-Bold.ttf in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
 				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
 				9242DC341DA9DBBA00868886 /* SAMoonSleepScene.sks in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
+				F2588EE21DB4460000F2EF62 /* MenuView.xib in Resources */,
 				927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
 				923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */,
@@ -814,7 +819,6 @@
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
-				F2AB0B9B1DA4BDCB00A78260 /* MyriadPro-Black.otf in Resources */,
 				F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */,
 				928FBF1D1DA774B100664630 /* hey.wav in Resources */,
 				9242DC3B1DA9E1AC00868886 /* dance.wav in Resources */,
@@ -823,6 +827,7 @@
 				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
+				F2588EDC1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf in Resources */,
 				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
 				F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */,
 				921D07C41DA2026A00A4FC39 /* laughing.wav in Resources */,
@@ -909,9 +914,9 @@
 				F2F9910C1DB2E307004200B6 /* HUD.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
 				9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */,
+				F2588EE41DB4548E00F2EF62 /* LanguageManager.swift in Sources */,
 				9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */,
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
-				F220ED6F1D7F935500D98278 /* view.swift in Sources */,
 				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
 				F2A115CC1DB0700500602128 /* Character.swift in Sources */,
 				92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */,
@@ -923,6 +928,7 @@
 				F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */,
 				9241096C1D828FB1009523F9 /* SABookScene.swift in Sources */,
 				F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */,
+				F2588EE01DB445E100F2EF62 /* MenuView.swift in Sources */,
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
 				923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,

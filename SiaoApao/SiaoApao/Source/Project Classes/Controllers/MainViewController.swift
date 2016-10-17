@@ -17,20 +17,30 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let URL = "https://jsonblob.com/api/blob/5800350ee4b0bcac9f7f01bd"
-        
+        let URL = "http://52.88.85.62/JsonSA"
+
         HUD.show()
         
-        Alamofire.request(URL).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
+        Alamofire.request(URL, method: .post).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
             switch response.result{
             case .success(let languages):
                 
-                RealmManager.saveLanguages(languages)
+                // Hide HUD
                 HUD.hide()
+                
+                // Save languages
+                Language.save(languages)
+                
+                // Set default language code
+                Language.saveCode(code: "EN")
+                
+                // Show Menu
                 self.showMainMenu()
                 
             case .failure(let error):
                 print("Alamofire error: \(error)")
+                
+            
                 HUD.hide()
 
             }

@@ -8,10 +8,13 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: BaseViewController {
     
     // MARK: - @IBOutlet
+    @IBOutlet weak var btnSpanish: UIButton!
+    @IBOutlet weak var btnEnglish: UIButton!
     
+    @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var lblStories: UILabel!
     @IBOutlet weak var lblGames: UILabel!
     @IBOutlet weak var lblcharacters: UILabel!
@@ -24,10 +27,16 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        flowController = SAMenuFlowController(navigationController: self.navigationController)
         
-        //self.setupUI()
+        // Setup navigation
+        flowController = SAMenuFlowController(navigationController: self.navigationController)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.updateLocalizableStrings()
+
     }
     
     // MARK: - UI
@@ -45,10 +54,14 @@ class MenuViewController: UIViewController {
     
     // MARK: - Labels
     func updateLocalizableStrings(){
+        
+        self.btnSpanish.setTitle("spanish".localized, for: .normal)
+        self.btnEnglish.setTitle("english".localized, for: .normal)
+        
+        self.lblLanguage.text   = "language".localized
         self.lblGames.text      = "games".localized
         self.lblStories.text    = "stories".localized
         self.lblcharacters.text = "characters".localized
-        
     }
     
     // MARK: - Navigation
@@ -65,13 +78,28 @@ class MenuViewController: UIViewController {
         flowController.showCharacters()
         
     }
+        
+    // MARK: - Menu Actions
     
-    // MARK: - Language
-    
-    @IBAction func changeLanguageToEnglish(_ sender: AnyObject) {
+    func goHome(){
+        flowController.showMenu()
     }
     
-    @IBAction func changeLanguageToSpanish(_ sender: AnyObject) {
+    @IBAction  func changeLanguageToSpanish(){
+
+        // Save language code
+        Language.saveCode(code: "ES")
         
+        // Update strings
+        self.updateLocalizableStrings()
+    }
+    
+    @IBAction  func changeLanguageToEnglish(){
+        
+        // Save language code
+        Language.saveCode(code: "EN")
+        
+        // Update strings
+        self.updateLocalizableStrings()
     }
 }

@@ -42,7 +42,6 @@ class SAKissBedScene: SABaseScene {
         label4.text = "scene_kiss_apao_text4".localized
     }
     
-    
     // MARK: - Gesture Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -53,7 +52,7 @@ class SAKissBedScene: SABaseScene {
                 if touchedNode == girlsNode  {
                     touchedNode.removeAllActions()
                     
-                    let newTexture = SKTexture.init(imageNamed: "KissGirl2")
+                    let newTexture = SKTexture.init(imageNamed: "kissGirl2")
                     let newTextureAction = SKAction.setTexture(newTexture)
                     
                     let groupAction = SKAction.group([newTextureAction, kissSound])
