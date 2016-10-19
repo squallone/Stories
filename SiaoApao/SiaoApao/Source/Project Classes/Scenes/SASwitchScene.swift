@@ -69,9 +69,9 @@ class SASwitchScene: SABaseScene {
                     }
                     darkNode?.run(alphaAction, completion: { 
                         if self.darkNode?.alpha == 0 {
-                            print("Hide the next button")
+                            self.hideNextButton()
                         } else{
-                            print("Show the next button")
+                            self.showNextButton()
                         }
                     })
                 }

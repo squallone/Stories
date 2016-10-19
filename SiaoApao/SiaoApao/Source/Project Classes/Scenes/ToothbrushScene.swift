@@ -87,7 +87,9 @@ class ToothbrushScene: SABaseScene {
                                 }
                                 
                                 if self.checkBubbleIsTapped() {
-                                    print("Show next Button")
+                                    
+                                    // Show next button
+                                    self.showNextButton()
                                 }
                             }
                         })

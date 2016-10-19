@@ -59,7 +59,10 @@ class SAKissBedScene: SABaseScene {
 
                     /* Create the action */
                     touchedNode.run(groupAction, completion: {
-                        print("show the next button")
+                        
+                        // Show the next button
+                        self.showNextButton()
+
                     })
                 }
             }

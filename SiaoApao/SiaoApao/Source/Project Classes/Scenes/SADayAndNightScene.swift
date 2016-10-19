@@ -110,14 +110,17 @@ class SADayAndNightScene: SABaseScene {
                     
                     if selectedNode == sunSpriteNode {
                         print("Show next Button")
+
+                        showNextButton()
                     } else{
+                        
+                        hideNextButton()
                         /* Show Arrows */
                         downArrowNode?.removeAllActions()
                         let fadeOutAction = SKAction.fadeIn(withDuration: 0.5)
                         downArrowNode?.run(fadeOutAction)
                         upArrowNode?.run(fadeOutAction)
                         
-                        print("Hide next Button")
                     }
                     
                 } else {

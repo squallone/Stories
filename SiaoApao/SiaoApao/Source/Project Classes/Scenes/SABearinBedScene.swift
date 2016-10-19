@@ -95,7 +95,8 @@ class SABearinBedScene: SABaseScene {
                                 self.bearNode?.run(SKAction.repeatForever(bounceAction))
                             })
                         } else {
-                            print("show the next button")
+                            // Show next button
+                            showNextButton()
                         }
                     }
                 }

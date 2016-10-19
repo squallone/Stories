@@ -104,7 +104,9 @@ class SAFishbowlScene: SABaseScene {
                         if (self.fishNode?.position.x)! > self.finalPositon.x {
                             let crossFaceAction = SKAction.fadeOut(withDuration: 1.0)
                             self.fishNode?.run(crossFaceAction, completion: {
-                                print("Show next button")
+                                
+                                // Show next button
+                                self.showNextButton()
                             })
                         }
                     })

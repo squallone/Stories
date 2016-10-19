@@ -52,7 +52,7 @@ class SAMoonSleepScene: SABaseScene {
 
         let sequenceAction = SKAction.sequence(sequenceArray)
         run(sequenceAction) {
-            print("Show next")
+            self.showNextButton()
         }
     }
     

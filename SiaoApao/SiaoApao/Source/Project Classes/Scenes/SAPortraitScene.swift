@@ -108,10 +108,10 @@ class SAPortraitScene: SABaseScene {
                             let sequence = SKAction.group([heySound, fadeInAction])
                             ballonNode?.run(sequence)
                             
-                            print("Show next Button")
-                            
+                            showNextButton()
+
                         } else {
-                            print("Hide next Button")
+                            hideNextButton()
                         }
                     }
                 }

@@ -119,13 +119,14 @@ class SAPuppetScene: SABaseScene {
 
                     createSmile(with: currentSmileValue)
                     
-                    print("Not show Next Button")
+                    hideNextButton()
                 } else {
                     /* HideArrows */
                     let fadeOutAction = SKAction.fadeOut(withDuration: 1.0)
                     tralingArrowNode?.run(fadeOutAction)
                     leadingArrowNode?.run(fadeOutAction)
-                    print("show Next Button")
+
+                    showNextButton()                    
                 }
             }
         }

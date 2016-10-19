@@ -113,9 +113,10 @@ class SASurfScene: SABaseScene {
                     }
                     
                     if self.checkTortoisePause() {
-                        print("Show next Button")
+                        showNextButton()
+
                     } else {
-                        print("Hide next Button")
+                        hideNextButton()
                     }
                 }
             }

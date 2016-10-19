@@ -105,7 +105,9 @@ class SACarpetScene: SABaseScene {
                                     let finalImage = UIImage.init(named: "TiredDragon")
                                     self.dragonNode?.texture = SKTexture.init(image: finalImage!)
                                     self.dragonNode?.run(self.tiredSound)
-                                    print("Show next button")
+                                    
+                                    // Show next button
+                                    self.showNextButton()
                                 }
                             })
                         }

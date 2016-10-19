@@ -15,7 +15,7 @@ class SABookScene: SABaseScene {
     var bookGirlsNode: SKSpriteNode?
     var armchairNode: SKSpriteNode?
     var selectedNode = SKNode()
-    var numbeOfTotalLetter = 10
+    var numbeOfTotalLetter = 0
     
     // MARK: - PopSound
     let popSound: SKAction = SKAction.playSoundFileNamed(
@@ -28,13 +28,16 @@ class SABookScene: SABaseScene {
     var velocityNodeList: [CGPoint] = []
     var lastUpdateTimeList: [TimeInterval] = []
     var dtList: [TimeInterval] = []
-    
+    var words: [String] = ["Bubbles", "Book", "Adventure", "Sun", "Moon", "Turtles", "Coach", "Dragon", "Bed"]
+
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
         self.updateLocalizableString()
+        
+        self.numbeOfTotalLetter = words.count
         
         /* Init Properties */
         bookNode = self.childNode(withName: "book") as? SKSpriteNode
@@ -94,8 +97,8 @@ class SABookScene: SABaseScene {
         let letterLabelNode =  SKLabelNode(fontNamed: "Arial")
         letterLabelNode.name = "letter"
         
-        letterLabelNode.text = randomStringWithLength(len: 0)
-        letterLabelNode.fontSize = 85
+        letterLabelNode.text = words[identifier]
+        letterLabelNode.fontSize = 50
         letterLabelNode.fontColor = UIColor.black
         letterLabelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
         letterLabelNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
@@ -130,7 +133,7 @@ class SABookScene: SABaseScene {
             self.velocityNodeList[identifier] = velocity
             
             /* Add new letter */
-            if identifier < self.numbeOfTotalLetter {
+            if identifier < self.numbeOfTotalLetter - 1{
                 let newIdentifier = identifier + 1
                 self.createRandomLabel(identifier: newIdentifier)
             }
@@ -188,8 +191,10 @@ class SABookScene: SABaseScene {
                         self.selectedNode.removeFromParent()
                         
                         self.numbeOfTotalLetter -= 1
-                        if self.numbeOfTotalLetter < 0 {
+                        
+                        if self.numbeOfTotalLetter < 2 {
                             print("Show Next Button")
+                            self.showNextButton()
                         }
                     })
                 }
@@ -208,10 +213,11 @@ class SABookScene: SABaseScene {
         
         if touchedNode is SKLabelNode {
             
-            touchedNode.removeAllActions()
-            
-            let indexNode = letterLabelNodeList.index(of: touchedNode as! SKLabelNode)
-            self.velocityNodeList[indexNode!] = CGPoint.zero
+            if let indexNode = letterLabelNodeList.index(of: touchedNode as! SKLabelNode){
+                touchedNode.removeAllActions()
+
+                self.velocityNodeList[indexNode] = CGPoint.zero
+            }
         }
     }
     

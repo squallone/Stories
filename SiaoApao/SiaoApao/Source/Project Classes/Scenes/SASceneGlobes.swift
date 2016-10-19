@@ -18,7 +18,8 @@ class SASceneGlobes: SABaseScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-     
+    
+        // Strings
         self.updateLocalizableString()
   
         /* Add bubble animation */
@@ -90,7 +91,8 @@ class SASceneGlobes: SABaseScene {
                         
                         self.totalBubbles -= 1
                         if self.totalBubbles <= 0 {
-                            print("Show Next Button")
+
+                            self.showNextButton()
                         }
 
                     })

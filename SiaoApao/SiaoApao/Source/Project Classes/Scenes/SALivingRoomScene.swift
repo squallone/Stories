@@ -72,10 +72,10 @@ class SALivingRoomScene: SABaseScene {
                                 touchedNode.removeAllActions()
                             })
 
-                            print("No Show next Button")
+                            hideNextButton()
 
                         } else {
-                            print("Show next Button")
+                            showNextButton()
 
                         }
                     }

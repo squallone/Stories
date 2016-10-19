@@ -24,12 +24,15 @@ class SABaseScene: SKScene {
     
     let labelFontSize : CGFloat = 28.0
 
-    // MARK: - Actions
+    // MARK: - Life cycle
     
     override func didMove(to view: SKView) {
         self.addLabels()
         self.addInstructionsBar()
     }
+    
+    // MARK: - Actions
+
     
     func addLabels(){
         
@@ -40,6 +43,7 @@ class SABaseScene: SKScene {
         label1.fontSize = labelFontSize
         label1.fontName = "ArialNarrow-Bold"
         label1.fontColor = UIColor.colorLabels
+        label1.isUserInteractionEnabled = false
         addChild(label1)
         
         label2 = SKLabelNode(text: "")
@@ -49,6 +53,8 @@ class SABaseScene: SKScene {
         label2.fontSize = labelFontSize
         label2.fontName = "ArialNarrow-Bold"
         label2.fontColor = UIColor.colorLabels
+        label2.isUserInteractionEnabled = false
+
         addChild(label2)
         
         label3 = SKLabelNode(text: "")
@@ -58,6 +64,7 @@ class SABaseScene: SKScene {
         label3.fontSize = labelFontSize
         label3.fontName = "ArialNarrow-Bold"
         label3.fontColor = UIColor.colorLabels
+        label3.isUserInteractionEnabled = false
         addChild(label3)
         
         label4 = SKLabelNode(text: "")
@@ -67,6 +74,7 @@ class SABaseScene: SKScene {
         label4.fontSize = labelFontSize
         label4.fontName = "ArialNarrow-Bold"
         label4.fontColor = UIColor.colorLabels
+        label4.isUserInteractionEnabled = false
         addChild(label4)
     }
     
@@ -89,6 +97,9 @@ class SABaseScene: SKScene {
         nextButton?.zPosition = 10
         addChild(nextButton!)
         
+        // Default status for next button
+        self.hideNextButton()
+        
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
         titleBar.position = CGPoint(x: size.width / 2, y: 65)
@@ -104,6 +115,18 @@ class SABaseScene: SKScene {
         titleLabel.fontColor = UIColor.white
         addChild(titleLabel)
     }
+    
+    func hideNextButton(){
+        self.nextButton?.isUserInteractionEnabled = true
+        self.nextButton?.alpha = 0.7
+    }
+    
+    func showNextButton(){
+        self.nextButton?.isUserInteractionEnabled = false
+        self.nextButton?.alpha = 1.0
+    }
+    
+    // MARK: - Touches Began
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
