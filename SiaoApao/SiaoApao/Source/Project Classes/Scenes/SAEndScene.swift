@@ -9,5 +9,11 @@
 import SpriteKit
 
 class SAEndScene: SABaseScene {
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        
+        self.nextButton?.texture = SKTexture(imageNamed: "home")
+    }
 
 }

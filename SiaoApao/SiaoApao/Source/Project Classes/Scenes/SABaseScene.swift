@@ -98,7 +98,7 @@ class SABaseScene: SKScene {
         addChild(nextButton!)
         
         // Default status for next button
-        self.hideNextButton()
+       //self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
@@ -125,6 +125,21 @@ class SABaseScene: SKScene {
         self.nextButton?.isUserInteractionEnabled = false
         self.nextButton?.alpha = 1.0
     }
+    
+    func hideLabels(){
+        self.label1.isHidden = true
+        self.label2.isHidden = true
+        self.label3.isHidden = true
+        self.label4.isHidden = true
+    }
+    
+    func showLabels(){
+        self.label1.isHidden = false
+        self.label2.isHidden = false
+        self.label3.isHidden = false
+        self.label4.isHidden = false
+    }
+    
     
     // MARK: - Touches Began
     
@@ -327,8 +342,13 @@ extension SABaseScene{
             }
             break
         case is SAEndScene:
-            /* There is not next Button */
-            if action == "back" {
+            if action == "next" {
+                self.removeFromParent()
+                self.view?.presentScene(nil)
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "close"), object: nil)
+            
+            }else if action == "back" {
                 if let nextScene = SAMoonSleepScene(fileNamed:"SAMoonSleepScene"){
                     nextScene.scaleMode = .aspectFill
                     scene?.view?.presentScene(nextScene, transition: transitionBack)

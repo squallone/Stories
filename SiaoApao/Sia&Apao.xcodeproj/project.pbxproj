@@ -80,6 +80,8 @@
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2A115CC1DB0700500602128 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A115CB1DB0700500602128 /* Character.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
+		F2AC6D391DB77A160091B091 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC6D381DB77A160091B091 /* Game.swift */; };
+		F2AC6D3B1DB77A1F0091B091 /* Storie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC6D3A1DB77A1F0091B091 /* Storie.swift */; };
 		F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */; };
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
@@ -197,6 +199,8 @@
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2A115CB1DB0700500602128 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
+		F2AC6D381DB77A160091B091 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F2AC6D3A1DB77A1F0091B091 /* Storie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storie.swift; sourceTree = "<group>"; };
 		F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesViewController.swift; sourceTree = "<group>"; };
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
@@ -578,6 +582,8 @@
 			children = (
 				F20780CC1DAE0F15007E39DE /* Language.swift */,
 				F2A115CB1DB0700500602128 /* Character.swift */,
+				F2AC6D381DB77A160091B091 /* Game.swift */,
+				F2AC6D3A1DB77A1F0091B091 /* Storie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -918,6 +924,7 @@
 				9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */,
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
 				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
+				F2AC6D3B1DB77A1F0091B091 /* Storie.swift in Sources */,
 				F2A115CC1DB0700500602128 /* Character.swift in Sources */,
 				92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */,
 				F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */,
@@ -948,6 +955,7 @@
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
 				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
+				F2AC6D391DB77A160091B091 /* Game.swift in Sources */,
 				F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */,

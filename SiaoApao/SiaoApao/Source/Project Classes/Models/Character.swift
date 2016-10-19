@@ -7,9 +7,8 @@
 //
 
 import ObjectMapper
-import RealmSwift
 
-class Character: Object, Mappable {
+class Character: Mappable {
 
     dynamic var name        = ""
     dynamic var phrase      = ""
@@ -19,10 +18,6 @@ class Character: Object, Mappable {
     //Impl. of Mappable protocol
     required convenience init?(map: Map) {
         self.init()
-    }
-    
-    override static func primaryKey() -> String? {
-        return "name"
     }
     
     func mapping(map: Map) {

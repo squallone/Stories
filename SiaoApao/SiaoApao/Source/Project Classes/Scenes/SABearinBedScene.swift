@@ -19,11 +19,10 @@ class SABearinBedScene: SABaseScene {
     
     var currentSelect: Int = 0
     
-    // TODO: Cambiar estos textos por los localizados
-    let phrasesLetter: [String] = ["Gracias",
-                                   "Te quiero",
-                                   "Listo para dormir",
-                                   "Okay, ya estuvo"]
+    let phrasesLetter: [String] = ["orli_dialogue1".localized,
+                                   "orli_dialogue2".localized,
+                                   "orli_dialogue3".localized,
+                                   "orli_dialogue4".localized]
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)

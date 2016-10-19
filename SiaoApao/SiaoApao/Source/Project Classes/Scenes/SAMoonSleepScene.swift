@@ -27,6 +27,8 @@ class SAMoonSleepScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.hideLabels()
+
         self.updateLocalizableString()
         
         moonNode = self.childNode(withName: "moon") as? SKSpriteNode
@@ -52,6 +54,21 @@ class SAMoonSleepScene: SABaseScene {
 
         let sequenceAction = SKAction.sequence(sequenceArray)
         run(sequenceAction) {
+
+            self.showLabels()
+            
+            self.label1.position = CGPoint(x: 440, y: 205)
+            self.label2.position = CGPoint(x: 440, y: 170)
+            self.label3.position = CGPoint(x: 440, y: 135)
+            self.label4.position = CGPoint(x: 440, y: 100)
+            
+            let background       = SKSpriteNode()
+            background.color     = UIColor(white: 1.0, alpha: 0.8)
+            background.size      = CGSize(width: 420, height: 115)
+            background.position  = CGPoint(x: 640, y: 180)
+            background.zPosition = 10
+            self.addChild(background)
+            
             self.showNextButton()
         }
     }

@@ -13,25 +13,40 @@ class SASheetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(SASheetViewController.close), name: NSNotification.Name(rawValue: "close"), object: nil)
+
         /* Init self.view to suport scence, beacuse this viewController is not use XIB */
         self.view = SKView(frame: UIScreen.main.bounds)
+    }
+    
+    func close(){
+       self.dismiss(animated: true, completion: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         
-        if let scene = SADayAndNightScene(fileNamed:"SADayAndNightScene") {
-            //if let scene = SASurfScene(fileNamed:"SASurfScene") {
-            // Configure the view.
-            let skView = self.view as! SKView
+        let skView = self.view as! SKView
+        if skView.scene == nil {
+            
             skView.showsFPS = true
             skView.showsNodeCount = true
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .aspectFill
-            
-            skView.presentScene(scene)
+            if let scene = SAMoonSleepScene(fileNamed:"SAMoonSleepScene") {
+                
+                /* Set the scale mode to scale to fit the window */
+                scene.scaleMode = .aspectFill
+                
+                skView.presentScene(scene)
+            }
         }
     }
 }
