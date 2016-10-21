@@ -28,3 +28,24 @@ class Character: Mappable {
         biography   <- map["biography"]
     }
 }
+
+extension Character{
+    
+    func update() -> Character{
+        
+        let lang = Language.current()
+        
+        guard let language = lang else {
+            return Character()
+        }
+        
+        let characters = language.characters
+        
+        if characters.contains(where: {$0.name == self.name}) {
+            return $0
+        } else {
+            // item not found
+        }
+    }
+    
+}

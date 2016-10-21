@@ -16,9 +16,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         let URL = "http://52.88.85.62/JsonSA"
-
+        
         HUD.show()
         
         Alamofire.request(URL, method: .post).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
@@ -45,6 +46,11 @@ class MainViewController: UIViewController {
 
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.showMainMenu()
+
     }
     
      // MARK: - Navigation

@@ -40,7 +40,7 @@ class SASheetViewController: UIViewController {
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
-            if let scene = SAMoonSleepScene(fileNamed:"SAMoonSleepScene") {
+            if let scene = SADayAndNightScene(fileNamed:"SADayAndNightScene") {
                 
                 /* Set the scale mode to scale to fit the window */
                 scene.scaleMode = .aspectFill

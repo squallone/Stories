@@ -30,8 +30,9 @@ class SACharactersFlowController: NSObject {
         self.navigationController.popViewController(animated: true)
     }
     
-    func showBiography(character: String){
+    func showBiography(character: Character){
         let biographyViewcontroller = BiographyViewController(nibName: "BiographyViewController", bundle: nil)
+        biographyViewcontroller.character = character
         self.navigationController.pushViewController(biographyViewcontroller, animated: true)
     }
 

@@ -59,6 +59,8 @@
 		F2008F601D828D3B0056A22B /* ToothbrushScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */; };
 		F2008F651D82951D0056A22B /* SABearinBedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2008F641D82951D0056A22B /* SABearinBedScene.swift */; };
 		F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2008F661D8295380056A22B /* SABearinBedScene.sks */; };
+		F206C4251DB9E300009895E0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F206C4241DB9E300009895E0 /* Storyboard.storyboard */; };
+		F206C4271DB9EBFE009895E0 /* CooperBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F206C4261DB9EBFE009895E0 /* CooperBlack.ttf */; };
 		F20780CD1DAE0F15007E39DE /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20780CC1DAE0F15007E39DE /* Language.swift */; };
 		F20FEF8E1DB169E700FF940B /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8D1DB169E700FF940B /* String+Localized.swift */; };
 		F20FEF901DB16C4200FF940B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FEF8F1DB16C4200FF940B /* RealmManager.swift */; };
@@ -76,12 +78,16 @@
 		F2588EE01DB445E100F2EF62 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588EDF1DB445E100F2EF62 /* MenuView.swift */; };
 		F2588EE21DB4460000F2EF62 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2588EE11DB4460000F2EF62 /* MenuView.xib */; };
 		F2588EE41DB4548E00F2EF62 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */; };
+		F25C7DD11DB929B100B6B5AF /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25C7DCF1DB929B100B6B5AF /* CharacterCollectionViewCell.swift */; };
+		F25C7DD21DB929B100B6B5AF /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25C7DD01DB929B100B6B5AF /* CharacterCollectionViewCell.xib */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
 		F272BBBF1D8267AC003E55D1 /* SASceneGlobes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */; };
 		F2A115CC1DB0700500602128 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A115CB1DB0700500602128 /* Character.swift */; };
 		F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA72F11D827F7300C2B314 /* SABaseScene.swift */; };
 		F2AC6D391DB77A160091B091 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC6D381DB77A160091B091 /* Game.swift */; };
 		F2AC6D3B1DB77A1F0091B091 /* Storie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC6D3A1DB77A1F0091B091 /* Storie.swift */; };
+		F2B55F911DB89CB6009220D0 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B55F8F1DB89CB6009220D0 /* GameCollectionViewCell.swift */; };
+		F2B55F921DB89CB6009220D0 /* GameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B55F901DB89CB6009220D0 /* GameCollectionViewCell.xib */; };
 		F2B66E951D81227500652249 /* SAMenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */; };
 		F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */; };
 		F2B66E991D8126AF00652249 /* SALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B66E981D8126AF00652249 /* SALabel.swift */; };
@@ -178,6 +184,8 @@
 		F2008F5F1D828D3B0056A22B /* ToothbrushScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ToothbrushScene.sks; sourceTree = "<group>"; };
 		F2008F641D82951D0056A22B /* SABearinBedScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABearinBedScene.swift; sourceTree = "<group>"; };
 		F2008F661D8295380056A22B /* SABearinBedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SABearinBedScene.sks; sourceTree = "<group>"; };
+		F206C4241DB9E300009895E0 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = "SiaoApao/Source/Project Classes/Storyboard.storyboard"; sourceTree = SOURCE_ROOT; };
+		F206C4261DB9EBFE009895E0 /* CooperBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CooperBlack.ttf; sourceTree = "<group>"; };
 		F20780CC1DAE0F15007E39DE /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F20FEF8D1DB169E700FF940B /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		F20FEF8F1DB16C4200FF940B /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -195,12 +203,16 @@
 		F2588EDF1DB445E100F2EF62 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		F2588EE11DB4460000F2EF62 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		F25C7DCF1DB929B100B6B5AF /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		F25C7DD01DB929B100B6B5AF /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
 		F272BBBE1D8267AC003E55D1 /* SASceneGlobes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASceneGlobes.swift; sourceTree = "<group>"; };
 		F2A115CB1DB0700500602128 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F2AA72F11D827F7300C2B314 /* SABaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SABaseScene.swift; sourceTree = "<group>"; };
 		F2AC6D381DB77A160091B091 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F2AC6D3A1DB77A1F0091B091 /* Storie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storie.swift; sourceTree = "<group>"; };
+		F2B55F8F1DB89CB6009220D0 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2B55F901DB89CB6009220D0 /* GameCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCollectionViewCell.xib; sourceTree = "<group>"; };
 		F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuGamesViewController.swift; sourceTree = "<group>"; };
 		F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuGamesViewController.xib; sourceTree = "<group>"; };
 		F2B66E981D8126AF00652249 /* SALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALabel.swift; sourceTree = "<group>"; };
@@ -573,6 +585,7 @@
 				F2D602021D7FE5AA006B2AE7 /* Characters */,
 				F2B66E971D81227900652249 /* Games */,
 				9242E1B31D8053370025A172 /* Sheet */,
+				F206C4241DB9E300009895E0 /* Storyboard.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -625,6 +638,15 @@
 			name = Biography;
 			sourceTree = "<group>";
 		};
+		F25C7DD31DB929B700B6B5AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F25C7DCF1DB929B100B6B5AF /* CharacterCollectionViewCell.swift */,
+				F25C7DD01DB929B100B6B5AF /* CharacterCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		F272BBC01D8267B4003E55D1 /* Globes */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +659,7 @@
 		F2AB0B971DA4BDCB00A78260 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F206C4261DB9EBFE009895E0 /* CooperBlack.ttf */,
 				F2AB0B981DA4BDCB00A78260 /* MyriadPro */,
 			);
 			path = Fonts;
@@ -654,6 +677,8 @@
 		F2B66E971D81227900652249 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				F2B55F8F1DB89CB6009220D0 /* GameCollectionViewCell.swift */,
+				F2B55F901DB89CB6009220D0 /* GameCollectionViewCell.xib */,
 				F2B66E931D81227500652249 /* SAMenuGamesViewController.swift */,
 				F2B66E941D81227500652249 /* SAMenuGamesViewController.xib */,
 			);
@@ -683,6 +708,7 @@
 		F2D602021D7FE5AA006B2AE7 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				F25C7DD31DB929B700B6B5AF /* Cells */,
 				F2D601FE1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift */,
 				F2D601FF1D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib */,
 			);
@@ -805,6 +831,7 @@
 				927AF5C21D98C18C00BB8212 /* walk.wav in Resources */,
 				924F68B91DA205F900CC8DDD /* tired.wav in Resources */,
 				F2B66E961D81227500652249 /* SAMenuGamesViewController.xib in Resources */,
+				F206C4251DB9E300009895E0 /* Storyboard.storyboard in Resources */,
 				926289A91D7F7F4D00F253FF /* LaunchScreen.storyboard in Resources */,
 				9256CB2F1DAB42A800AB4332 /* kiss.wav in Resources */,
 				9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */,
@@ -814,12 +841,14 @@
 				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
+				F206C4271DB9EBFE009895E0 /* CooperBlack.ttf in Resources */,
 				9242DC341DA9DBBA00868886 /* SAMoonSleepScene.sks in Resources */,
 				926289A61D7F7F4D00F253FF /* Assets.xcassets in Resources */,
 				F2588EE21DB4460000F2EF62 /* MenuView.xib in Resources */,
 				927AF5C01D98B6CE00BB8212 /* liquid.wav in Resources */,
 				F220ED801D7F981700D98278 /* MainViewController.xib in Resources */,
 				923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */,
+				F25C7DD21DB929B100B6B5AF /* CharacterCollectionViewCell.xib in Resources */,
 				9242DC2A1DA9D56F00868886 /* SAKissBedScene.sks in Resources */,
 				9242DC2D1DA9D94D00868886 /* SASwitchScene.sks in Resources */,
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
@@ -836,6 +865,7 @@
 				F2588EDC1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf in Resources */,
 				9205CE291D82951D00CC06F0 /* SAFishbowlScene.sks in Resources */,
 				F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */,
+				F2B55F921DB89CB6009220D0 /* GameCollectionViewCell.xib in Resources */,
 				921D07C41DA2026A00A4FC39 /* laughing.wav in Resources */,
 				928FBF1F1DA77AF900664630 /* pop.wav in Resources */,
 				F2008F671D8295380056A22B /* SABearinBedScene.sks in Resources */,
@@ -941,6 +971,7 @@
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
 				927AF5B71D98639400BB8212 /* SKAction+Custom.swift in Sources */,
 				F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */,
+				F25C7DD11DB929B100B6B5AF /* CharacterCollectionViewCell.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
 				9242DC321DA9DB3E00868886 /* SAMoonSleepScene.swift in Sources */,
@@ -956,6 +987,7 @@
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
 				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
 				F2AC6D391DB77A160091B091 /* Game.swift in Sources */,
+				F2B55F911DB89CB6009220D0 /* GameCollectionViewCell.swift in Sources */,
 				F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */,

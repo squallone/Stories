@@ -8,10 +8,11 @@
 
 import UIKit
 
-class SAMenuGamesViewController: UIViewController {
+class SAMenuGamesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - @IBOutlet
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lblHome: UILabel!
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var lblEnglish: UILabel!
@@ -21,12 +22,20 @@ class SAMenuGamesViewController: UIViewController {
     // MARK: Properties
     
     var flowController: SAMenuGamesFlowController!
+    var games = [Game]()
     
     // MARK: View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let language = Language.current()!
+        self.games = language.games
+        
+        // Table View
+        collectionView.register(UINib(nibName: "GameCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GameCollectionViewCell")
+        
+        // Flow controller
         flowController = SAMenuGamesFlowController(navigationController: self.navigationController)
         
         // Hide menu
@@ -61,27 +70,24 @@ class SAMenuGamesViewController: UIViewController {
         self.lblSpanish.text    = "spanish".localized
     }
     
-    // MARK: Actions
     
-    @IBAction func showGameBubbles(_ sender: AnyObject) {
-    }
+    // MARK: - UICollection DataSource
     
-    @IBAction func showGameCatchTheWorld(_ sender: AnyObject) {
-    }
-    
-    @IBAction func showGameRideTheTurtles(_ sender: AnyObject) {
-    }
-    
-    @IBAction func showGameDanceWithTyro(_ sender: AnyObject) {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.games.count
         
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        return UICollectionViewCell()
+    }
+    
+    // MARK: - Menu Actions
     
     @IBAction func showMenu(_ sender: AnyObject) {
         self.dropDownView.isHidden = self.dropDownView.isHidden ? false : true
     }
-    
-    // MARK: - Menu Actions
     
     func goHome(){
         flowController.back()
