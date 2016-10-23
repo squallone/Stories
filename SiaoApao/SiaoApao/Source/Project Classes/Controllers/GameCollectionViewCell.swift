@@ -10,9 +10,9 @@ import UIKit
 
 class GameCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lblName: SALabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

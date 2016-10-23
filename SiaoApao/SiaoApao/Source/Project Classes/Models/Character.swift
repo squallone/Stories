@@ -41,11 +41,12 @@ extension Character{
         
         let characters = language.characters
         
-        if characters.contains(where: {$0.name == self.name}) {
-            return $0
-        } else {
-            // item not found
+        for character in characters {
+            if character.name == self.name{
+                return character
+            }
         }
+        return Character()
     }
-    
+
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: BaseViewController {
+class MenuViewController: UIViewController {
     
     // MARK: - @IBOutlet
     @IBOutlet weak var btnSpanish: UIButton!

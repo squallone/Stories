@@ -13,11 +13,9 @@ import RealmSwift
 
 class MainViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         let URL = "http://52.88.85.62/JsonSA"
         
         HUD.show()
@@ -33,17 +31,14 @@ class MainViewController: UIViewController {
                 Language.save(languages)
                 
                 // Set default language code
-                Language.saveCode(code: "EN")
+                Language.saveCode(code: "ES")
                 
                 // Show Menu
                 self.showMainMenu()
                 
             case .failure(let error):
                 print("Alamofire error: \(error)")
-                
-            
                 HUD.hide()
-
             }
         }
     }

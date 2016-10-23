@@ -26,6 +26,10 @@ class SACharactersFlowController: NSObject {
     
     // MARK: - Navigation
     
+    func showHome(){
+        self.navigationController.popToRootViewController(animated: true)
+    }
+    
     func back(){
         self.navigationController.popViewController(animated: true)
     }
@@ -33,6 +37,7 @@ class SACharactersFlowController: NSObject {
     func showBiography(character: Character){
         let biographyViewcontroller = BiographyViewController(nibName: "BiographyViewController", bundle: nil)
         biographyViewcontroller.character = character
+        biographyViewcontroller.isBackEnable = true
         self.navigationController.pushViewController(biographyViewcontroller, animated: true)
     }
 

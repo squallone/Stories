@@ -29,4 +29,8 @@ class SAMenuGamesFlowController: NSObject {
         self.navigationController.popViewController(animated: true)
     }
     
+    func showHome(){
+        self.navigationController.popToRootViewController(animated: true)
+    }
+    
 }

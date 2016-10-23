@@ -16,15 +16,6 @@ class SAMenuStoriesViewController: BaseViewController {
     @IBOutlet weak var lblGames: UILabel!
     @IBOutlet weak var lblCharacters: UILabel!
     
-    // Menu labels
-    @IBOutlet weak var lblHome: UILabel!
-    @IBOutlet weak var lblLanguage: UILabel!
-    @IBOutlet weak var lblEnglish: UILabel!
-    @IBOutlet weak var lblSpanish: UILabel!
-    
-    // View
-    @IBOutlet weak var dropDownView: UIView!
-    
     // MARK: - Properties
 
     var flowController: SAMenuStoriesFlowController!
@@ -34,24 +25,10 @@ class SAMenuStoriesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Assign delegeate
+        self.menuView.delegate = self
         // Navigation
         flowController = SAMenuStoriesFlowController(navigationController: self.navigationController)
-
-        // Hide menu
-        self.dropDownView.isHidden = true
-        
-        // Update recognizers
-        let tapHome = UITapGestureRecognizer(target: self, action:#selector(SAMenuStoriesViewController.goHome))
-        self.lblHome.addGestureRecognizer(tapHome)
-        
-        // Update recognizers
-        let tapEnglish = UITapGestureRecognizer(target: self, action:#selector(SAMenuStoriesViewController.changeLanguageToEnglish))
-        self.lblEnglish.addGestureRecognizer(tapEnglish)
-        
-        // Update recognizers
-        let tapSpanish = UITapGestureRecognizer(target: self, action:#selector(SAMenuStoriesViewController.changeLanguageToSpanish))
-        self.lblSpanish.addGestureRecognizer(tapSpanish)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,11 +43,6 @@ class SAMenuStoriesViewController: BaseViewController {
         self.lblGames.text      = "games".localized
         self.lblStories.text    = "stories".localized
         self.lblCharacters.text = "characters".localized
-        
-        self.lblHome.text       = "home".localized
-        self.lblLanguage.text   = "language".localized
-        self.lblEnglish.text    = "english".localized
-        self.lblSpanish.text    = "spanish".localized
     }
     
     // MARK: Stories
@@ -78,6 +50,10 @@ class SAMenuStoriesViewController: BaseViewController {
     @IBAction func showBeforeGoinTobed(_ sender: AnyObject) {
         
         let testViewController = SASheetViewController()
+        let game = Game()
+        game.scene = "catch_world"
+        
+        testViewController.game = game
         // Present ViewController
         self.present(testViewController, animated: true, completion: nil)
     }
@@ -103,38 +79,25 @@ class SAMenuStoriesViewController: BaseViewController {
         flowController.showCharacters()
         
     }
+}
+
+extension SAMenuStoriesViewController: MenuViewDelegate{
     
-    @IBAction func showMenu(_ sender: AnyObject) {
-        
-        self.dropDownView.isHidden = self.dropDownView.isHidden ? false : true
+    func didPressSpanish() {
+        self.updateLocalizableStrings()
+    }
+    
+    func didPressEnglish() {
+        self.updateLocalizableStrings()
+    }
+    
+    func didPressBack() {
+        flowController.showMenu()
 
     }
     
-    // MARK: - Menu Actions
-    
-    func goHome(){
+    func didPressHome() {
         flowController.showMenu()
+
     }
-    
-    func changeLanguageToSpanish(){
-        
-        // Hide menu
-        self.dropDownView.isHidden = true
-        // Save language code
-        Language.saveCode(code: "ES")
-        // Update strings
-        self.updateLocalizableStrings()
-        
-    }
-    
-    func changeLanguageToEnglish(){
-        
-        // Hide menu
-        self.dropDownView.isHidden = true
-        // Save language code
-        Language.saveCode(code: "EN")
-        // Update strings
-        self.updateLocalizableStrings()
-    }
-    
 }

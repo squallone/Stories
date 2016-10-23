@@ -8,16 +8,11 @@
 
 import UIKit
 
-class SAMenuGamesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class SAMenuGamesViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - @IBOutlet
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var lblHome: UILabel!
-    @IBOutlet weak var lblLanguage: UILabel!
-    @IBOutlet weak var lblEnglish: UILabel!
-    @IBOutlet weak var lblSpanish: UILabel!
-    @IBOutlet weak var dropDownView: UIView!
     
     // MARK: Properties
     
@@ -29,6 +24,8 @@ class SAMenuGamesViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.menuView.delegate = self
+        
         let language = Language.current()!
         self.games = language.games
         
@@ -37,23 +34,7 @@ class SAMenuGamesViewController: UIViewController, UICollectionViewDataSource, U
         
         // Flow controller
         flowController = SAMenuGamesFlowController(navigationController: self.navigationController)
-        
-        // Hide menu
-        self.dropDownView.isHidden = true
-        
-        // Update recognizers
-        let tapHome = UITapGestureRecognizer(target: self, action:#selector(goHome))
-        self.lblHome.addGestureRecognizer(tapHome)
-        
-        // Update recognizers
-        let tapEnglish = UITapGestureRecognizer(target: self, action:#selector(changeLanguageToEnglish))
-        self.lblEnglish.addGestureRecognizer(tapEnglish)
-        
-        // Update recognizers
-        let tapSpanish = UITapGestureRecognizer(target: self, action:#selector(changeLanguageToSpanish))
-        self.lblSpanish.addGestureRecognizer(tapSpanish)
-
-    }
+     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,13 +44,8 @@ class SAMenuGamesViewController: UIViewController, UICollectionViewDataSource, U
     // MARK: - Labels
     
     func updateLocalizableStrings(){
-        
-        self.lblHome.text       = "home".localized
-        self.lblLanguage.text   = "language".localized
-        self.lblEnglish.text    = "english".localized
-        self.lblSpanish.text    = "spanish".localized
+
     }
-    
     
     // MARK: - UICollection DataSource
     
@@ -80,38 +56,69 @@ class SAMenuGamesViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        return UICollectionViewCell()
+        let game = games[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as! GameCollectionViewCell
+        cell.lblName.text = game.name
+        return cell
     }
     
-    // MARK: - Menu Actions
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let game = games[indexPath.row]
+        
+        if game.scene != "none"{
+            let testViewController = SASheetViewController()
+            testViewController.game = game
+            testViewController.showHomeButton = true
+            // Present ViewController
+            self.present(testViewController, animated: true, completion: nil)
+        }
     
-    @IBAction func showMenu(_ sender: AnyObject) {
-        self.dropDownView.isHidden = self.dropDownView.isHidden ? false : true
     }
     
-    func goHome(){
+}
+
+// MARK: - Flow Layout
+
+extension SAMenuGamesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 260, height: 260)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: self.view.frame.size.height / 12,
+                            left: self.view.frame.size.width / 5,
+                            bottom:  self.view.frame.size.height / 12,
+                            right: self.view.frame.size.width / 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return self.view.frame.size.height / 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return self.view.frame.size.width / 12
+        
+    }
+}
+
+extension SAMenuGamesViewController: MenuViewDelegate{
+    
+    func didPressSpanish() {
+        self.updateLocalizableStrings()
+    }
+    
+    func didPressEnglish() {
+        self.updateLocalizableStrings()
+    }
+    
+    func didPressHome() {
+        flowController.showHome()
+    }
+    
+    func didPressBack() {
         flowController.back()
     }
-    
-    func changeLanguageToSpanish(){
-        
-        // Hide menu
-        self.dropDownView.isHidden = true
-        // Save language code
-        Language.saveCode(code: "ES")
-        // Update strings
-        self.updateLocalizableStrings()
-        
-    }
-    
-    func changeLanguageToEnglish(){
-        
-        // Hide menu
-        self.dropDownView.isHidden = true
-        // Save language code
-        Language.saveCode(code: "EN")
-        // Update strings
-        self.updateLocalizableStrings()
-    }
-    
 }

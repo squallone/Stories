@@ -20,16 +20,16 @@ class Language: Object, Mappable {
     private dynamic var storiesData: NSData?
 
     // MARK: - Labels
-    var labels: [String: String] {
+    var labels: [String: Any] {
         get {
             guard let labelsData = labelsData else {
-                return [String: String]()
+                return [String: Any]()
             }
             do {
                 let dict = try JSONSerialization.jsonObject(with: labelsData as Data, options: []) as? [String: String]
                 return dict!
             } catch {
-                return [String: String]()
+                return [String: Any]()
             }
         }
         
@@ -49,7 +49,7 @@ class Language: Object, Mappable {
                 return [Character]()
             }
             do {
-                let dict = try JSONSerialization.jsonObject(with: charactersData as Data, options: []) as? [[String: String]]
+                let dict = try JSONSerialization.jsonObject(with: charactersData as Data, options: []) as? [[String: Any]]
                 
                 let information = Mapper<Character>().mapArray(JSONObject: dict)
                 if let array = information {
@@ -80,7 +80,7 @@ class Language: Object, Mappable {
                 return [Game]()
             }
             do {
-                let dict = try JSONSerialization.jsonObject(with: gamesData as Data, options: []) as? [[String: String]]
+                let dict = try JSONSerialization.jsonObject(with: gamesData as Data, options: []) as? [[String: Any]]
                 
                 let information = Mapper<Game>().mapArray(JSONObject: dict)
                 if let array = information {
@@ -144,7 +144,7 @@ class Language: Object, Mappable {
         name  <- map["language"]
         code  <- map["code"]
         
-        let transformJSONObject = TransformOf<NSData, [String: String]>(fromJSON: { (value: [String: String]?) -> NSData? in
+        let transformJSONObject = TransformOf<NSData, [String: Any]>(fromJSON: { (value: [String: Any]?) -> NSData? in
             do {
                 guard let json = value else{
                     return nil
@@ -156,15 +156,13 @@ class Language: Object, Mappable {
                 return nil
             }
             
-            }, toJSON: { (value: NSData?) -> [String: String]? in
+            }, toJSON: { (value: NSData?) -> [String: Any]? in
                 // transform value from NSData? to [String: String]?
                 return nil
         })
         
-        labelsData <- (map["data.labels"], transformJSONObject)
         
-        
-        let transformJSONArray = TransformOf<NSData, [[String: String]]>(fromJSON: { (value: [[String: String]]?) -> NSData? in
+        let transformJSONArray = TransformOf<NSData, [[String: Any]]>(fromJSON: { (value: [[String: Any]]?) -> NSData? in
             do {
                 guard let json = value else{
                     return nil
@@ -176,12 +174,13 @@ class Language: Object, Mappable {
                 return nil
             }
             
-            }, toJSON: { (value: NSData?) -> [[String: String]]? in
+            }, toJSON: { (value: NSData?) -> [[String: Any]]? in
                 // transform value from NSData? to [String: String]?
                 return nil
         })
-        
+
         charactersData <- (map["data.characters"], transformJSONArray)
+        labelsData     <- (map["data.labels"], transformJSONObject)
         gamesData      <- (map["data.games"], transformJSONArray)
         storiesData    <- (map["data.stories"], transformJSONArray)
 
@@ -206,18 +205,7 @@ class Language: Object, Mappable {
                 for language in languages {
                     realm.add(language, update: true)
                     print("Updated \(language.code) language succesfully")
-                    
-                    for character in language.characters{
-                        print(character.name)
-                    }
-                    
-                    for game in language.games{
-                        print(game.name)
-                    }
-                    
-                    for story in language.stories{
-                        print(story.name)
-                    }
+                   
                 }
             }
         } catch let error as NSError {

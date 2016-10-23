@@ -13,13 +13,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SAMenuStoriesViewController" customModule="SiaoApao" customModuleProvider="target">
             <connections>
-                <outlet property="dropDownView" destination="bUf-rU-gyG" id="a5B-u9-2Ng"/>
                 <outlet property="lblCharacters" destination="NI6-Jy-52z" id="ha9-Gh-ua9"/>
-                <outlet property="lblEnglish" destination="Tid-Ob-YNs" id="ho5-aO-XoP"/>
                 <outlet property="lblGames" destination="tH3-38-rHJ" id="24d-Eu-EuP"/>
-                <outlet property="lblHome" destination="Lf3-vX-DdQ" id="mPW-mK-wCK"/>
-                <outlet property="lblLanguage" destination="g4G-1d-O7z" id="TPD-lb-2yk"/>
-                <outlet property="lblSpanish" destination="KnB-uh-gQi" id="7T6-aR-cys"/>
                 <outlet property="lblStories" destination="xFw-up-1AH" id="sPm-C1-gSF"/>
                 <outlet property="view" destination="zAT-9e-Ivs" id="Rx1-dx-I5W"/>
             </connections>
@@ -30,45 +25,6 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainMenu" translatesAutoresizingMaskIntoConstraints="NO" id="6u4-my-VVL"/>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUf-rU-gyG" userLabel="Drop down">
-                    <frame key="frameInset" minX="822" minY="83" width="202" height="269"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropdown menu" translatesAutoresizingMaskIntoConstraints="NO" id="AS9-Yk-eIP">
-                            <frame key="frameInset" width="202" height="290"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lf3-vX-DdQ">
-                            <frame key="frameInset" minX="22" minY="52" width="159" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="23"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4G-1d-O7z">
-                            <frame key="frameInset" minX="22" minY="128" width="159" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="23"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-Ob-YNs">
-                            <frame key="frameInset" minX="40" minY="190" width="123" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spanish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnB-uh-gQi">
-                            <frame key="frameInset" minX="40" minY="229" width="123" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MI-ao-y9U" userLabel="Button Stories">
                     <frame key="frameInset" minX="413" minY="27" width="266" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,14 +79,6 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-kA-GiI" userLabel="Corner">
-                    <frame key="frameInset" minX="907" width="117" height="117"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="logo_corner"/>
-                    <connections>
-                        <action selector="showMenu:" destination="-1" eventType="touchUpInside" id="Xrv-Ns-Bdw"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-gE-DYc" userLabel="Story 1">
                     <frame key="frameInset" minX="130" minY="184" width="494" height="129"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -214,8 +162,6 @@
     <resources>
         <image name="MainMenu" width="682" height="511"/>
         <image name="back_selector" width="600" height="157"/>
-        <image name="dropdown menu" width="397" height="446"/>
-        <image name="logo_corner" width="168" height="168"/>
         <image name="menu_back_characters" width="412" height="164"/>
         <image name="menu_back_games" width="262" height="201"/>
         <image name="menu_back_stories" width="376" height="182"/>

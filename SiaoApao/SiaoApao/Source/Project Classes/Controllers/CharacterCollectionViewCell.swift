@@ -10,7 +10,7 @@ import UIKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
    
-    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblName: SALabel!
     @IBOutlet weak var characterImageView: UIImageView!
     
     override func awakeFromNib() {

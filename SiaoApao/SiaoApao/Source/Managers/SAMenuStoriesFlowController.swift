@@ -26,19 +26,25 @@ class SAMenuStoriesFlowController: NSObject {
     // MARK: - Navigation
     
     func showMenu(){
+        self.navigationController.popToRootViewController(animated: true)
+    }
+    
+    func showBack(){
         self.navigationController.popViewController(animated: true)
     }
     
     func showGames(){
         
-        let menuStoriesViewController = SAMenuGamesViewController(nibName: "SAMenuGamesViewController", bundle: nil)
-        self.navigationController .pushViewController(menuStoriesViewController, animated: true)
+        let menuGamesViewController = SAMenuGamesViewController(nibName: "SAMenuGamesViewController", bundle: nil)
+        menuGamesViewController.isBackEnable = true
+        self.navigationController .pushViewController(menuGamesViewController, animated: true)
     }
     
     func showCharacters(){
         
-        let menuStoriesViewController = SAMenuCharactersViewController(nibName: "SAMenuCharactersViewController", bundle: nil)
-        self.navigationController .pushViewController(menuStoriesViewController, animated: true)
+        let menuCharactersViewController = SAMenuCharactersViewController(nibName: "SAMenuCharactersViewController", bundle: nil)
+        menuCharactersViewController.isBackEnable = true
+        self.navigationController .pushViewController(menuCharactersViewController, animated: true)
         
     }
 }

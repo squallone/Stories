@@ -11,7 +11,9 @@ import SpriteKit
 class SABaseScene: SKScene {
     
     // MARK: - Properties
+    public var showHomeButton: Bool?
     
+    public var backButton: SKSpriteNode?
     public var nextButton: SKSpriteNode?
     public var titleLabel: SKLabelNode!
     
@@ -83,11 +85,11 @@ class SABaseScene: SKScene {
         // Back button
         if !self.isKind(of: SADayAndNightScene.self) {
             
-            let backButton = SKSpriteNode(imageNamed: "LeftArrow")
-            backButton.name = "back"
-            backButton.position = CGPoint(x: 65, y: 65)
-            backButton.zPosition = 10
-            addChild(backButton)
+            backButton = SKSpriteNode(imageNamed: "LeftArrow")
+            backButton?.name = "back"
+            backButton?.position = CGPoint(x: 65, y: 65)
+            backButton?.zPosition = 10
+            addChild(backButton!)
         }
         
         // Next button
@@ -98,7 +100,7 @@ class SABaseScene: SKScene {
         addChild(nextButton!)
         
         // Default status for next button
-       //self.hideNextButton()
+       self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
@@ -114,6 +116,17 @@ class SABaseScene: SKScene {
         titleLabel.fontSize = labelFontSize
         titleLabel.fontColor = UIColor.white
         addChild(titleLabel)
+        
+        
+        if let showHomeButton = self.showHomeButton{
+            
+            if showHomeButton{
+                self.nextButton?.texture = SKTexture(imageNamed: "home")
+                self.backButton?.isHidden = true
+                self.hideLabels()
+                showNextButton()
+            }
+        }
     }
     
     func hideNextButton(){
@@ -162,6 +175,17 @@ extension SABaseScene{
         let transitionNext = SKTransition.reveal(with: .left, duration: 0.8)
         let transitionBack = SKTransition.reveal(with: .right, duration: 0.8)
 
+        if action == "next"{
+            
+            if let dismiss = self.showHomeButton{
+                
+                if dismiss{
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "close"), object: nil)
+                    return
+                }
+            }
+        }
+        
         switch self {
         case is SADayAndNightScene:
             if action == "next"{

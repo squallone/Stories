@@ -9,21 +9,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameCollectionViewCell" customModule="SiaoApao" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="568" height="284"/>
+            <rect key="frame" x="0.0" y="0.0" width="290" height="284"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="568" height="284"/>
+                <rect key="frame" x="0.0" y="0.0" width="290" height="284"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRH-oK-y8i">
-                        <frame key="frameInset" minX="16" minY="15" width="257" height="255"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" image="bubble_menu"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bubbles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x73-Pk-uJB" customClass="SALabel" customModule="SiaoApao" customModuleProvider="target">
-                        <frame key="frameInset" minX="57" minY="110" width="175" height="65"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble_menu" translatesAutoresizingMaskIntoConstraints="NO" id="R9K-M6-uok">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bubbles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x73-Pk-uJB" customClass="SALabel" customModule="SiaoApao" customModuleProvider="target">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="198" id="aRQ-Ur-sOm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
@@ -37,8 +36,20 @@
                     </label>
                 </subviews>
             </view>
-            <size key="customSize" width="568" height="284"/>
-            <point key="canvasLocation" x="290" y="-75"/>
+            <constraints>
+                <constraint firstItem="x73-Pk-uJB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="6BO-aC-bo2"/>
+                <constraint firstItem="R9K-M6-uok" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="KJH-SF-4SY"/>
+                <constraint firstItem="R9K-M6-uok" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="qic-yZ-8wX"/>
+                <constraint firstItem="R9K-M6-uok" firstAttribute="centerY" secondItem="x73-Pk-uJB" secondAttribute="centerY" id="u1M-Sm-4Um"/>
+                <constraint firstItem="R9K-M6-uok" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="wGo-AQ-vtC"/>
+                <constraint firstItem="R9K-M6-uok" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="xSc-gr-Kaa"/>
+                <constraint firstItem="R9K-M6-uok" firstAttribute="centerX" secondItem="x73-Pk-uJB" secondAttribute="centerX" constant="1" id="zO3-vV-cTx"/>
+            </constraints>
+            <size key="customSize" width="290" height="284"/>
+            <connections>
+                <outlet property="lblName" destination="x73-Pk-uJB" id="bbG-kb-cRH"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="-96"/>
         </collectionViewCell>
     </objects>
     <resources>

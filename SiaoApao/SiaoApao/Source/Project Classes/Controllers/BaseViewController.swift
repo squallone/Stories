@@ -10,27 +10,33 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    var menuView : MenuView!
+    var isBackEnable: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.menuView = MenuView.loadMenu1()
+
+        if let isBackEnable = self.isBackEnable{
+            if isBackEnable{
+                self.menuView = MenuView.loadMenu2()
+            }
+        }
+
+        self.menuView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.menuView)
+        
+        // Constraints
+        let views: [String: UIView] = ["menuView": self.menuView]
+        
+        var constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:[menuView(203)]|", options: .alignAllCenterX, metrics: [:], views: views)
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|[menuView(335)]", options: .alignAllCenterX, metrics: [:], views: views))
+        
+        for c in constraints {
+            c.isActive = true
+        }
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
