@@ -9,17 +9,22 @@
 import UIKit
 import SpriteKit
 
-class SASheetViewController: UIViewController {
+class SASheetViewController: BaseViewController {
     
     var game: Game!
     var showHomeButton : Bool?
+    var skView : SKView!
     
     override func viewDidLoad() {
+        skView = SKView(frame: UIScreen.main.bounds)
+        self.view = skView
         super.viewDidLoad()
+        
+        self.menuView.delegate = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(SASheetViewController.close), name: NSNotification.Name(rawValue: "close"), object: nil)
 
         /* Init self.view to suport scence, beacuse this viewController is not use XIB */
-        self.view = SKView(frame: UIScreen.main.bounds)
     }
     
     func close(){
@@ -46,17 +51,11 @@ class SASheetViewController: UIViewController {
         default:
             break
         }
-       
     }
     
     func dayNightScene(){
         
-        let skView = self.view as! SKView
         if skView.scene == nil {
-            
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -65,7 +64,6 @@ class SASheetViewController: UIViewController {
                 scene.showHomeButton = self.showHomeButton
                 /* Set the scale mode to scale to fit the window */
                 scene.scaleMode = .aspectFill
-                
                 skView.presentScene(scene)
             }
         }
@@ -73,12 +71,7 @@ class SASheetViewController: UIViewController {
     
     func bubbleScene(){
         
-        let skView = self.view as! SKView
         if skView.scene == nil {
-            
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -87,7 +80,6 @@ class SASheetViewController: UIViewController {
 
                 /* Set the scale mode to scale to fit the window */
                 scene.scaleMode = .aspectFill
-                
                 skView.presentScene(scene)
             }
         }
@@ -95,21 +87,14 @@ class SASheetViewController: UIViewController {
     
     func turtlesScene(){
         
-        let skView = self.view as! SKView
         if skView.scene == nil {
-            
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             if let scene = SASurfScene(fileNamed:"SASurfScene") {
                 scene.showHomeButton = self.showHomeButton
-
                 /* Set the scale mode to scale to fit the window */
                 scene.scaleMode = .aspectFill
-                
                 skView.presentScene(scene)
             }
         }
@@ -117,24 +102,37 @@ class SASheetViewController: UIViewController {
     
     func danceTyroScene(){
         
-        let skView = self.view as! SKView
         if skView.scene == nil {
-            
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             if let scene = SACarpetScene(fileNamed:"SACarpetScene") {
                 scene.showHomeButton = self.showHomeButton
-
                 /* Set the scale mode to scale to fit the window */
                 scene.scaleMode = .aspectFill
-                
                 skView.presentScene(scene)
             }
         }
     }
+}
+
+extension SASheetViewController: MenuViewDelegate{
     
+    func didPressSpanish() {
+        let currentScene = skView.scene as! SABaseScene
+        currentScene.updateLocalizableString()
+    }
+    
+    func didPressEnglish() {
+        let currentScene = skView.scene as! SABaseScene
+        currentScene.updateLocalizableString()
+    }
+    
+    func didPressHome() {
+        close()
+    }
+    
+    func didPressBack() {
+        close()
+    }
 }

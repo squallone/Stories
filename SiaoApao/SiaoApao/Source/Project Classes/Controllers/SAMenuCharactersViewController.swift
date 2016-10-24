@@ -64,7 +64,7 @@ extension SAMenuCharactersViewController: UICollectionViewDataSource {
         switch character.name {
         case "Sia":
             cell.characterImageView.image = #imageLiteral(resourceName: "character_sia")
-        case "Apa":
+        case "Apao":
             cell.characterImageView.image = #imageLiteral(resourceName: "character_apao")
         case "Tyro":
             cell.characterImageView.image = #imageLiteral(resourceName: "character_tyro")

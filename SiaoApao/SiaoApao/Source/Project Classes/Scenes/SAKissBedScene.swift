@@ -32,7 +32,7 @@ class SAKissBedScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_kiss_apao_instructions".localized

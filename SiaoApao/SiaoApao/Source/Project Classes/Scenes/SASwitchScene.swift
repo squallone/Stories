@@ -37,7 +37,7 @@ class SASwitchScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_turnoff_light_instructions".localized

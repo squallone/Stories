@@ -90,6 +90,7 @@ class MenuView: UIView {
         showMenu(self)
         // Save language code
         Language.saveCode(code: "EN")
+        print("English selected")
         // Update labels
         self.updateLocalizableStrings()
         // Notify delegate
@@ -103,6 +104,7 @@ class MenuView: UIView {
 
         // Save language code
         Language.saveCode(code: "ES")
+        print("Spanish selected")
         // Update labels
         self.updateLocalizableStrings()
         // Notify delegate

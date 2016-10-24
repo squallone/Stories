@@ -60,15 +60,12 @@ class SASceneGlobes: SABaseScene {
             
             self.totalBubbles += 1;
             
-        }
-        
-        
+        }        
     }
-    
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_bubbles_instructions".localized

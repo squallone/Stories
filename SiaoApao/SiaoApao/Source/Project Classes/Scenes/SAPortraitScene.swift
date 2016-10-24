@@ -46,7 +46,7 @@ class SAPortraitScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_dress_instructions".localized

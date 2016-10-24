@@ -16,6 +16,44 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        delay(delay: 4.0) {
+            self.fetchLanguagesData()
+        }
+    }
+    
+     // MARK: - Navigation
+     
+    func showMainMenu(){
+        
+        // Controller and NavigationController
+        let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: menuViewController)
+        
+        // Hide navigation bar
+        navigationController.navigationBar.isHidden = true
+        
+        // Present ViewController
+        self.present(navigationController, animated: true, completion: nil)
+        
+    }
+    
+    // MARK: - Delay
+    
+    func delay(delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            closure()
+        }
+    }
+    
+    // MARK: - API
+    
+    func fetchLanguagesData(){
+        
         let URL = "http://52.88.85.62/JsonSA"
         
         HUD.show()
@@ -41,27 +79,6 @@ class MainViewController: UIViewController {
                 HUD.hide()
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.showMainMenu()
 
     }
-    
-     // MARK: - Navigation
-     
-    func showMainMenu(){
-        
-        // Controller and NavigationController
-        let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
-        let navigationController = UINavigationController(rootViewController: menuViewController)
-        
-        // Hide navigation bar
-        navigationController.navigationBar.isHidden = true
-        
-        // Present ViewController
-        self.present(navigationController, animated: true, completion: nil)
-        
-    }
- 
 }

@@ -35,7 +35,6 @@ class SABaseScene: SKScene {
     
     // MARK: - Actions
 
-    
     func addLabels(){
         
         label1 = SKLabelNode(text: "")
@@ -153,7 +152,9 @@ class SABaseScene: SKScene {
         self.label4.isHidden = false
     }
     
+    func updateLocalizableString(){
     
+    }
     // MARK: - Touches Began
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

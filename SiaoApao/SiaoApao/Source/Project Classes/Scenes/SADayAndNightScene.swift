@@ -38,6 +38,16 @@ class SADayAndNightScene: SABaseScene {
         
         self.updateLocalizableString()
         
+        if !self.label1.isHidden{
+            let background       = SKSpriteNode()
+            background.color     = UIColor(white: 1.0, alpha: 0.8)
+            background.size      = CGSize(width: 472, height: 161)
+            background.position  = CGPoint(x: 250, y: 669)
+            background.zPosition = 10
+            self.addChild(background)
+        }
+        
+        
         /* Init Properties */
         sunSpriteNode     = self.childNode(withName: "sun") as? SKSpriteNode
         moonSpriteNode    = self.childNode(withName: "moon") as? SKSpriteNode
@@ -67,7 +77,7 @@ class SADayAndNightScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_day_night_instructions".localized

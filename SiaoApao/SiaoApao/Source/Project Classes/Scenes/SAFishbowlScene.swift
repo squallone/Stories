@@ -46,7 +46,7 @@ class SAFishbowlScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_goodnight_galileo_instructions".localized

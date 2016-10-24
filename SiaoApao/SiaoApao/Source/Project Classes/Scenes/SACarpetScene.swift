@@ -54,7 +54,7 @@ class SACarpetScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_dance_instructions".localized
@@ -108,6 +108,7 @@ class SACarpetScene: SABaseScene {
                                     
                                     // Show next button
                                     self.showNextButton()
+                                    self.backgroundMusicPlayer.stop()
                                 }
                             })
                         }

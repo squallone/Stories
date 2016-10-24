@@ -34,7 +34,7 @@ class SALivingRoomScene: SABaseScene {
     
     // MARK: - Labels
     
-    func updateLocalizableString(){
+    override func updateLocalizableString(){
         
         /* Title description */
         titleLabel.text = "scene_milk_instructions".localized

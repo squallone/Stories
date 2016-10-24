@@ -73,9 +73,7 @@ class SAMenuGamesViewController: BaseViewController, UICollectionViewDataSource,
             // Present ViewController
             self.present(testViewController, animated: true, completion: nil)
         }
-    
-    }
-    
+    }    
 }
 
 // MARK: - Flow Layout
