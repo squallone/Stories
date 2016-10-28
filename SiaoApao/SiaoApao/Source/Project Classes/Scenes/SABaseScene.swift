@@ -329,25 +329,12 @@ extension SABaseScene{
             break
         case is SAKissBedScene:
             if action == "next" {
-                if let nextScene = SASwitchScene(fileNamed:"SASwitchScene"){
-                    nextScene.scaleMode = .aspectFill
-                    scene?.view?.presentScene(nextScene, transition: transitionNext)
-                }
-            }else if action == "back"{
-                if let nextScene = SABearinBedScene(fileNamed:"SABearinBedScene"){
-                    nextScene.scaleMode = .aspectFill
-                    scene?.view?.presentScene(nextScene, transition: transitionBack)
-                }
-            }
-            break
-        case is SASwitchScene:
-            if action == "next" {
                 if let nextScene = SAMoonSleepScene(fileNamed:"SAMoonSleepScene"){
                     nextScene.scaleMode = .aspectFill
                     scene?.view?.presentScene(nextScene, transition: transitionNext)
                 }
             }else if action == "back"{
-                if let nextScene = SAKissBedScene(fileNamed:"SAKissBedScene"){
+                if let nextScene = SABearinBedScene(fileNamed:"SABearinBedScene"){
                     nextScene.scaleMode = .aspectFill
                     scene?.view?.presentScene(nextScene, transition: transitionBack)
                 }
@@ -360,7 +347,7 @@ extension SABaseScene{
                     scene?.view?.presentScene(nextScene, transition: transitionNext)
                 }
             } else if action == "back" {
-                if let nextScene = SASwitchScene(fileNamed:"SASwitchScene") {
+                if let nextScene = SAKissBedScene(fileNamed:"SAKissBedScene") {
                     nextScene.scaleMode = .aspectFill
                     scene?.view?.presentScene(nextScene, transition: transitionBack)
                 }

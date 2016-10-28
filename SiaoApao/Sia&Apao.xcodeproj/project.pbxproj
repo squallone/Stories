@@ -22,8 +22,6 @@
 		9241096E1D828FF0009523F9 /* SABookScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9241096D1D828FF0009523F9 /* SABookScene.sks */; };
 		9242DC271DA9D4D100868886 /* SAKissBedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC261DA9D4D100868886 /* SAKissBedScene.swift */; };
 		9242DC2A1DA9D56F00868886 /* SAKissBedScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC291DA9D56F00868886 /* SAKissBedScene.sks */; };
-		9242DC2D1DA9D94D00868886 /* SASwitchScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC2C1DA9D94D00868886 /* SASwitchScene.sks */; };
-		9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC2E1DA9DA3000868886 /* SASwitchScene.swift */; };
 		9242DC321DA9DB3E00868886 /* SAMoonSleepScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242DC311DA9DB3E00868886 /* SAMoonSleepScene.swift */; };
 		9242DC341DA9DBBA00868886 /* SAMoonSleepScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */; };
 		9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9242DC361DA9E0D500868886 /* SAEndScene.sks */; };
@@ -141,8 +139,6 @@
 		9241096D1D828FF0009523F9 /* SABookScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SABookScene.sks; sourceTree = "<group>"; };
 		9242DC261DA9D4D100868886 /* SAKissBedScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKissBedScene.swift; sourceTree = "<group>"; };
 		9242DC291DA9D56F00868886 /* SAKissBedScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAKissBedScene.sks; sourceTree = "<group>"; };
-		9242DC2C1DA9D94D00868886 /* SASwitchScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASwitchScene.sks; sourceTree = "<group>"; };
-		9242DC2E1DA9DA3000868886 /* SASwitchScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASwitchScene.swift; sourceTree = "<group>"; };
 		9242DC311DA9DB3E00868886 /* SAMoonSleepScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMoonSleepScene.swift; sourceTree = "<group>"; };
 		9242DC331DA9DBBA00868886 /* SAMoonSleepScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAMoonSleepScene.sks; sourceTree = "<group>"; };
 		9242DC361DA9E0D500868886 /* SAEndScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAEndScene.sks; sourceTree = "<group>"; };
@@ -333,15 +329,6 @@
 			name = Kiss;
 			sourceTree = "<group>";
 		};
-		9242DC2B1DA9D89200868886 /* Switch */ = {
-			isa = PBXGroup;
-			children = (
-				9242DC2E1DA9DA3000868886 /* SASwitchScene.swift */,
-				9242DC2C1DA9D94D00868886 /* SASwitchScene.sks */,
-			);
-			name = Switch;
-			sourceTree = "<group>";
-		};
 		9242DC301DA9DA8800868886 /* MoonSleep */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,7 +472,6 @@
 				F2008F611D828D410056A22B /* ToothbrushScene */,
 				9242DC241DA9D42100868886 /* BearinBedScene */,
 				9242DC251DA9D44500868886 /* Kiss */,
-				9242DC2B1DA9D89200868886 /* Switch */,
 				9242DC301DA9DA8800868886 /* MoonSleep */,
 				9242DC351DA9DFA600868886 /* End */,
 			);
@@ -877,7 +863,6 @@
 				F25C7DD21DB929B100B6B5AF /* CharacterCollectionViewCell.xib in Resources */,
 				F226908F1DBC921900EAE921 /* BiographyDetailViewController.xib in Resources */,
 				9242DC2A1DA9D56F00868886 /* SAKissBedScene.sks in Resources */,
-				9242DC2D1DA9D94D00868886 /* SASwitchScene.sks in Resources */,
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
 				F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */,
 				923912EC1D828409000FC33C /* SALivingRoomScene.sks in Resources */,
@@ -980,7 +965,6 @@
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
 				9242E1B51D80538C0025A172 /* SASheetViewController.swift in Sources */,
 				F2588EE41DB4548E00F2EF62 /* LanguageManager.swift in Sources */,
-				9242DC2F1DA9DA3000868886 /* SASwitchScene.swift in Sources */,
 				F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */,
 				F2AA72F21D827F7300C2B314 /* SABaseScene.swift in Sources */,
 				F2AC6D3B1DB77A1F0091B091 /* Storie.swift in Sources */,
