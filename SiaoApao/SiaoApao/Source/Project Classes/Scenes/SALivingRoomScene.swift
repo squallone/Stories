@@ -12,7 +12,7 @@ class SALivingRoomScene: SABaseScene {
     
     // MARK: - Properties
     var milkNode: SKSpriteNode?
-    let maxNumberTexture: Int = 6
+    let maxNumberTexture: Int = 7 //number of Texture
     var countTexture: Int = 0
     
     let liquidSound: SKAction = SKAction.playSoundFileNamed(
@@ -58,7 +58,7 @@ class SALivingRoomScene: SABaseScene {
 
                     if !touchedNode.hasActions() {
                         countTexture = countTexture + 1
-                        if countTexture <= maxNumberTexture {
+                        if countTexture < maxNumberTexture {
                             
                             /* Create new texture */
                             let photoImageName = "milk\(countTexture)"
@@ -74,9 +74,17 @@ class SALivingRoomScene: SABaseScene {
 
                             hideNextButton()
 
-                        } else {
-                            showNextButton()
-
+                        } else if countTexture == maxNumberTexture {
+                            
+                            /* Set new texture */
+                            let milkTextureAction = SKAction.fadeAlpha(to: 0, duration: 0.0)
+                            
+                            /* Last touch in milk */
+                            let groupAction = SKAction.group([milkTextureAction,liquidSound])
+                            touchedNode.run(groupAction, completion: {
+                                self.showNextButton()
+                            })
+                            
                         }
                     }
                 }
