@@ -89,7 +89,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="201.66999999999999" id="6mh-zW-hYs"/>
-                        <constraint firstAttribute="height" constant="268.89999999999998" id="8X8-9b-RJu"/>
+                        <constraint firstAttribute="height" constant="309" id="8X8-9b-RJu"/>
                     </constraints>
                 </view>
             </subviews>

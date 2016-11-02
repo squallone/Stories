@@ -21,6 +21,7 @@ class MenuView: UIView {
     // MARK: - Properties
     
     var delegate: MenuViewDelegate?
+    var sheetController: SASheetViewController?
     
     @IBOutlet weak var btnHome: UIButton?
     @IBOutlet weak var btnBack: UIButton?
@@ -34,14 +35,13 @@ class MenuView: UIView {
     
     class func loadMenu(nibName: String) -> MenuView {
        
-        let menuView = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MenuView
+        let menuView = UINib(nibName: nibName, bundle: nil).instantiate(withOwner: nil, options: nil).first as! MenuView
         menuView.updateLocalizableStrings()
         menuView.dropdownView.isHidden = true
         
         return menuView
-
     }
-    
+        
     class func loadMenu1() -> MenuView {
         
         return loadMenu(nibName: "MenuView")
@@ -74,6 +74,10 @@ class MenuView: UIView {
         showMenu(self)
         if let didPressHome = self.delegate?.didPressHome{
             didPressHome()
+        }
+        
+        if let controller = sheetController{
+            controller.dismiss(animated: true, completion: nil)
         }
     }
     

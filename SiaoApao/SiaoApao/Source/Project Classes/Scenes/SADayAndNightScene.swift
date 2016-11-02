@@ -39,11 +39,19 @@ class SADayAndNightScene: SABaseScene {
         self.updateLocalizableString()
         
         if !self.label1.isHidden{
+            
+            let backgroundShape = SKShapeNode(rect: CGRect(x: 250, y: 669, width: 472, height: 161))
+            let path = CGMutablePath()
+            path.move(to: CGPoint(x: 10.0, y: 10.0))
+            path.addLine(to: CGPoint(x: 10.0, y: 10.0))
+            backgroundShape.path = path
+
             let background       = SKSpriteNode()
             background.color     = UIColor(white: 1.0, alpha: 0.8)
             background.size      = CGSize(width: 472, height: 161)
             background.position  = CGPoint(x: 250, y: 669)
             background.zPosition = 10
+           // background
             self.addChild(background)
         }
         

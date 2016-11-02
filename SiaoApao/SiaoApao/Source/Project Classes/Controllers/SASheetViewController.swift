@@ -11,28 +11,22 @@ import SpriteKit
 
 class SASheetViewController: BaseViewController {
     
+    // MARK: - IBOulets
+    @IBOutlet weak var skView: SKView!
+   // @IBOutlet weak var menuView: UIView!
+    
+    // MARK: - Properties
     var game: Game!
     var showHomeButton : Bool?
-    var skView : SKView!
-    
+
+    // MARK: - View life cycle
     override func viewDidLoad() {
-        skView = SKView(frame: UIScreen.main.bounds)
-        self.view = skView
+        self.isBackEnable = true
         super.viewDidLoad()
         
-        self.menuView.delegate = self
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(SASheetViewController.close), name: NSNotification.Name(rawValue: "close"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SASheetViewController.didPressBack), name: NSNotification.Name(rawValue: "close"), object: nil)
 
         /* Init self.view to suport scence, beacuse this viewController is not use XIB */
-    }
-    
-    func close(){
-       self.dismiss(animated: true, completion: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,9 +47,20 @@ class SASheetViewController: BaseViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.menuView.btnHome?.addTarget(self, action: #selector(didPressHome), for: .touchUpInside)
+        self.menuView.btnBack?.addTarget(self, action: #selector(didPressBack), for: .touchUpInside)
+        self.menuView.btnSpanish?.addTarget(self, action: #selector(changeLanguage), for: .touchUpInside)
+        self.menuView.btnEnglish?.addTarget(self, action: #selector(changeLanguage), for: .touchUpInside)
+
+    }
+    
+    // MARK: - Scenes
+    
     func dayNightScene(){
         
-        if skView.scene == nil {
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -66,12 +71,10 @@ class SASheetViewController: BaseViewController {
                 scene.scaleMode = .aspectFill
                 skView.presentScene(scene)
             }
-        }
     }
     
     func bubbleScene(){
         
-        if skView.scene == nil {
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -82,12 +85,10 @@ class SASheetViewController: BaseViewController {
                 scene.scaleMode = .aspectFill
                 skView.presentScene(scene)
             }
-        }
     }
     
     func turtlesScene(){
         
-        if skView.scene == nil {
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -97,12 +98,10 @@ class SASheetViewController: BaseViewController {
                 scene.scaleMode = .aspectFill
                 skView.presentScene(scene)
             }
-        }
     }
     
     func danceTyroScene(){
         
-        if skView.scene == nil {
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -112,27 +111,27 @@ class SASheetViewController: BaseViewController {
                 scene.scaleMode = .aspectFill
                 skView.presentScene(scene)
             }
-        }
-    }
-}
-
-extension SASheetViewController: MenuViewDelegate{
-    
-    func didPressSpanish() {
-        let currentScene = skView.scene as! SABaseScene
-        currentScene.updateLocalizableString()
     }
     
-    func didPressEnglish() {
+    
+    // MARK: - Actions
+    
+    func changeLanguage() {
         let currentScene = skView.scene as! SABaseScene
         currentScene.updateLocalizableString()
     }
     
     func didPressHome() {
-        close()
+        _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
     func didPressBack() {
-        close()
+       _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
+
+

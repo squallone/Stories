@@ -99,13 +99,13 @@ class SABaseScene: SKScene {
         addChild(nextButton!)
         
         // Default status for next button
-       self.hideNextButton()
+       //self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
         titleBar.position = CGPoint(x: size.width / 2, y: 65)
         titleBar.setScale(1.17)
-        titleBar.zPosition = 10
+        titleBar.zPosition = 9
         addChild(titleBar)
         
         titleLabel = SKLabelNode(text: "")
@@ -190,10 +190,7 @@ extension SABaseScene{
         switch self {
         case is SADayAndNightScene:
             if action == "next"{
-                if let nextScene = SASceneGlobes(fileNamed:"SASceneGlobes"){
-                    nextScene.scaleMode = .aspectFill
-                    scene?.view?.presentScene(nextScene, transition: transitionNext)
-                }
+                scene?.view?.presentScene(SASceneGlobes(fileNamed:"SASceneGlobes")!, transition: SKTransition.reveal(with: .left, duration: 0.8))
             }
             break
         case is SASceneGlobes:
@@ -201,6 +198,8 @@ extension SABaseScene{
                 if let nextScene = SASurfScene(fileNamed:"SASurfScene"){
                     nextScene.scaleMode = .aspectFill
                     scene?.view?.presentScene(nextScene, transition: transitionNext)
+
+
                 }
             }else if action == "back"{
                 if let nextScene = SADayAndNightScene(fileNamed:"SADayAndNightScene"){
@@ -343,7 +342,9 @@ extension SABaseScene{
         case is SAMoonSleepScene:
             if action == "next" {
                 if let nextScene = SAEndScene(fileNamed:"SAEndScene"){
+                    let transitionNext = SKTransition.reveal(with: .left, duration: 0)
                     nextScene.scaleMode = .aspectFill
+
                     scene?.view?.presentScene(nextScene, transition: transitionNext)
                 }
             } else if action == "back" {

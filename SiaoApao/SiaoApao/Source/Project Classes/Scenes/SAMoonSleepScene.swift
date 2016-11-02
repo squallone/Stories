@@ -64,7 +64,7 @@ class SAMoonSleepScene: SABaseScene {
             
             let background       = SKSpriteNode()
             background.color     = UIColor(white: 1.0, alpha: 0.8)
-            background.size      = CGSize(width: 420, height: 115)
+            background.size      = CGSize(width: 440, height: 115)
             background.position  = CGPoint(x: 640, y: 180)
             background.zPosition = 10
             self.addChild(background)

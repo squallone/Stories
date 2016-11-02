@@ -14,13 +14,17 @@ class BaseViewController: UIViewController {
     var isBackEnable: Bool?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+       super.viewDidLoad()
         
         self.menuView = MenuView.loadMenu1()
 
+        
+        var visualFormatVertical = "V:|[menuView(335)]"
+        
         if let isBackEnable = self.isBackEnable{
             if isBackEnable{
                 self.menuView = MenuView.loadMenu2()
+                visualFormatVertical = "V:|[menuView(395)]"
             }
         }
 
@@ -31,7 +35,7 @@ class BaseViewController: UIViewController {
         let views: [String: UIView] = ["menuView": self.menuView]
         
         var constraints = NSLayoutConstraint.constraints(withVisualFormat: "H:[menuView(203)]|", options: .alignAllCenterX, metrics: [:], views: views)
-        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|[menuView(335)]", options: .alignAllCenterX, metrics: [:], views: views))
+        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: visualFormatVertical , options: .alignAllCenterX, metrics: [:], views: views))
         
         for c in constraints {
             c.isActive = true

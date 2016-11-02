@@ -49,13 +49,13 @@ class SAMenuStoriesViewController: BaseViewController {
     
     @IBAction func showBeforeGoinTobed(_ sender: AnyObject) {
         
-        let testViewController = SASheetViewController()
+        let testViewController = SASheetViewController(nibName: "SASheetViewController", bundle: nil)
         let game = Game()
         game.scene = "catch_world"
         
         testViewController.game = game
         // Present ViewController
-        self.present(testViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(testViewController, animated: true)
     }
     
     

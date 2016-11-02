@@ -54,6 +54,15 @@ class SAKissBedScene: SABaseScene {
         label4.text = "scene_kiss_apao_text4".localized
     }
     
+    func updateColors(isOn: Bool){
+        
+        label1.fontColor = isOn ? UIColor.colorLabels : UIColor.white
+        label2.fontColor = isOn ? UIColor.colorLabels : UIColor.white
+        label3.fontColor = isOn ? UIColor.colorLabels : UIColor.white
+        label4.fontColor = isOn ? UIColor.colorLabels : UIColor.white
+
+    }
+    
     // MARK: - Gesture Actions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -64,7 +73,7 @@ class SAKissBedScene: SABaseScene {
                 if touchedNode == girlsNode && isKissGirl == false  {
                     touchedNode.removeAllActions()
                     
-                    let newTexture = SKTexture.init(imageNamed: "KissGirl2")
+                    let newTexture = SKTexture.init(imageNamed: "kissGirl2")
                     let newTextureAction = SKAction.setTexture(newTexture)
                     
                     let groupAction = SKAction.group([newTextureAction, kissSound])
@@ -102,8 +111,10 @@ class SAKissBedScene: SABaseScene {
                     darkNode?.run(alphaAction, completion: {
                         if self.darkNode?.alpha == 0 {
                             self.hideNextButton()
+                            self.updateColors(isOn: true)
                         } else{
                             self.showNextButton()
+                            self.updateColors(isOn: false)
                         }
                     })
                 }
