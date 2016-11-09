@@ -51,7 +51,7 @@ class SAMenuStoriesViewController: BaseViewController {
         
         let testViewController = SASheetViewController(nibName: "SASheetViewController", bundle: nil)
         let game = Game()
-        game.scene = "catch_world"
+        game.scene = "sun_moon"
         
         testViewController.game = game
         // Present ViewController

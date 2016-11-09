@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BiographyViewController" customModule="SiaoApao" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="f21-Kp-Q6h" id="99m-8I-Ecm"/>
                 <outlet property="lblDescription" destination="3JB-2Z-bSY" id="tbQ-PG-Y5v"/>
                 <outlet property="lblFoodDescription" destination="g1M-d1-NMK" id="Ag0-ed-sVT"/>
                 <outlet property="lblFoodTitle" destination="cqf-dG-QvQ" id="n2Y-KP-IDM"/>

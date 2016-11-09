@@ -42,17 +42,17 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msB-4Q-nK8" customClass="MenuView" customModule="SiaoApao" customModuleProvider="target">
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="246" id="3Kg-KD-CTU"/>
-                        <constraint firstAttribute="width" constant="177" id="AKV-Bs-zDW"/>
-                    </constraints>
-                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoU-iO-mu7">
+                    <frame key="frameInset" minX="42" minY="602" width="128" height="129"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="LeftArrow"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="LB1-MK-vKC"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="msB-4Q-nK8" secondAttribute="trailing" constant="50" id="1q6-gH-sZe"/>
                 <constraint firstItem="ZdF-81-3qy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2nl-H2-0ZF"/>
                 <constraint firstItem="FR7-GC-UGj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="3FA-kK-2Eh"/>
                 <constraint firstAttribute="bottom" secondItem="ZdF-81-3qy" secondAttribute="bottom" id="7Ma-Sl-5L1"/>
@@ -60,9 +60,8 @@
                 <constraint firstItem="ZdF-81-3qy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Epy-YL-nxt"/>
                 <constraint firstAttribute="trailing" secondItem="b8M-3j-CSK" secondAttribute="trailing" constant="78" id="Ha5-iW-eXa"/>
                 <constraint firstItem="FR7-GC-UGj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="73" id="LC6-rx-zk4"/>
-                <constraint firstItem="msB-4Q-nK8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="LKf-2v-bmg"/>
                 <constraint firstAttribute="trailing" secondItem="xge-UX-meT" secondAttribute="trailing" constant="78" id="Z2a-5S-842"/>
-                <constraint firstAttribute="bottom" secondItem="b8M-3j-CSK" secondAttribute="bottom" constant="82" id="d31-GO-wju"/>
+                <constraint firstAttribute="bottom" secondItem="b8M-3j-CSK" secondAttribute="bottom" constant="174" id="d31-GO-wju"/>
                 <constraint firstAttribute="trailing" secondItem="FR7-GC-UGj" secondAttribute="trailing" constant="78" id="oke-ch-Q44"/>
                 <constraint firstAttribute="trailing" secondItem="ZdF-81-3qy" secondAttribute="trailing" id="tW8-Qe-0A9"/>
                 <constraint firstItem="xge-UX-meT" firstAttribute="top" secondItem="FR7-GC-UGj" secondAttribute="bottom" constant="19" id="tyQ-h9-Qqz"/>
@@ -72,6 +71,7 @@
         </view>
     </objects>
     <resources>
+        <image name="LeftArrow" width="128" height="129"/>
         <image name="biography_back" width="1366" height="1024"/>
     </resources>
 </document>

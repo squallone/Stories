@@ -9,7 +9,8 @@
 import UIKit
 
 class BiographyViewController: BaseViewController {
-
+    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubtitle: UILabel!
@@ -33,6 +34,19 @@ class BiographyViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateLocalizableStrings()
+        
+        switch character.name {
+        case "Sia":
+            imageView.image = #imageLiteral(resourceName: "character_sia")
+        case "Apao":
+            imageView.image = #imageLiteral(resourceName: "character_apao")
+        case "Tyro":
+            imageView.image = #imageLiteral(resourceName: "character_tyro")
+        case "Galileo":
+            imageView.image = #imageLiteral(resourceName: "character_galileo")
+        default: break
+        }
+
     }
 
     // MARK: - Labels
@@ -53,7 +67,6 @@ class BiographyViewController: BaseViewController {
     @IBAction func readMore(_ sender: AnyObject) {
         let detailController = BiographyDetailViewController(nibName: "BiographyDetailViewController", bundle: nil)
         detailController.character = self.character
-        detailController.isBackEnable = true
         self.navigationController?.pushViewController(detailController, animated: true)
     }
 

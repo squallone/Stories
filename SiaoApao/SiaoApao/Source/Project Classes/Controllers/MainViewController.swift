@@ -64,10 +64,8 @@ class MainViewController: UIViewController {
                 
                 // Hide HUD
                 HUD.hide()
-                
                 // Save languages
                 Language.save(languages)
-                
                 // Set default language code
                 Language.saveCode(code: "ES")
                 
@@ -76,6 +74,15 @@ class MainViewController: UIViewController {
                 
             case .failure(let error):
                 print("Alamofire error: \(error)")
+                let realm = try! Realm()
+
+                let languages = realm.objects(Language.self)
+                
+                if languages.count > 0{
+                    // Show Menu
+                    self.showMainMenu()
+                }
+                
                 HUD.hide()
             }
         }

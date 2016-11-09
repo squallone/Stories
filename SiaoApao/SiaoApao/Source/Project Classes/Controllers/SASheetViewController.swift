@@ -21,11 +21,16 @@ class SASheetViewController: BaseViewController {
 
     // MARK: - View life cycle
     override func viewDidLoad() {
+        
         self.isBackEnable = true
         super.viewDidLoad()
         
+        /* Sprite Kit applies additional optimizations to improve rendering performance */
+        skView.ignoresSiblingOrder = true
+        
+        // Notification
         NotificationCenter.default.addObserver(self, selector: #selector(SASheetViewController.didPressBack), name: NSNotification.Name(rawValue: "close"), object: nil)
-
+        
         /* Init self.view to suport scence, beacuse this viewController is not use XIB */
     }
     
@@ -39,8 +44,10 @@ class SASheetViewController: BaseViewController {
             turtlesScene()
         case "dance":
             danceTyroScene()
-        case "catch_world":
+        case "sun_moon":
             dayNightScene()
+        case "catch_world":
+            catchWorld()
 
         default:
             break
@@ -61,56 +68,55 @@ class SASheetViewController: BaseViewController {
     
     func dayNightScene(){
         
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            if let scene = SADayAndNightScene(fileNamed:"SADayAndNightScene") {
+        if let scene = SADayAndNightScene(fileNamed:"SADayAndNightScene") {
                 
-                scene.showHomeButton = self.showHomeButton
-                /* Set the scale mode to scale to fit the window */
-                scene.scaleMode = .aspectFill
-                skView.presentScene(scene)
-            }
+            scene.showHomeButton = self.showHomeButton
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
+    }
+    
+    func catchWorld(){
+        
+        if let scene = SABookScene(fileNamed:"SABookScene") {
+            
+            scene.showHomeButton = self.showHomeButton
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
     }
     
     func bubbleScene(){
-        
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            if let scene = SASceneGlobes(fileNamed:"SASceneGlobes") {
-                scene.showHomeButton = self.showHomeButton
 
-                /* Set the scale mode to scale to fit the window */
-                scene.scaleMode = .aspectFill
-                skView.presentScene(scene)
-            }
+        if let scene = SASceneGlobes(fileNamed:"SASceneGlobes") {
+            scene.showHomeButton = self.showHomeButton
+
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
     }
     
     func turtlesScene(){
         
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            if let scene = SASurfScene(fileNamed:"SASurfScene") {
-                scene.showHomeButton = self.showHomeButton
-                /* Set the scale mode to scale to fit the window */
-                scene.scaleMode = .aspectFill
-                skView.presentScene(scene)
-            }
+        if let scene = SASurfScene(fileNamed:"SASurfScene") {
+            scene.showHomeButton = self.showHomeButton
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
     }
     
     func danceTyroScene(){
         
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            if let scene = SACarpetScene(fileNamed:"SACarpetScene") {
-                scene.showHomeButton = self.showHomeButton
-                /* Set the scale mode to scale to fit the window */
-                scene.scaleMode = .aspectFill
-                skView.presentScene(scene)
-            }
+        if let scene = SACarpetScene(fileNamed:"SACarpetScene") {
+            scene.showHomeButton = self.showHomeButton
+            /* Set the scale mode to scale to fit the window */
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
     }
     
     

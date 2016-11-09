@@ -11,6 +11,7 @@ import UIKit
 class MenuViewController: UIViewController {
     
     // MARK: - @IBOutlet
+    @IBOutlet weak var settingsMenuView: UIView!
     @IBOutlet weak var btnSpanish: UIButton!
     @IBOutlet weak var btnEnglish: UIButton!
     
@@ -83,6 +84,9 @@ class MenuViewController: UIViewController {
     
     func goHome(){
         flowController.showMenu()
+    }
+    @IBAction func showSettings(_ sender: AnyObject) {
+        settingsMenuView.isHidden = !settingsMenuView.isHidden
     }
     
     @IBAction  func changeLanguageToSpanish(){

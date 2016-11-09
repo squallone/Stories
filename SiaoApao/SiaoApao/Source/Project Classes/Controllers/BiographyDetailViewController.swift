@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BiographyDetailViewController: BaseViewController {
+class BiographyDetailViewController: UIViewController {
     
     var character = Character()
 
@@ -19,8 +19,6 @@ class BiographyDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        // Menu delegate
-        self.menuView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +27,9 @@ class BiographyDetailViewController: BaseViewController {
     }
     
     
+    @IBAction func back(_ sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
     // MARK: - Labels
     
     func updateLocalizableStrings(){
@@ -39,25 +40,4 @@ class BiographyDetailViewController: BaseViewController {
     }
 }
 
-
-extension BiographyDetailViewController: MenuViewDelegate{
-    
-    func didPressSpanish() {
-        self.character = self.character.update()
-        self.updateLocalizableStrings()
-    }
-    
-    func didPressEnglish() {
-        self.character = self.character.update()
-        self.updateLocalizableStrings()
-    }
-    
-    func didPressBack() {
-        _ = self.navigationController?.popViewController(animated: true)
-    }
-    
-    func didPressHome() {
-        _ = self.navigationController?.popToRootViewController(animated: true)
-    }
-}
 

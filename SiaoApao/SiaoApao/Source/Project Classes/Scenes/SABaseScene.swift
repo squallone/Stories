@@ -92,14 +92,14 @@ class SABaseScene: SKScene {
         }
         
         // Next button
-        nextButton = SKSpriteNode(imageNamed: "RightArrow")
+        nextButton = SKSpriteNode(imageNamed: "RightArrowDisabled")
         nextButton?.name = "next"
         nextButton?.position = CGPoint(x: size.width-65, y: 65)
         nextButton?.zPosition = 10
         addChild(nextButton!)
         
         // Default status for next button
-       //self.hideNextButton()
+       self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
@@ -130,12 +130,13 @@ class SABaseScene: SKScene {
     
     func hideNextButton(){
         self.nextButton?.isUserInteractionEnabled = true
-        self.nextButton?.alpha = 0.7
+        self.nextButton?.texture = SKTexture(imageNamed: "RightArrowDisabled")
     }
     
     func showNextButton(){
         self.nextButton?.isUserInteractionEnabled = false
-        self.nextButton?.alpha = 1.0
+        self.nextButton?.texture = SKTexture(imageNamed: "RightArrow")
+
     }
     
     func hideLabels(){

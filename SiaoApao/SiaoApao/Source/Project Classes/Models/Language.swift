@@ -183,8 +183,6 @@ class Language: Object, Mappable {
         labelsData     <- (map["data.labels"], transformJSONObject)
         gamesData      <- (map["data.games"], transformJSONArray)
         storiesData    <- (map["data.stories"], transformJSONArray)
-
-        
     }
     
     // MARK: - Realm
@@ -224,9 +222,7 @@ class Language: Object, Mappable {
         guard let codeSelected = code else{
             return nil
         }
-        
         return getLanguage(code: codeSelected)
-        
     }
     
     class func getLanguage(code: String) -> Language?{

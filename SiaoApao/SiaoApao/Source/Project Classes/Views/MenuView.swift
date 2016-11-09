@@ -21,7 +21,6 @@ class MenuView: UIView {
     // MARK: - Properties
     
     var delegate: MenuViewDelegate?
-    var sheetController: SASheetViewController?
     
     @IBOutlet weak var btnHome: UIButton?
     @IBOutlet weak var btnBack: UIButton?
@@ -75,10 +74,7 @@ class MenuView: UIView {
         if let didPressHome = self.delegate?.didPressHome{
             didPressHome()
         }
-        
-        if let controller = sheetController{
-            controller.dismiss(animated: true, completion: nil)
-        }
+ 
     }
     
     @IBAction func goBack(_ sender: AnyObject) {

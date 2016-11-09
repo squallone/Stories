@@ -70,8 +70,8 @@ class SAMenuGamesViewController: BaseViewController, UICollectionViewDataSource,
             let testViewController = SASheetViewController()
             testViewController.game = game
             testViewController.showHomeButton = true
-            // Present ViewController
-            self.present(testViewController, animated: true, completion: nil)
+            // Push ViewController
+           _ = self.navigationController?.pushViewController(testViewController, animated: true)
         }
     }    
 }
