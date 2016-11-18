@@ -70,7 +70,7 @@ class SAFishbowlScene: SABaseScene {
         label4.text = "scene_goodnight_galileo_text4".localized
         
         // TODO: Localized Text
-        dialogLabelNode?.text = "Goog Night"
+        dialogLabelNode?.text = "Good Night"
     }
     
     func handlePanFrom(_ recognizer: UIPanGestureRecognizer) {
@@ -119,6 +119,9 @@ class SAFishbowlScene: SABaseScene {
                     
                     fishNode?.run(caveAction!, completion: {
                         if (self.fishNode?.position.x)! > self.finalPositon.x && !self.isFinish {
+
+                            self.isFinish = true
+
                             let crossFaceAction = SKAction.fadeOut(withDuration: 1.0)
                             self.fishNode?.run(crossFaceAction, completion: {
                                 
@@ -128,8 +131,6 @@ class SAFishbowlScene: SABaseScene {
                                 self.dialogNode?.run(groupActon, completion: {
                                     // Show next button
                                     self.showNextButton()
-                                    
-                                    self.isFinish = true
                                 })
                             })
                         }
