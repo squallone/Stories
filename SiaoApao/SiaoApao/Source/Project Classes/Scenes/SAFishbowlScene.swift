@@ -13,6 +13,8 @@ class SAFishbowlScene: SABaseScene {
     // MARK: - Properties
     var fishNode: SKSpriteNode?
     var caveNode: SKSpriteNode?
+    var dialogNode: SKSpriteNode?
+    var dialogLabelNode: SKLabelNode?
     var bidirectionalArrow: SKSpriteNode?
     var selectedNode = SKSpriteNode()
     
@@ -20,18 +22,27 @@ class SAFishbowlScene: SABaseScene {
     var finalPositon: CGPoint = CGPoint(x: 860, y: 410)
     var caveAction: SKAction?
 
+    // MARK: - Sound Action
+    let goodNightSound: SKAction = SKAction.playSoundFileNamed(
+        "goodnight.wav", waitForCompletion: true)
+    
     var isFirstTime = true
+    var isFinish = false
     
     /* Setup your scene here */
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
-        self.updateLocalizableString()
-        
         /* Init properties */
         fishNode = self.childNode(withName: "fish") as? SKSpriteNode
         caveNode = self.childNode(withName: "cave") as? SKSpriteNode
         bidirectionalArrow = self.childNode(withName: "arrow") as? SKSpriteNode
+        dialogNode = self.childNode(withName: "dialog") as? SKSpriteNode
+        dialogLabelNode = dialogNode?.childNode(withName: "dialogLabel") as? SKLabelNode
+        
+        /* Localizeable String  */
+        self.updateLocalizableString()
+
         
         /* Add gesture */
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SAFishbowlScene.handlePanFrom))
@@ -42,6 +53,9 @@ class SAFishbowlScene: SABaseScene {
         bidirectionalArrow?.run(SKAction.repeatForever(bounceAction))
         
         caveAction = SKAction.move(by: CGVector(dx:1.0, dy:0.0), duration: 1.0)
+        
+        /* Hide dialogNode */
+        dialogNode?.alpha = 0
     }
     
     // MARK: - Labels
@@ -54,6 +68,9 @@ class SAFishbowlScene: SABaseScene {
         label2.text = "scene_goodnight_galileo_text2".localized
         label3.text = "scene_goodnight_galileo_text3".localized
         label4.text = "scene_goodnight_galileo_text4".localized
+        
+        // TODO: Localized Text
+        dialogLabelNode?.text = "Goog Night"
     }
     
     func handlePanFrom(_ recognizer: UIPanGestureRecognizer) {
@@ -101,12 +118,19 @@ class SAFishbowlScene: SABaseScene {
                 } else {
                     
                     fishNode?.run(caveAction!, completion: {
-                        if (self.fishNode?.position.x)! > self.finalPositon.x {
+                        if (self.fishNode?.position.x)! > self.finalPositon.x && !self.isFinish {
                             let crossFaceAction = SKAction.fadeOut(withDuration: 1.0)
                             self.fishNode?.run(crossFaceAction, completion: {
                                 
-                                // Show next button
-                                self.showNextButton()
+                                /* Good night Action */
+                                let fadeInAction = SKAction.fadeIn(withDuration: 1.0)
+                                let groupActon = SKAction.group([self.goodNightSound, fadeInAction])
+                                self.dialogNode?.run(groupActon, completion: {
+                                    // Show next button
+                                    self.showNextButton()
+                                    
+                                    self.isFinish = true
+                                })
                             })
                         }
                     })
