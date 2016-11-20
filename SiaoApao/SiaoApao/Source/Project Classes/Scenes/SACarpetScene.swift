@@ -13,8 +13,10 @@ class SACarpetScene: SABaseScene {
     
     // MARK: - Properties
     var dragonNode: SKSpriteNode?
+    var carpetGirl: SKSpriteNode?
+    var carpetGirlTwo: SKSpriteNode?
     let stepNumber: Int = 7
-    var numberOfTouches: Int = 5;
+    var numberOfTouches: Int = 8;
     var danceAction: SKAction!
     
     var backgroundMusicPlayer: AVAudioPlayer!
@@ -25,17 +27,24 @@ class SACarpetScene: SABaseScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        /* Localizable string*/
         self.updateLocalizableString()
+        
+        /* Load backgroud music */
+        self.playBackgroundMusic(filename: "dance.wav")
         
         /* Init properties */
         dragonNode = self.childNode(withName: "dragon") as? SKSpriteNode
+        carpetGirl = self.childNode(withName: "carpetGirl") as? SKSpriteNode
+        carpetGirlTwo  = self.childNode(withName: "carpetGirlTwo") as? SKSpriteNode
         
         /* Create Bounce Action */
-        let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
+        let bounceAction = SKAction.bounce(to: 1.01, duration: 0.2)
         dragonNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
         
-        /* Create Dacen Action */
-        /* Create step Action*/
+        
+        /* Create Dragon Dance Action */
+        /* Create step Action */
         let stepSequence = SKAction.sequence([SKAction.rotate(byAngle: degToRad(-2.0), duration: 0.1),
                                               SKAction.moveBy(x: 5, y: 0, duration: 0.1),
                                               SKAction.rotate(byAngle: 0.0, duration: 0.1),
@@ -47,6 +56,36 @@ class SACarpetScene: SABaseScene {
         
         danceAction = SKAction.repeatForever(SKAction.sequence([groupAction,
                                                                 groupActionReversed]))
+        
+        /* Dance girl */
+        let rightRotateAction           = SKAction.rotate(byAngle: degToRad(-1.0), duration: 0.2)
+        let reverseRightRotateAction    = rightRotateAction.reversed()
+        let leftRotateAction            = SKAction.rotate(byAngle: degToRad(1.0), duration: 0.2)
+        let reverseLeftRotateAction     = leftRotateAction.reversed()
+        let getUpAction                 = SKAction.move(by: CGVector(dx:0, dy:5.0), duration: 0.1)
+        let getDownAction               = SKAction.move(by: CGVector(dx:0, dy:-10.0), duration: 0.1)
+
+        let sequenceGirlArray = [rightRotateAction,
+                                 reverseRightRotateAction,
+                                 leftRotateAction,
+                                 reverseLeftRotateAction,
+                                 getUpAction,
+                                 rightRotateAction,
+                                 reverseRightRotateAction,
+                                 getDownAction,
+                                 leftRotateAction,
+                                 reverseLeftRotateAction,
+                                 getUpAction]
+        
+        let stepTwoSequenceAction = SKAction.sequence(sequenceGirlArray)
+       carpetGirl?.run(SKAction.repeatForever(stepTwoSequenceAction))
+        
+        /* Dance girl two*/
+        let sequenceGirlTwoArray = [stepSequence,
+                                    stepSequence.reversed()];
+        let stepThreeSequenceAction = SKAction.sequence(sequenceGirlTwoArray)
+        carpetGirlTwo?.run(SKAction.repeatForever(stepThreeSequenceAction))
+
     }
     
     // MARK: - Labels
@@ -75,19 +114,35 @@ class SACarpetScene: SABaseScene {
                     if ((touchedNode.action(forKey: "dace")) == nil) {
                         touchedNode.removeAllActions()
                         
-                        self.playBackgroundMusic(filename: "dance.wav")
                         dragonNode?.run(danceAction, withKey: "dace")
+                        let waitAction = SKAction.wait(forDuration: 2.0)
+                        dragonNode?.run(waitAction, completion: {
+                            /* Pause Dragon Dance Action */
+                            self.dragonNode?.isPaused = true
+                            
+                            /* Decrement number of toches */
+                            self.numberOfTouches -= 1
+                        })
                     
                     } else {
                         
                         /* Other Touches */
                         if numberOfTouches > 0 {
-                            /* Resume Background Music */
-                            backgroundMusicPlayer.play()
-                        
-                            /* Resume Dragon Dance Action */
-                            dragonNode?.isPaused = false
-                        
+                            
+                            if self.dragonNode?.isPaused == true {
+                           
+                                /* Resume Dragon Dance Action */
+                                dragonNode?.isPaused = false
+                                
+                                let waitAction = SKAction.wait(forDuration: 2.0)
+                                dragonNode?.run(waitAction, completion: {
+                                    /* Pause Dragon Dance Action */
+                                    self.dragonNode?.isPaused = true
+                                    
+                                    /* Decrement number of toches */
+                                    self.numberOfTouches -= 1
+                                })
+                            }
                         } else {
                             /* Stop background Sound */
                             backgroundMusicPlayer.stop()
@@ -104,6 +159,9 @@ class SACarpetScene: SABaseScene {
                             let groupAction = SKAction.group([textureAction, tiredSound])
                             dragonNode?.run(groupAction, completion: {
                                 
+                                self.carpetGirl?.removeAllActions()
+                                self.carpetGirlTwo?.removeAllActions()
+                                
                                 // Show next button
                                 self.showNextButton()
                             })
@@ -112,23 +170,6 @@ class SACarpetScene: SABaseScene {
                 }
             }
         }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        
-        /* Pause Dragon Dance Action */
-        self.dragonNode?.isPaused = true
-        
-        
-        if self.backgroundMusicPlayer != nil{
-            /* Puase Background Music */
-            self.backgroundMusicPlayer.pause()
-        }
-        
-        
-        /* Decrement number of toches */
-        self.numberOfTouches -= 1
     }
     
     
@@ -150,6 +191,4 @@ class SACarpetScene: SABaseScene {
             return
         }
     }
-
-    
 }

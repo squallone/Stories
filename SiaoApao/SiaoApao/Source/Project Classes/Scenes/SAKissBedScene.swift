@@ -37,6 +37,9 @@ class SAKissBedScene: SABaseScene {
         /* Init Alpha*/
         darkNode?.alpha = 0.0
         
+        /* Interaction */
+        switchNode?.isUserInteractionEnabled = true
+        
         /* Create Bounce Action */
         let bounceAction = SKAction.bounce(to: 1.005, duration: 0.2)
         girlsNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
@@ -73,7 +76,7 @@ class SAKissBedScene: SABaseScene {
                 if touchedNode == girlsNode && isKissGirl == false  {
                     touchedNode.removeAllActions()
                     
-                    let newTexture = SKTexture.init(imageNamed: "kissGirl2")
+                    let newTexture = SKTexture.init(imageNamed: "KissGirl2")
                     let newTextureAction = SKAction.setTexture(newTexture)
                     
                     let groupAction = SKAction.group([newTextureAction, kissSound])
@@ -92,8 +95,12 @@ class SAKissBedScene: SABaseScene {
                         
                         let bounceAction = SKAction.bounce(to: 1.01, duration: 0.2)
                         self.switchNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
-                        //self.showNextButton()
+
                         self.isKissGirl = true
+                        
+                        /* Enable switch */
+                        self.switchNode?.isUserInteractionEnabled = false
+                        
                     })
                 } else if touchedNode == switchNode {
                     touchedNode.removeAllActions()
