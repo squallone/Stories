@@ -81,11 +81,18 @@ class MainViewController: UIViewController {
                 if languages.count > 0{
                     // Show Menu
                     self.showMainMenu()
+                }else{
+                    let alertController = UIAlertController(title: "Sia&Apao", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+
+                    let okAction = UIAlertAction(title: "Retry", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+                        self.fetchLanguagesData()
+                    }
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 }
                 
                 HUD.hide()
             }
         }
-
     }
 }

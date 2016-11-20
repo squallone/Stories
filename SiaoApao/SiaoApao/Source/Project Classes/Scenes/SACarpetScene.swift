@@ -120,8 +120,12 @@ class SACarpetScene: SABaseScene {
         /* Pause Dragon Dance Action */
         self.dragonNode?.isPaused = true
         
-        /* Puase Background Music */
-        self.backgroundMusicPlayer.pause()
+        
+        if self.backgroundMusicPlayer != nil{
+            /* Puase Background Music */
+            self.backgroundMusicPlayer.pause()
+        }
+        
         
         /* Decrement number of toches */
         self.numberOfTouches -= 1
