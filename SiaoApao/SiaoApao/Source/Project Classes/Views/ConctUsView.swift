@@ -26,10 +26,13 @@ class ConctUsView: UIView {
     }
     
     @IBAction func didPressFB(_ sender: Any) {
+        viewModel.didPressFacebook?()
+
     }
-    
 }
 
 struct SettingsViewModel{
     var didPressClose: (() -> Void)? = nil
+    var didPressFacebook: (() -> Void)? = nil
+
 }

@@ -35,6 +35,10 @@ class FormSheetViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
         
+        viewModel.didPressFacebook = {
+            UIApplication.shared.openURL(NSURL(string: "http://www.facebook.com/sia.and.apao")! as URL)
+        }
+        
         switch self.type {
         case .contactUs:
             
@@ -51,7 +55,5 @@ class FormSheetViewController: UIViewController {
 
         default:()
         }
-        
-        self.view.backgroundColor = UIColor.clear
     }
 }

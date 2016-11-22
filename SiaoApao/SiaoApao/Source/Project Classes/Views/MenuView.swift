@@ -41,16 +41,11 @@ class MenuView: UIView {
         return menuView
     }
         
-    class func loadMenu1() -> MenuView {
-        
-        return loadMenu(nibName: "MenuView")
-    }
-    
-    class func loadMenu2() -> MenuView {
+    class func loadMenu() -> MenuView {
         
         return loadMenu(nibName: "Menu2View")
-
     }
+    
     
     // MARK: - Labels
     
