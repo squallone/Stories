@@ -12,6 +12,7 @@ class SABaseScene: SKScene {
     
     // MARK: - Properties
     public var showHomeButton: Bool?
+    public var isSceneGame: Bool?
     
     public var backButton: SKSpriteNode?
     public var nextButton: SKSpriteNode?
@@ -24,17 +25,19 @@ class SABaseScene: SKScene {
     public var label3: SKLabelNode!
     public var label4: SKLabelNode!
     
+    public var timerLabelNode: SKTimerNode!
+    
     let labelFontSize : CGFloat = 28.0
 
     // MARK: - Life cycle
-    
     override func didMove(to view: SKView) {
+        super.didMove(to: view)
         self.addLabels()
         self.addInstructionsBar()
+        self.addTimerLabel()
     }
     
     // MARK: - Actions
-
     func addLabels(){
         
         label1 = SKLabelNode(text: "")
@@ -119,11 +122,19 @@ class SABaseScene: SKScene {
         
         if let showHomeButton = self.showHomeButton{
             
-            if showHomeButton{
+            if showHomeButton {
                 self.nextButton?.texture = SKTexture(imageNamed: "home")
                 self.backButton?.isHidden = true
                 self.hideLabels()
                 showNextButton()
+                
+                /* No show the nextButton in a Game
+                 It only show when the user complete
+                 the scene */
+                if (isSceneGame == true) {
+                    /* ¿Is correct the next button?*/
+                    hideNextButton()
+                }
             }
         }
     }
@@ -151,6 +162,23 @@ class SABaseScene: SKScene {
         self.label2.isHidden = false
         self.label3.isHidden = false
         self.label4.isHidden = false
+    }
+    
+    func addTimerLabel() {
+        if (isSceneGame == true) {
+            timerLabelNode = SKTimerNode()
+            timerLabelNode.zPosition = 15
+            timerLabelNode.position = CGPoint(x: size.width / 2, y: 710)
+            timerLabelNode.fontName = "ArialNarrow-Bold"
+            timerLabelNode.fontColor = UIColor.red
+            timerLabelNode.verticalAlignmentMode = .center
+            timerLabelNode.horizontalAlignmentMode = .center
+            timerLabelNode.isUserInteractionEnabled = false
+            addChild(timerLabelNode)
+            
+            timerLabelNode.starTimer()
+
+        }
     }
     
     func updateLocalizableString(){

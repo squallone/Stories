@@ -82,6 +82,8 @@ class SASheetViewController: BaseViewController {
         if let scene = SABookScene(fileNamed:"SABookScene") {
             
             scene.showHomeButton = self.showHomeButton
+            scene.isSceneGame = true
+
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)
@@ -92,6 +94,7 @@ class SASheetViewController: BaseViewController {
 
         if let scene = SASceneGlobes(fileNamed:"SASceneGlobes") {
             scene.showHomeButton = self.showHomeButton
+            scene.isSceneGame = true
 
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
@@ -103,6 +106,8 @@ class SASheetViewController: BaseViewController {
         
         if let scene = SASurfScene(fileNamed:"SASurfScene") {
             scene.showHomeButton = self.showHomeButton
+            scene.isSceneGame = true
+
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)
@@ -113,6 +118,8 @@ class SASheetViewController: BaseViewController {
         
         if let scene = SACarpetScene(fileNamed:"SACarpetScene") {
             scene.showHomeButton = self.showHomeButton
+            scene.isSceneGame = true
+
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)
