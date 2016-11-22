@@ -11,10 +11,12 @@ import SpriteKit
 class SKSuccessNode: SKNode {
     
     public var titleLabel: SKLabelNode!
+    public var titleButtonLabel: SKLabelNode!
+
     public var retryButton: SKSpriteNode!
     
     /* Local Constant */
-    let titleFontSize : CGFloat = 47.0
+    let titleFontSize : CGFloat = 37.0
     let buttonFontSize : CGFloat = 20.0
     
     override init () {
@@ -44,7 +46,7 @@ class SKSuccessNode: SKNode {
         addChild(retryButton)
         
         /* Text in button */
-        let titleButtonLabel = SKLabelNode(text: "game_retry".localized)
+        titleButtonLabel = SKLabelNode(text: "game_retry".localized)
         titleButtonLabel.name = "retryScene"
         titleButtonLabel.zPosition = 1.0
         titleButtonLabel.position = CGPoint(x: 0, y: 0)

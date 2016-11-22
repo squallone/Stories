@@ -30,6 +30,7 @@ class SASurfScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
+        super.updateLocalizableString()
         
         /* Title description */
         titleLabel.text = "scene_turtles_instructions".localized

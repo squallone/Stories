@@ -56,7 +56,8 @@ class SAPuppetScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_dress_instructions".localized
         label1.text = "scene_tickle_text1".localized

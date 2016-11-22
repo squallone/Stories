@@ -48,7 +48,8 @@ class SABearinBedScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_cuddle_orli_instructions".localized
         label1.text = "scene_cuddle_orli_text1".localized

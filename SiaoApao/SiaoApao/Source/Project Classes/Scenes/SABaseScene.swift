@@ -104,7 +104,7 @@ class SABaseScene: SKScene {
         addChild(nextButton!)
         
         // Default status for next button
-       self.hideNextButton()
+       //self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
@@ -201,7 +201,9 @@ class SABaseScene: SKScene {
     }
     
     func updateLocalizableString(){
-    
+        successNode?.titleLabel.text = "game_congratulations".localized
+        successNode?.titleButtonLabel.text = "game_retry".localized
+
     }
     // MARK: - Touches Began
     
