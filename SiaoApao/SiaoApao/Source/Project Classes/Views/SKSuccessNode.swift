@@ -14,19 +14,24 @@ class SKSuccessNode: SKNode {
     public var retryButton: SKSpriteNode!
     
     /* Local Constant */
-    let labelFontSize : CGFloat = 30.0
+    let titleFontSize : CGFloat = 47.0
     let buttonFontSize : CGFloat = 20.0
     
     override init () {
         super.init()
         
+        /* retry Button*/
+        let backgroundNode = SKSpriteNode(imageNamed: "menu_back_stories")
+        backgroundNode.zPosition = -1
+        addChild(backgroundNode)
         
         
         /* Set Text */
         titleLabel = SKLabelNode(text: "¡Felicidades!")
-        titleLabel.position = CGPoint(x: 0, y: 0)
-        titleLabel.horizontalAlignmentMode = .left
-        titleLabel.fontSize = labelFontSize
+        titleLabel.position = CGPoint(x: 0, y: 28)
+        titleLabel.horizontalAlignmentMode = .center
+        titleLabel.verticalAlignmentMode = .center
+        titleLabel.fontSize = titleFontSize
         titleLabel.fontName = "ArialNarrow-Bold"
         titleLabel.fontColor = UIColor.colorLabels
         titleLabel.isUserInteractionEnabled = false
@@ -34,18 +39,20 @@ class SKSuccessNode: SKNode {
         
         /* retry Button*/
         retryButton = SKSpriteNode(imageNamed: "wood_Button")
-        retryButton.position = CGPoint(x: 65, y: 65)
-        retryButton.zPosition = 10
+        retryButton.position = CGPoint(x: 0, y: -45)
+        retryButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         addChild(retryButton)
         
         /* Text in button */
         let titleButtonLabel = SKLabelNode(text: "Reintentar")
-        titleButtonLabel.position = CGPoint(x: retryButton.size.width / 2, y: retryButton.size.height / 2)
+        titleButtonLabel.name = "retryScene"
+        titleButtonLabel.zPosition = 1.0
+        titleButtonLabel.position = CGPoint(x: 0, y: 0)
         titleButtonLabel.horizontalAlignmentMode = .center
         titleButtonLabel.verticalAlignmentMode = .center
         titleButtonLabel.fontSize = buttonFontSize
         titleButtonLabel.fontName = "ArialNarrow-Bold"
-        titleLabel.fontColor = UIColor.black
+        titleButtonLabel.fontColor = UIColor.white
         retryButton.addChild(titleButtonLabel)
         
     }
