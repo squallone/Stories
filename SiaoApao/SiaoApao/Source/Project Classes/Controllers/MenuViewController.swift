@@ -85,9 +85,28 @@ class MenuViewController: UIViewController {
     func goHome(){
         flowController.showMenu()
     }
+    
     @IBAction func showSettings(_ sender: AnyObject) {
         settingsMenuView.isHidden = !settingsMenuView.isHidden
     }
+    
+    
+    @IBAction func showTheTeam(_ sender: Any) {
+        showSettings(sender as AnyObject)
+        flowController.showTheTeam()
+
+    }
+    
+    @IBAction func showContactUs(_ sender: Any) {
+        showSettings(sender as AnyObject)
+        flowController.showContactUs()
+    }
+    
+    @IBAction func showOptions(_ sender: Any) {
+        
+    }
+    
+    // MARK: - Language
     
     @IBAction  func changeLanguageToSpanish(){
 
