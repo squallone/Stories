@@ -27,7 +27,7 @@ class SKSuccessNode: SKNode {
         
         
         /* Set Text */
-        titleLabel = SKLabelNode(text: "¡Felicidades!")
+        titleLabel = SKLabelNode(text: "game_congratulations".localized)
         titleLabel.position = CGPoint(x: 0, y: 28)
         titleLabel.horizontalAlignmentMode = .center
         titleLabel.verticalAlignmentMode = .center
@@ -44,7 +44,7 @@ class SKSuccessNode: SKNode {
         addChild(retryButton)
         
         /* Text in button */
-        let titleButtonLabel = SKLabelNode(text: "Reintentar")
+        let titleButtonLabel = SKLabelNode(text: "game_retry".localized)
         titleButtonLabel.name = "retryScene"
         titleButtonLabel.zPosition = 1.0
         titleButtonLabel.position = CGPoint(x: 0, y: 0)
