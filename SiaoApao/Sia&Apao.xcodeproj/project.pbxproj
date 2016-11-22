@@ -107,6 +107,8 @@
 		F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */; };
 		F2C152361DE41AEF00FF3972 /* SAIntroScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2C152351DE41AEF00FF3972 /* SAIntroScene.sks */; };
 		F2C152391DE41B2300FF3972 /* SAIntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C152381DE41B2300FF3972 /* SAIntroScene.swift */; };
+		F2C1523B1DE4220000FF3972 /* SKAlertNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1523A1DE4220000FF3972 /* SKAlertNode.swift */; };
+		F2C1523F1DE4252400FF3972 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1523E1DE4252400FF3972 /* Alert.swift */; };
 		F2D601F91D7FE493006B2AE7 /* SAMenuStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */; };
 		F2D601FA1D7FE493006B2AE7 /* SAMenuStoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */; };
 		F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D601FC1D7FE4F3006B2AE7 /* BaseViewController.swift */; };
@@ -245,6 +247,8 @@
 		F2B9F40B1DA6239C00B94545 /* MKOutlinedLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKOutlinedLabelNode.swift; sourceTree = "<group>"; };
 		F2C152351DE41AEF00FF3972 /* SAIntroScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SAIntroScene.sks; sourceTree = "<group>"; };
 		F2C152381DE41B2300FF3972 /* SAIntroScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAIntroScene.swift; sourceTree = "<group>"; };
+		F2C1523A1DE4220000FF3972 /* SKAlertNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKAlertNode.swift; sourceTree = "<group>"; };
+		F2C1523E1DE4252400FF3972 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F2D601F71D7FE493006B2AE7 /* SAMenuStoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuStoriesViewController.swift; sourceTree = "<group>"; };
 		F2D601F81D7FE493006B2AE7 /* SAMenuStoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMenuStoriesViewController.xib; sourceTree = "<group>"; };
 		F2D601FC1D7FE4F3006B2AE7 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -567,6 +571,7 @@
 			children = (
 				92841DDA1D8F282E00735AC8 /* Extensions */,
 				F2F9910B1DB2E307004200B6 /* HUD.swift */,
+				F2C1523E1DE4252400FF3972 /* Alert.swift */,
 			);
 			name = Helpers;
 			path = Source/Helpers;
@@ -624,14 +629,10 @@
 		F220ED671D7F8C4B00D98278 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				92F95DEA1DE3EAA8002B03AC /* SKSuccessNode.swift */,
-				925A12201DDEEF97008F3AE1 /* SKTimerNode.swift */,
-				F22D37CD1DE2D677004D923E /* WebView.swift */,
-				F22D37CF1DE2D687004D923E /* WebView.xib */,
-				F22D37C71DE270C3004D923E /* ConctUsView.swift */,
-				F22D37C91DE27150004D923E /* ConctUsView.xib */,
+				F2C1523D1DE4221C00FF3972 /* Custom nodes */,
 				F272ACF61DC9532400C5A302 /* NibLoadingView.swift */,
 				F2B66E981D8126AF00652249 /* SALabel.swift */,
+				F2C1523C1DE4220E00FF3972 /* Settings Menu */,
 				F22690921DBCA9FC00EAE921 /* Menu */,
 			);
 			path = Views;
@@ -738,6 +739,27 @@
 				F2C152351DE41AEF00FF3972 /* SAIntroScene.sks */,
 			);
 			name = Intro;
+			sourceTree = "<group>";
+		};
+		F2C1523C1DE4220E00FF3972 /* Settings Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F22D37CD1DE2D677004D923E /* WebView.swift */,
+				F22D37CF1DE2D687004D923E /* WebView.xib */,
+				F22D37C71DE270C3004D923E /* ConctUsView.swift */,
+				F22D37C91DE27150004D923E /* ConctUsView.xib */,
+			);
+			name = "Settings Menu";
+			sourceTree = "<group>";
+		};
+		F2C1523D1DE4221C00FF3972 /* Custom nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F2C1523A1DE4220000FF3972 /* SKAlertNode.swift */,
+				92F95DEA1DE3EAA8002B03AC /* SKSuccessNode.swift */,
+				925A12201DDEEF97008F3AE1 /* SKTimerNode.swift */,
+			);
+			name = "Custom nodes";
 			sourceTree = "<group>";
 		};
 		F2D601F41D7FD3E4006B2AE7 /* Managers */ = {
@@ -1010,6 +1032,7 @@
 				F20780CD1DAE0F15007E39DE /* Language.swift in Sources */,
 				9242DC271DA9D4D100868886 /* SAKissBedScene.swift in Sources */,
 				F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */,
+				F2C1523F1DE4252400FF3972 /* Alert.swift in Sources */,
 				F2F9910C1DB2E307004200B6 /* HUD.swift in Sources */,
 				F220ED7F1D7F981700D98278 /* MainViewController.swift in Sources */,
 				92F95DEB1DE3EAA8002B03AC /* SKSuccessNode.swift in Sources */,
@@ -1053,6 +1076,7 @@
 				9262899B1D7F7F4D00F253FF /* AppDelegate.swift in Sources */,
 				F220ED691D7F8C6B00D98278 /* Constants.swift in Sources */,
 				923912E61D827A80000FC33C /* SAPuppetScene.swift in Sources */,
+				F2C1523B1DE4220000FF3972 /* SKAlertNode.swift in Sources */,
 				92841DDE1D8F817A00735AC8 /* SKScene+CommonOperations.swift in Sources */,
 				F2AC6D391DB77A160091B091 /* Game.swift in Sources */,
 				F2B55F911DB89CB6009220D0 /* GameCollectionViewCell.swift in Sources */,

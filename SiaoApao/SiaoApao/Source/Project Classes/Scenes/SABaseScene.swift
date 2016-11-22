@@ -8,12 +8,14 @@
 
 import SpriteKit
 
-class SABaseScene: SKScene {
+class SABaseScene: SKScene, Alerts {
     
     // MARK: - Properties
     public var showHomeButton: Bool?
     public var isSceneGame: Bool?
     
+    public var alertNode: SKSpriteNode?
+
     public var backButton: SKSpriteNode?
     public var nextButton: SKSpriteNode?
     public var titleLabel: SKLabelNode!
@@ -40,6 +42,7 @@ class SABaseScene: SKScene {
     }
     
     // MARK: - Actions
+    
     func addLabels(){
         
         label1 = SKLabelNode(text: "")
@@ -104,7 +107,7 @@ class SABaseScene: SKScene {
         addChild(nextButton!)
         
         // Default status for next button
-       //self.hideNextButton()
+       self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")
@@ -203,7 +206,6 @@ class SABaseScene: SKScene {
     func updateLocalizableString(){
         successNode?.titleLabel.text = "game_congratulations".localized
         successNode?.titleButtonLabel.text = "game_retry".localized
-
     }
     // MARK: - Touches Began
     
@@ -213,6 +215,10 @@ class SABaseScene: SKScene {
         if let location = touches.first?.location(in: self) {
             let touchedNode = atPoint(location)
             if (touchedNode.name != nil) {
+              
+                //TODO: Validate scene
+                
+                // Validate complete scene
                 changeScene(action: touchedNode.name!)
             }
         }

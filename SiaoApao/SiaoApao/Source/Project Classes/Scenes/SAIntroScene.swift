@@ -19,5 +19,7 @@ class SAIntroScene: SABaseScene {
         nextButton.position = CGPoint(x: size.width-65, y: 65)
         nextButton.zPosition = 10
         addChild(nextButton)
+        
+
     }
 }
