@@ -66,7 +66,8 @@ class SASceneGlobes: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_bubbles_instructions".localized
         label1.text = "scene_bubbles_text1".localized

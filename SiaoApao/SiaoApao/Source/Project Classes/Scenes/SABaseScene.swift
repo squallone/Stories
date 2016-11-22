@@ -201,7 +201,9 @@ class SABaseScene: SKScene {
     }
     
     func updateLocalizableString(){
-    
+        successNode?.titleLabel.text = "game_congratulations".localized
+        successNode?.titleButtonLabel.text = "game_retry".localized
+
     }
     // MARK: - Touches Began
     

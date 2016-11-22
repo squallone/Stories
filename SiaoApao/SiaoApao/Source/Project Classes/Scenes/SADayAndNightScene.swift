@@ -78,7 +78,8 @@ class SADayAndNightScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_day_night_instructions".localized
         label1.text = "scene_day_night_text1".localized

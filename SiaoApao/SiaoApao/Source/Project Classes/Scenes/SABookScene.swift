@@ -69,7 +69,8 @@ class SABookScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_read_book_instructions".localized
         label1.text = "scene_read_book_text1".localized

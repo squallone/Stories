@@ -43,7 +43,8 @@ class ToothbrushScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_brush_teeth_instructions".localized
         label1.text = "scene_brush_teeth_text1".localized

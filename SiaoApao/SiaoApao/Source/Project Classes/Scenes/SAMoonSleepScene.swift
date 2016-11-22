@@ -76,7 +76,8 @@ class SAMoonSleepScene: SABaseScene {
     // MARK: - Labels
     
     override func updateLocalizableString(){
-        
+        super.updateLocalizableString()
+
         /* Title description */
         titleLabel.text = "scene_sleeping_instructions".localized
         label1.text = "scene_sleeping_text1".localized
