@@ -104,7 +104,7 @@ class SABaseScene: SKScene {
         addChild(nextButton!)
         
         // Default status for next button
-       self.hideNextButton()
+       //self.hideNextButton()
         
         // Title bar
         let titleBar = SKSpriteNode(imageNamed: "bar")

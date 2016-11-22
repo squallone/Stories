@@ -62,13 +62,13 @@ class SAMoonSleepScene: SABaseScene {
             self.label3.position = CGPoint(x: 440, y: 135)
             self.label4.position = CGPoint(x: 440, y: 100)
             
-            let background       = SKSpriteNode()
-            background.color     = UIColor(white: 1.0, alpha: 0.8)
-            background.size      = CGSize(width: 440, height: 115)
-            background.position  = CGPoint(x: 640, y: 180)
+            let background = SKShapeNode(rect: CGRect(x: 425, y: 125, width: 440, height: 115), cornerRadius: 10)
+            background.fillColor = UIColor(white: 1.0, alpha: 0.8)
             background.zPosition = 10
+            
             self.addChild(background)
             
+
             self.showNextButton()
         }
     }
