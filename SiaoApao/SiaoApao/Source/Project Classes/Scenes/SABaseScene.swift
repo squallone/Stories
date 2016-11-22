@@ -26,6 +26,7 @@ class SABaseScene: SKScene {
     public var label4: SKLabelNode!
     
     public var timerLabelNode: SKTimerNode!
+    public var successNode: SKSuccessNode!
     
     let labelFontSize : CGFloat = 28.0
 
@@ -35,6 +36,7 @@ class SABaseScene: SKScene {
         self.addLabels()
         self.addInstructionsBar()
         self.addTimerLabel()
+        //self.addSuccessNode()
     }
     
     // MARK: - Actions
@@ -179,6 +181,14 @@ class SABaseScene: SKScene {
             timerLabelNode.starTimer()
 
         }
+    }
+    
+    func addSuccessNode() {
+        successNode = SKSuccessNode()
+        successNode.zPosition = 15
+        successNode.position = CGPoint(x: size.width / 2, y: 500)
+        addChild(successNode)
+        
     }
     
     func updateLocalizableString(){
