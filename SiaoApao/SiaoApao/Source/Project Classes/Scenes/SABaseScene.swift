@@ -25,8 +25,8 @@ class SABaseScene: SKScene {
     public var label3: SKLabelNode!
     public var label4: SKLabelNode!
     
-    public var timerLabelNode: SKTimerNode!
-    public var successNode: SKSuccessNode!
+    public var timerLabelNode: SKTimerNode?
+    public var successNode: SKSuccessNode?
     
     let labelFontSize : CGFloat = 28.0
 
@@ -36,7 +36,7 @@ class SABaseScene: SKScene {
         self.addLabels()
         self.addInstructionsBar()
         self.addTimerLabel()
-        //self.addSuccessNode()
+        self.addSuccessNode()
     }
     
     // MARK: - Actions
@@ -149,7 +149,13 @@ class SABaseScene: SKScene {
     func showNextButton(){
         self.nextButton?.isUserInteractionEnabled = false
         self.nextButton?.texture = SKTexture(imageNamed: "RightArrow")
-
+        
+        /* Show rety Message */
+        let alphaAction = SKAction.fadeAlpha(to: 1.0, duration: 0.5)
+        successNode?.run(alphaAction)
+        
+        /* Pause timer */
+        timerLabelNode?.pauseTimer()
     }
     
     func hideLabels(){
@@ -169,25 +175,28 @@ class SABaseScene: SKScene {
     func addTimerLabel() {
         if (isSceneGame == true) {
             timerLabelNode = SKTimerNode()
-            timerLabelNode.zPosition = 15
-            timerLabelNode.position = CGPoint(x: size.width / 2, y: 710)
-            timerLabelNode.fontName = "ArialNarrow-Bold"
-            timerLabelNode.fontColor = UIColor.red
-            timerLabelNode.verticalAlignmentMode = .center
-            timerLabelNode.horizontalAlignmentMode = .center
-            timerLabelNode.isUserInteractionEnabled = false
-            addChild(timerLabelNode)
+            timerLabelNode?.zPosition = 15
+            timerLabelNode?.position = CGPoint(x: size.width / 2, y: 710)
+            timerLabelNode?.fontName = "ArialNarrow-Bold"
+            timerLabelNode?.fontColor = UIColor.red
+            timerLabelNode?.verticalAlignmentMode = .center
+            timerLabelNode?.horizontalAlignmentMode = .center
+            timerLabelNode?.isUserInteractionEnabled = false
+            addChild(timerLabelNode!)
             
-            timerLabelNode.starTimer()
+            timerLabelNode?.starTimer()
 
         }
     }
     
     func addSuccessNode() {
-        successNode = SKSuccessNode()
-        successNode.zPosition = 15
-        successNode.position = CGPoint(x: size.width / 2, y: 500)
-        addChild(successNode)
+        if (isSceneGame == true) {
+            successNode = SKSuccessNode()
+            successNode?.zPosition = 15
+            successNode?.position = CGPoint(x: size.width / 2, y: 500)
+            successNode?.alpha = 0.0
+            addChild(successNode!)
+        }
         
     }
     
@@ -214,6 +223,10 @@ extension SABaseScene{
         
         let transitionNext = SKTransition.reveal(with: .left, duration: 0.8)
         let transitionBack = SKTransition.reveal(with: .right, duration: 0.8)
+        
+        if action == "retryScene" {
+            print("casa")
+        }
 
         if action == "next"{
             
