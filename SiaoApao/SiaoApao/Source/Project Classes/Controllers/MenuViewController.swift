@@ -19,6 +19,9 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var lblStories: UILabel!
     @IBOutlet weak var lblGames: UILabel!
     @IBOutlet weak var lblcharacters: UILabel!
+    @IBOutlet weak var btnTeam: UIButton!
+    @IBOutlet weak var btnContactUs: UIButton!
+    @IBOutlet weak var btnOptions: UIButton!
         
     // MARK: - Properties
     
@@ -58,7 +61,9 @@ class MenuViewController: UIViewController {
         
         self.btnSpanish.setTitle("spanish".localized, for: .normal)
         self.btnEnglish.setTitle("english".localized, for: .normal)
-        
+        self.btnTeam.setTitle("the_team".localized, for: .normal)
+        self.btnContactUs.setTitle("contact_us".localized, for: .normal)
+
         self.lblLanguage.text   = "language".localized
         self.lblGames.text      = "games".localized
         self.lblStories.text    = "stories".localized

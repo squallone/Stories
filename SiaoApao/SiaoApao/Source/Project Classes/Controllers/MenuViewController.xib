@@ -16,8 +16,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="SiaoApao" customModuleProvider="target">
             <connections>
+                <outlet property="btnContactUs" destination="yCL-Ne-b5O" id="1UK-TI-sGj"/>
                 <outlet property="btnEnglish" destination="e8E-Vr-NSN" id="gad-0h-fs4"/>
+                <outlet property="btnOptions" destination="vxt-zF-7on" id="Phg-dr-d6N"/>
                 <outlet property="btnSpanish" destination="i26-t3-hq9" id="TJG-UK-0Gz"/>
+                <outlet property="btnTeam" destination="i5h-ZX-Q4l" id="Eqb-Io-tZ6"/>
                 <outlet property="lblGames" destination="gat-eR-GcX" id="TGY-Jr-SOp"/>
                 <outlet property="lblLanguage" destination="Ieo-6p-Q4H" id="Pkt-pq-DQ4"/>
                 <outlet property="lblStories" destination="Teo-Df-ySp" id="ND8-jM-zWZ"/>
@@ -156,11 +159,11 @@
                             <rect key="frame" x="0.0" y="0.0" width="215" height="392"/>
                         </imageView>
                         <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-ZX-Q4l">
-                            <rect key="frame" x="42" y="39" width="121" height="63"/>
+                            <rect key="frame" x="28" y="39" width="162" height="63"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal">
                                 <attributedString key="attributedTitle">
-                                    <fragment content="The            Team">
+                                    <fragment content="The Team">
                                         <attributes>
                                             <font key="NSFont" size="29" name="MyriadPro-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -195,8 +198,8 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="i5h-ZX-Q4l" secondAttribute="trailing" constant="51" id="38q-30-2vt"/>
-                        <constraint firstItem="i5h-ZX-Q4l" firstAttribute="leading" secondItem="ypx-wC-dbf" secondAttribute="leading" constant="42" id="5M2-yI-Ph7"/>
+                        <constraint firstAttribute="trailing" secondItem="i5h-ZX-Q4l" secondAttribute="trailing" constant="24" id="38q-30-2vt"/>
+                        <constraint firstItem="i5h-ZX-Q4l" firstAttribute="leading" secondItem="ypx-wC-dbf" secondAttribute="leading" constant="28" id="5M2-yI-Ph7"/>
                         <constraint firstItem="yCL-Ne-b5O" firstAttribute="height" secondItem="i5h-ZX-Q4l" secondAttribute="height" id="BDV-d4-7TX"/>
                         <constraint firstItem="yCL-Ne-b5O" firstAttribute="top" secondItem="i5h-ZX-Q4l" secondAttribute="bottom" constant="51" id="Ix9-I3-Evx"/>
                         <constraint firstItem="i5h-ZX-Q4l" firstAttribute="top" secondItem="ypx-wC-dbf" secondAttribute="top" constant="39" id="JQy-cP-Bbo"/>

@@ -242,6 +242,12 @@ extension SABaseScene{
         }
         
         switch self {
+        case is SAIntroScene:
+            if action == "next"{
+                scene?.view?.presentScene(SADayAndNightScene(fileNamed:"SADayAndNightScene")!, transition: SKTransition.reveal(with: .left, duration: 0.8))
+            }
+            break
+
         case is SADayAndNightScene:
             if action == "next"{
                 scene?.view?.presentScene(SASceneGlobes(fileNamed:"SASceneGlobes")!, transition: SKTransition.reveal(with: .left, duration: 0.8))
