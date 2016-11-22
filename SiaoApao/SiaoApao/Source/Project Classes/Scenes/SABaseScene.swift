@@ -122,11 +122,19 @@ class SABaseScene: SKScene {
         
         if let showHomeButton = self.showHomeButton{
             
-            if showHomeButton{
+            if showHomeButton {
                 self.nextButton?.texture = SKTexture(imageNamed: "home")
                 self.backButton?.isHidden = true
                 self.hideLabels()
                 showNextButton()
+                
+                /* No show the nextButton in a Game
+                 It only show when the user complete
+                 the scene */
+                if (isSceneGame == true) {
+                    /* ¿Is correct the next button?*/
+                    hideNextButton()
+                }
             }
         }
     }
