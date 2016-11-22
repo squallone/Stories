@@ -37,6 +37,10 @@ class SAMenuCharactersViewController: BaseViewController {
         collectionView.register(UINib(nibName: "CharacterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CharacterCollectionViewCell")
         collectionView.delegate = self
     }
+    @IBAction func back(_ sender: Any) {
+        flowController.back()
+
+    }
     
 }
 

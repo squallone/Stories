@@ -41,6 +41,9 @@
                     <state key="normal" title="https://www.facebook.com/sia.and.apao/#">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="didPressFB:" destination="-2" eventType="touchUpInside" id="P7a-J7-1tS"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-8X-aAK">
                     <rect key="frame" x="20" y="166" width="404" height="20"/>
