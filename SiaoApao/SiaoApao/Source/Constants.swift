@@ -13,12 +13,11 @@ struct Constants{
     struct Appdelegate {
         static let Accessor = UIApplication.shared.delegate as! AppDelegate;
     }
-    
     struct HTTP {
-        static let Protocolo    = "https://"
-        static let Host         = "jsonblob.com/"
+        static let Protocolo    = "http://"
+        static let Host         = "52.88.85.62/"
         static let Port         = ""
-        static let Path         = "api/blob/"
+        static let Path         = ""
         static let Endpoint     = Constants.HTTP.Protocolo + Constants.HTTP.Host + Constants.HTTP.Port + Constants.HTTP.Path
     }
 }

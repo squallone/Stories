@@ -74,6 +74,11 @@ class SAMenuGamesViewController: BaseViewController, UICollectionViewDataSource,
            _ = self.navigationController?.pushViewController(testViewController, animated: true)
         }
     }    
+    
+    @IBAction func back(_ sender: Any) {
+        flowController.back()
+
+    }
 }
 
 // MARK: - Flow Layout

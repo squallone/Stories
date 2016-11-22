@@ -74,6 +74,11 @@
 		F226908E1DBC921900EAE921 /* BiographyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226908C1DBC921900EAE921 /* BiographyDetailViewController.swift */; };
 		F226908F1DBC921900EAE921 /* BiographyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F226908D1DBC921900EAE921 /* BiographyDetailViewController.xib */; };
 		F22690971DBCB6E700EAE921 /* Menu2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22690961DBCB6E700EAE921 /* Menu2View.xib */; };
+		F22D37C81DE270C3004D923E /* ConctUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D37C71DE270C3004D923E /* ConctUsView.swift */; };
+		F22D37CA1DE27150004D923E /* ConctUsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22D37C91DE27150004D923E /* ConctUsView.xib */; };
+		F22D37CC1DE28F2A004D923E /* FormSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D37CB1DE28F2A004D923E /* FormSheetViewController.swift */; };
+		F22D37CE1DE2D677004D923E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22D37CD1DE2D677004D923E /* WebView.swift */; };
+		F22D37D01DE2D687004D923E /* WebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22D37CF1DE2D687004D923E /* WebView.xib */; };
 		F242671F1DAB092600708A54 /* BiographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242671D1DAB092600708A54 /* BiographyViewController.swift */; };
 		F24267201DAB092600708A54 /* BiographyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F242671E1DAB092600708A54 /* BiographyViewController.xib */; };
 		F24267231DAB2F5F00708A54 /* SACharactersFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */; };
@@ -205,6 +210,11 @@
 		F226908C1DBC921900EAE921 /* BiographyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyDetailViewController.swift; sourceTree = "<group>"; };
 		F226908D1DBC921900EAE921 /* BiographyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyDetailViewController.xib; sourceTree = "<group>"; };
 		F22690961DBCB6E700EAE921 /* Menu2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Menu2View.xib; sourceTree = "<group>"; };
+		F22D37C71DE270C3004D923E /* ConctUsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConctUsView.swift; sourceTree = "<group>"; };
+		F22D37C91DE27150004D923E /* ConctUsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConctUsView.xib; sourceTree = "<group>"; };
+		F22D37CB1DE28F2A004D923E /* FormSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSheetViewController.swift; sourceTree = "<group>"; };
+		F22D37CD1DE2D677004D923E /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F22D37CF1DE2D687004D923E /* WebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebView.xib; sourceTree = "<group>"; };
 		F242671D1DAB092600708A54 /* BiographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiographyViewController.swift; sourceTree = "<group>"; };
 		F242671E1DAB092600708A54 /* BiographyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyViewController.xib; sourceTree = "<group>"; };
 		F24267221DAB2F5F00708A54 /* SACharactersFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACharactersFlowController.swift; sourceTree = "<group>"; };
@@ -582,6 +592,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D601FC1D7FE4F3006B2AE7 /* BaseViewController.swift */,
+				F22D37CB1DE28F2A004D923E /* FormSheetViewController.swift */,
 				F220ED811D7F981C00D98278 /* Main */,
 				F24267211DAB092E00708A54 /* Biography */,
 				F220ED7A1D7F979700D98278 /* Menu */,
@@ -610,6 +621,10 @@
 			children = (
 				92F95DEA1DE3EAA8002B03AC /* SKSuccessNode.swift */,
 				925A12201DDEEF97008F3AE1 /* SKTimerNode.swift */,
+				F22D37CD1DE2D677004D923E /* WebView.swift */,
+				F22D37CF1DE2D687004D923E /* WebView.xib */,
+				F22D37C71DE270C3004D923E /* ConctUsView.swift */,
+				F22D37C91DE27150004D923E /* ConctUsView.xib */,
 				F272ACF61DC9532400C5A302 /* NibLoadingView.swift */,
 				F2B66E981D8126AF00652249 /* SALabel.swift */,
 				F22690921DBCA9FC00EAE921 /* Menu */,
@@ -866,6 +881,7 @@
 				9242DC371DA9E0D500868886 /* SAEndScene.sks in Resources */,
 				F2588EDE1DB4454400F2EF62 /* MyriadPro-Bold.ttf in Resources */,
 				92CEFE731D825A7500F04105 /* SADayAndNightScene.sks in Resources */,
+				F22D37D01DE2D687004D923E /* WebView.xib in Resources */,
 				923912E41D827A5F000FC33C /* SAPuppetScene.sks in Resources */,
 				F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */,
 				F2D602011D7FE5A2006B2AE7 /* SAMenuCharactersViewController.xib in Resources */,
@@ -890,6 +906,7 @@
 				924C804B1DAB4BB7001CEDE8 /* switch.wav in Resources */,
 				927AF5BC1D9897FE00BB8212 /* wave.wav in Resources */,
 				927AF5BA1D9897DE00BB8212 /* zipper.wav in Resources */,
+				F22D37CA1DE27150004D923E /* ConctUsView.xib in Resources */,
 				F22690971DBCB6E700EAE921 /* Menu2View.xib in Resources */,
 				F220ED791D7F975600D98278 /* MenuViewController.xib in Resources */,
 				F2588EDC1DB42E3E00F2EF62 /* ArialNarrow-Bold.ttf in Resources */,
@@ -1001,12 +1018,14 @@
 				924E1CEC1D826EAF00A50AA0 /* SAPortraitScene.swift in Sources */,
 				923912F01D8288E1000FC33C /* SACarpetScene.swift in Sources */,
 				F2D602001D7FE5A2006B2AE7 /* SAMenuCharactersViewController.swift in Sources */,
+				F22D37CC1DE28F2A004D923E /* FormSheetViewController.swift in Sources */,
 				927AF5B71D98639400BB8212 /* SKAction+Custom.swift in Sources */,
 				F2B9F40C1DA6239C00B94545 /* MKOutlinedLabelNode.swift in Sources */,
 				F25C7DD11DB929B100B6B5AF /* CharacterCollectionViewCell.swift in Sources */,
 				924012A81D8265C6005B4087 /* SASurfScene.swift in Sources */,
 				925A12211DDEEF97008F3AE1 /* SKTimerNode.swift in Sources */,
 				F2D602041D7FE87D006B2AE7 /* SAMenuFlowController.swift in Sources */,
+				F22D37C81DE270C3004D923E /* ConctUsView.swift in Sources */,
 				9242DC321DA9DB3E00868886 /* SAMoonSleepScene.swift in Sources */,
 				923912EA1D8283D7000FC33C /* SALivingRoomScene.swift in Sources */,
 				F2B66E9B1D812E3B00652249 /* SAMenuGamesFlowController.swift in Sources */,
@@ -1022,6 +1041,7 @@
 				F2AC6D391DB77A160091B091 /* Game.swift in Sources */,
 				F2B55F911DB89CB6009220D0 /* GameCollectionViewCell.swift in Sources */,
 				F2B7F4271DB1B97300461E15 /* UIColor+colors.swift in Sources */,
+				F22D37CE1DE2D677004D923E /* WebView.swift in Sources */,
 				F2D602061D7FEA8A006B2AE7 /* SAMenuStoriesFlowController.swift in Sources */,
 				9242DC391DA9E0ED00868886 /* SAEndScene.swift in Sources */,
 			);

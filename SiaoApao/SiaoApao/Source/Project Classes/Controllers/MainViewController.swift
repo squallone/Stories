@@ -13,6 +13,8 @@ import RealmSwift
 
 class MainViewController: UIViewController {
     
+    var alamofireManager: SessionManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,11 +56,15 @@ class MainViewController: UIViewController {
     
     func fetchLanguagesData(){
         
-        let URL = "http://52.88.85.62/JsonSA"
-        
         HUD.show()
+
+        let URL = Constants.HTTP.Endpoint + "/JsonSA"
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForResource = 180 // seconds
         
-        Alamofire.request(URL, method: .post).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
+        alamofireManager = Alamofire.SessionManager(configuration: configuration)
+        
+        alamofireManager.request(URL, method: .post).responseArray(keyPath: "languages") { (response: DataResponse<[Language]>) in
             switch response.result{
             case .success(let languages):
                 
