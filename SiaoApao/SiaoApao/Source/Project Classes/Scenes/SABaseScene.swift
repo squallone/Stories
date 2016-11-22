@@ -227,7 +227,20 @@ extension SABaseScene{
         let transitionBack = SKTransition.reveal(with: .right, duration: 0.8)
         
         if action == "retryScene" {
-            print("casa")
+
+            let myClass = self.classForCoder as? SABaseScene.Type
+            let nameClass = String(describing: type(of: self))
+            let restartScene = myClass?.init(fileNamed: nameClass)
+            
+            restartScene?.showHomeButton = true
+            /* Set flag the game scene*/
+            restartScene?.isSceneGame = true
+            
+            /* Hide backButton and label */
+            //restartScene?.backButton?.isHidden = true
+            //restartScene?.hideLabels()
+            scene?.view?.presentScene(restartScene)
+            
         }
 
         if action == "next"{
