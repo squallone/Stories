@@ -99,6 +99,8 @@ class SACarpetScene: SABaseScene {
         label2.text = "scene_dance_text2".localized
         label3.text = "scene_dance_text3".localized
         label4.text = "scene_dance_text4".localized
+        adviceString = "scene_dance_advice".localized
+
     }
     
     // MARK: - Gesture Actions

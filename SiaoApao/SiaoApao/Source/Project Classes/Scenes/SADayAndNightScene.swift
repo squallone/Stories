@@ -86,6 +86,7 @@ class SADayAndNightScene: SABaseScene {
         label2.text = "scene_day_night_text2".localized
         label3.text = "scene_day_night_text3".localized
         label4.text = "scene_day_night_text4".localized
+        adviceString = "scene_day_night_advice".localized
     }
     
     // MARK: - Gesture Actions

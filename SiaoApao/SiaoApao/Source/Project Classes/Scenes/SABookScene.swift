@@ -77,6 +77,8 @@ class SABookScene: SABaseScene {
         label2.text = "scene_read_book_text2".localized
         label3.text = "scene_read_book_text3".localized
         label4.text = "scene_read_book_text4".localized
+        adviceString = "scene_read_book_advice".localized
+
     }
     
     /* Override uopdate method */

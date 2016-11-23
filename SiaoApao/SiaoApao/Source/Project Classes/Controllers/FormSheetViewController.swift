@@ -39,6 +39,12 @@ class FormSheetViewController: UIViewController {
             UIApplication.shared.openURL(NSURL(string: "http://www.facebook.com/sia.and.apao")! as URL)
         }
         
+        viewModel.didOpenEmail = {
+            let email = "sia.and.apao@gmail.com"
+            let url = NSURL(string: "mailto:\(email)")
+            UIApplication.shared.openURL(url as! URL)
+        }
+        
         switch self.type {
         case .contactUs:
             

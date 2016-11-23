@@ -51,6 +51,8 @@ class ToothbrushScene: SABaseScene {
         label2.text = "scene_brush_teeth_text2".localized
         label3.text = "scene_brush_teeth_text3".localized
         label4.text = "scene_brush_teeth_text4".localized
+        adviceString = "scene_brush_teeth_advice".localized
+
     }
     
     // MARK: - Gesture Actions

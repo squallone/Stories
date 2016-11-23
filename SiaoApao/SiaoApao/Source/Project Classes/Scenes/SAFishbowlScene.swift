@@ -69,6 +69,8 @@ class SAFishbowlScene: SABaseScene {
         label2.text = "scene_goodnight_galileo_text2".localized
         label3.text = "scene_goodnight_galileo_text3".localized
         label4.text = "scene_goodnight_galileo_text4".localized
+        adviceString = "scene_goodnight_galileo_advice".localized
+
         
         // TODO: Localized Text
         dialogLabelNode?.text = "Good Night"

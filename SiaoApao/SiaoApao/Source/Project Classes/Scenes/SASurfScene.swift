@@ -38,6 +38,8 @@ class SASurfScene: SABaseScene {
         label2.text = "scene_turtles_text2".localized
         label3.text = "scene_turtles_text3".localized
         label4.text = "scene_turtles_text4".localized
+        adviceString = "scene_turtles_advice".localized
+
     }
 
     override func didMove(to view: SKView) {

@@ -43,6 +43,8 @@ class SALivingRoomScene: SABaseScene {
         label2.text = "scene_milk_text2".localized
         label3.text = "scene_milk_text3".localized
         label4.text = "scene_milk_text4".localized
+        adviceString = "scene_milk_advice".localized
+
     }
     
     // MARK: - Gesture Actions

@@ -31,6 +31,8 @@ class SABaseScene: SKScene, Alerts {
     public var successNode: SKSuccessNode?
     
     let labelFontSize : CGFloat = 28.0
+    var isNextButtonAvailable = false
+    var adviceString = ""
 
     // MARK: - Life cycle
     override func didMove(to view: SKView) {
@@ -145,12 +147,12 @@ class SABaseScene: SKScene, Alerts {
     }
     
     func hideNextButton(){
-        self.nextButton?.isUserInteractionEnabled = true
+        isNextButtonAvailable = false
         self.nextButton?.texture = SKTexture(imageNamed: "RightArrowDisabled")
     }
     
     func showNextButton(){
-        self.nextButton?.isUserInteractionEnabled = false
+        isNextButtonAvailable = true
         self.nextButton?.texture = SKTexture(imageNamed: "RightArrow")
         
         /* Show rety Message */
@@ -215,8 +217,6 @@ class SABaseScene: SKScene, Alerts {
         if let location = touches.first?.location(in: self) {
             let touchedNode = atPoint(location)
             if (touchedNode.name != nil) {
-              
-                //TODO: Validate scene
                 
                 // Validate complete scene
                 changeScene(action: touchedNode.name!)
@@ -250,6 +250,13 @@ extension SABaseScene{
         }
 
         if action == "next"{
+            
+            if !isNextButtonAvailable{
+                // Validate complete scene
+                showAlert(title: "Sia&Apao", message: adviceString)
+                
+                return
+            }
             
             if let dismiss = self.showHomeButton{
                 

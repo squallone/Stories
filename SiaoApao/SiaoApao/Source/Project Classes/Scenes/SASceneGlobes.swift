@@ -72,6 +72,8 @@ class SASceneGlobes: SABaseScene {
         titleLabel.text = "scene_bubbles_instructions".localized
         label1.text = "scene_bubbles_text1".localized
         label2.text = "scene_bubbles_text2".localized
+        adviceString = "scene_bubbles_advice".localized
+
     }
     
     // MARK: - Gesture Actions

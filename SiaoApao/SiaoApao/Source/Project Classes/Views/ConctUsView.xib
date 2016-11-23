@@ -29,7 +29,7 @@
                     <color key="textColor" red="1" green="0.0" blue="0.020532956710000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Facebook:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-Lm-wCh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-Lm-wCh">
                     <rect key="frame" x="20" y="82" width="398" height="20"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="18"/>
                     <color key="textColor" red="1" green="0.63206364459999997" blue="0.57361771579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +45,7 @@
                         <action selector="didPressFB:" destination="-2" eventType="touchUpInside" id="P7a-J7-1tS"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-8X-aAK">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-8X-aAK">
                     <rect key="frame" x="20" y="166" width="404" height="20"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="18"/>
                     <nil key="textColor"/>
@@ -79,6 +79,9 @@
                     <state key="normal" title="sia.and.apao@gmail.com">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="didOpenEmail:" destination="iN0-l3-epB" eventType="touchUpInside" id="Wvj-2c-REQ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -107,6 +110,10 @@
                 <constraint firstItem="Xl1-aa-0Rc" firstAttribute="bottom" secondItem="D7V-bV-XYF" secondAttribute="bottom" id="zQK-v0-aTa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnEmail" destination="OKj-Ca-JmQ" id="mDF-qp-sja"/>
+                <outlet property="lblContactUs" destination="mMp-to-jQO" id="aQK-g5-cEm"/>
+            </connections>
             <point key="canvasLocation" x="-287" y="-239"/>
         </view>
     </objects>

@@ -56,6 +56,8 @@ class SABearinBedScene: SABaseScene {
         label2.text = "scene_cuddle_orli_text2".localized
         label3.text = "scene_cuddle_orli_text3".localized
         label4.text = "scene_cuddle_orli_text4".localized
+        adviceString = "scene_cuddle_orli_advice".localized
+
     }
     
     // MARK: - Gesture Actions

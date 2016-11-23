@@ -84,5 +84,7 @@ class SAMoonSleepScene: SABaseScene {
         label2.text = "scene_sleeping_text2".localized
         label3.text = "scene_sleeping_text3".localized
         label4.text = "scene_sleeping_text4".localized
+        adviceString = "scene_sleeping_advice".localized
+
     }
 }

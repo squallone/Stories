@@ -56,6 +56,8 @@ class SAKissBedScene: SABaseScene {
         label2.text = "scene_kiss_apao_text2".localized
         label3.text = "scene_kiss_apao_text3".localized
         label4.text = "scene_kiss_apao_text4".localized
+        adviceString = "scene_kiss_apao_advice".localized
+
     }
     
     func updateColors(isOn: Bool){
@@ -92,7 +94,8 @@ class SAKissBedScene: SABaseScene {
                         self.label2.text = "scene_turnoff_light_text2".localized
                         self.label3.text = "scene_turnoff_light_text3".localized
                         self.label4.text = "scene_turnoff_light_text4".localized
-                        
+                        self.adviceString = "scene_turnoff_light_advice".localized
+
                         
                         let bounceAction = SKAction.bounce(to: 1.01, duration: 0.2)
                         self.switchNode?.run(SKAction.repeatForever(bounceAction), withKey:"moving")
