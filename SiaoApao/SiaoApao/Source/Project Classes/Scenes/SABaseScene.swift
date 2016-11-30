@@ -98,12 +98,14 @@ class SABaseScene: SKScene, Alerts {
             backButton?.name = "back"
             backButton?.position = CGPoint(x: 65, y: 65)
             backButton?.zPosition = 10
+            backButton?.setScale(1.0)
             addChild(backButton!)
         }
         
         // Next button
         nextButton = SKSpriteNode(imageNamed: "RightArrowDisabled")
         nextButton?.name = "next"
+        nextButton?.setScale(1.0)
         nextButton?.position = CGPoint(x: size.width-65, y: 65)
         nextButton?.zPosition = 10
         addChild(nextButton!)

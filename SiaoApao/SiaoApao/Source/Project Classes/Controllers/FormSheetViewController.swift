@@ -53,9 +53,8 @@ class FormSheetViewController: UIViewController {
             
         case .theTeam:
             let customView = WebView.loadNib(viewModel: viewModel)
-            let URLString = "\(Constants.HTTP.Endpoint)/team.html"
-            let url = URL(string: URLString)
-            customView.webView.loadRequest(URLRequest(url: url!))
+            
+            customView.webView.loadHTMLString("team_credits".localized, baseURL: Bundle.main.bundleURL)
             customView.isOpaque = false
             self.view = customView
 

@@ -26,25 +26,28 @@ class SAMenuGamesViewController: BaseViewController, UICollectionViewDataSource,
         
         self.menuView.delegate = self
         
-        let language = Language.current()!
-        self.games = language.games
-        
         // Table View
         collectionView.register(UINib(nibName: "GameCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GameCollectionViewCell")
         
         // Flow controller
         flowController = SAMenuGamesFlowController(navigationController: self.navigationController)
+        
+        // Refresh data
+        refreshData()
      }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.updateLocalizableStrings()
+        
+        // Refresh data
+        refreshData()
     }
     
     // MARK: - Labels
     
-    func updateLocalizableStrings(){
-
+    func refreshData(){
+        let language = Language.current()!
+        self.games = language.games
     }
     
     // MARK: - UICollection DataSource
@@ -110,11 +113,11 @@ extension SAMenuGamesViewController: UICollectionViewDelegateFlowLayout {
 extension SAMenuGamesViewController: MenuViewDelegate{
     
     func didPressSpanish() {
-        self.updateLocalizableStrings()
+        self.refreshData()
     }
     
     func didPressEnglish() {
-        self.updateLocalizableStrings()
+        self.refreshData()
     }
     
     func didPressHome() {

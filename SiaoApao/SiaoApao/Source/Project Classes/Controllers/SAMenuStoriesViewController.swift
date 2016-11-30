@@ -15,6 +15,9 @@ class SAMenuStoriesViewController: BaseViewController {
     @IBOutlet weak var lblStories: UILabel!
     @IBOutlet weak var lblGames: UILabel!
     @IBOutlet weak var lblCharacters: UILabel!
+    @IBOutlet weak var lblStory1: SALabel!
+    @IBOutlet weak var lblStory2: SALabel!
+    @IBOutlet weak var lblStory3: SALabel!
     
     // MARK: - Properties
 
@@ -43,6 +46,11 @@ class SAMenuStoriesViewController: BaseViewController {
         self.lblGames.text      = "games".localized
         self.lblStories.text    = "stories".localized
         self.lblCharacters.text = "characters".localized
+        
+        self.lblStory1.text = "story1_title".localized
+        self.lblStory2.text = "story2_title".localized
+        self.lblStory3.text = "story3_title".localized
+
     }
     
     // MARK: Stories

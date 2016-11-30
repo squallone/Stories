@@ -55,6 +55,12 @@ extension String{
             return ""
         }
         
-        return labelFound as! String
+        var string = labelFound as! String
+        
+        if self == "team_credits"{
+            string.replace("</body>", with: " <a href=\"http://www.fai.com.mx\"><img src=\"logoFai.png\"></a></body>")
+        }
+        
+        return string
     }
 }

@@ -89,6 +89,8 @@
 		F2588EE41DB4548E00F2EF62 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */; };
 		F25C7DD11DB929B100B6B5AF /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25C7DCF1DB929B100B6B5AF /* CharacterCollectionViewCell.swift */; };
 		F25C7DD21DB929B100B6B5AF /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25C7DD01DB929B100B6B5AF /* CharacterCollectionViewCell.xib */; };
+		F26DD9741DEE70C800E03856 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26DD9731DEE70C800E03856 /* String+Helpers.swift */; };
+		F26DD9761DEE71C700E03856 /* logoFai.png in Resources */ = {isa = PBXBuildFile; fileRef = F26DD9751DEE71C700E03856 /* logoFai.png */; };
 		F272ACF51DC927F900C5A302 /* SASheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F272ACF41DC927F900C5A302 /* SASheetViewController.xib */; };
 		F272ACF71DC9532400C5A302 /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272ACF61DC9532400C5A302 /* NibLoadingView.swift */; };
 		F272BBBD1D82677C003E55D1 /* SASceneGlobes.sks in Resources */ = {isa = PBXBuildFile; fileRef = F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */; };
@@ -229,6 +231,8 @@
 		F2588EE31DB4548E00F2EF62 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		F25C7DCF1DB929B100B6B5AF /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		F25C7DD01DB929B100B6B5AF /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		F26DD9731DEE70C800E03856 /* String+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		F26DD9751DEE71C700E03856 /* logoFai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoFai.png; sourceTree = "<group>"; };
 		F272ACF41DC927F900C5A302 /* SASheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SASheetViewController.xib; sourceTree = "<group>"; };
 		F272ACF61DC9532400C5A302 /* NibLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
 		F272BBBC1D82677C003E55D1 /* SASceneGlobes.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SASceneGlobes.sks; sourceTree = "<group>"; };
@@ -482,6 +486,7 @@
 				9242DC3E1DAAD56A00868886 /* CGFloat+Action.swift */,
 				F20FEF8D1DB169E700FF940B /* String+Localized.swift */,
 				F2B7F4261DB1B97300461E15 /* UIColor+colors.swift */,
+				F26DD9731DEE70C800E03856 /* String+Helpers.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 		F220ED611D7F8C4B00D98278 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F26DD9751DEE71C700E03856 /* logoFai.png */,
 				927AF5B81D9897DE00BB8212 /* Sounds */,
 				F2AB0B971DA4BDCB00A78260 /* Fonts */,
 				F220ED741D7F939D00D98278 /* asset.swift */,
@@ -863,7 +869,7 @@
 				TargetAttributes = {
 					926289961D7F7F4C00F253FF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6GD9JZZRM4;
+						DevelopmentTeam = EFQ8TSM8WJ;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -931,6 +937,7 @@
 				923912EE1D828829000FC33C /* SACarpetScene.sks in Resources */,
 				F25C7DD21DB929B100B6B5AF /* CharacterCollectionViewCell.xib in Resources */,
 				F226908F1DBC921900EAE921 /* BiographyDetailViewController.xib in Resources */,
+				F26DD9761DEE71C700E03856 /* logoFai.png in Resources */,
 				F272ACF51DC927F900C5A302 /* SASheetViewController.xib in Resources */,
 				9242DC2A1DA9D56F00868886 /* SAKissBedScene.sks in Resources */,
 				924E1CF21D826F4600A50AA0 /* SAPortraitScene.sks in Resources */,
@@ -1045,6 +1052,7 @@
 				F2A115CC1DB0700500602128 /* Character.swift in Sources */,
 				92841DDC1D8F2AC100735AC8 /* SKTexture+Gradient.swift in Sources */,
 				F2008F5E1D828D2E0056A22B /* ToothbrushScene.swift in Sources */,
+				F26DD9741DEE70C800E03856 /* String+Helpers.swift in Sources */,
 				F2D601FD1D7FE4F3006B2AE7 /* BaseViewController.swift in Sources */,
 				F220ED781D7F975600D98278 /* MenuViewController.swift in Sources */,
 				92CEFE751D825A9000F04105 /* SADayAndNightScene.swift in Sources */,
@@ -1225,7 +1233,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6GD9JZZRM4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SiaoApao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartthinking.SiaoApao;
@@ -1241,9 +1249,9 @@
 			baseConfigurationReference = EF632E8E9511E8B83083732D /* Pods-SiaoApao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Smart Thinking, S.A. de C.V.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6GD9JZZRM4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SiaoApao/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartthinking.SiaoApao;

@@ -28,15 +28,18 @@ class SABookScene: SABaseScene {
     var velocityNodeList: [CGPoint] = []
     var lastUpdateTimeList: [TimeInterval] = []
     var dtList: [TimeInterval] = []
-    var words: [String] = ["bubbles".localized,
-                           "book".localized,
-                           "adventure".localized,
-                           "sun".localized,
-                           "moon".localized,
-                           "turtles".localized,
-                           "coach".localized,
-                           "dragon".localized,
-                           "bed".localized]
+    var words: [String] = ["scene_read_book_word_1".localized,
+                           "scene_read_book_word_2".localized,
+                           "scene_read_book_word_3".localized,
+                           "scene_read_book_word_4".localized,
+                           "scene_read_book_word_5".localized,
+                           "scene_read_book_word_6".localized,
+                           "scene_read_book_word_7".localized,
+                           "scene_read_book_word_8".localized,
+                           "scene_read_book_word_9".localized,
+                           "scene_read_book_word_10".localized,
+                           "scene_read_book_word_11".localized,
+                           "scene_read_book_word_12".localized]
 
     
     /* Setup your scene here */
