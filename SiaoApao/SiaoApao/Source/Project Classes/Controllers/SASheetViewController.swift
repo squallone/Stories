@@ -68,7 +68,7 @@ class SASheetViewController: BaseViewController {
     
     func dayNightScene(){
         
-        if let scene = SAIntroScene(fileNamed:"SAIntroSceneho") {
+        if let scene = SAIntroScene(fileNamed:"SAIntroScene") {
                 
             scene.showHomeButton = self.showHomeButton
             /* Set the scale mode to scale to fit the window */

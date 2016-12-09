@@ -206,7 +206,7 @@ class SABookScene: SABaseScene {
                         
                         self.numbeOfTotalLetter -= 1
                         
-                        if self.numbeOfTotalLetter < 2 {
+                        if self.numbeOfTotalLetter < 1 {
                             print("Show Next Button")
                             self.showNextButton()
                         }
