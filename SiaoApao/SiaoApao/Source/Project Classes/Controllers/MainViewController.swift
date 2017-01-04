@@ -73,7 +73,7 @@ class MainViewController: UIViewController {
                 // Save languages
                 Language.save(languages)
                 // Set default language code
-                Language.saveCode(code: "ES")
+                Language.saveCode(code: "EN")
                 
                 // Show Menu
                 self.showMainMenu()

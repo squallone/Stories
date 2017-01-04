@@ -59,7 +59,7 @@ class SAPuppetScene: SABaseScene {
         super.updateLocalizableString()
 
         /* Title description */
-        titleLabel.text = "scene_dress_instructions".localized
+        titleLabel.text = "scene_tickle_instructions".localized
         label1.text = "scene_tickle_text1".localized
         label2.text = "scene_tickle_text2".localized
         label3.text = "scene_tickle_text3".localized

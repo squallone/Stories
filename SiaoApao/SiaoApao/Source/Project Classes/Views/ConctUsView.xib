@@ -35,15 +35,12 @@
                     <color key="textColor" red="1" green="0.63206364459999997" blue="0.57361771579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7V-bV-XYF">
-                    <rect key="frame" x="20" y="105" width="342" height="20"/>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7V-bV-XYF">
+                    <rect key="frame" x="20" y="105" width="79" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="https://www.facebook.com/sia.and.apao/#">
+                    <state key="normal" title="@siaapao">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
-                    <connections>
-                        <action selector="didPressFB:" destination="-2" eventType="touchUpInside" id="P7a-J7-1tS"/>
-                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-8X-aAK">
                     <rect key="frame" x="20" y="166" width="404" height="20"/>
@@ -51,16 +48,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl1-aa-0Rc">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl1-aa-0Rc">
                     <rect key="frame" x="437" y="67" width="61" height="58"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="61" id="1X8-tm-4ee"/>
                         <constraint firstAttribute="height" constant="58" id="bY5-4g-6x3"/>
                     </constraints>
                     <state key="normal" image="facebbok_logo"/>
-                    <connections>
-                        <action selector="didPressFB:" destination="iN0-l3-epB" eventType="touchUpInside" id="Axq-LM-tQh"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koF-my-eoQ">
                     <rect key="frame" x="442" y="171" width="51" height="57"/>
@@ -73,7 +67,7 @@
                         <action selector="didPressClose:" destination="iN0-l3-epB" eventType="touchUpInside" id="IoO-Oq-ZbU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKj-Ca-JmQ">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKj-Ca-JmQ">
                     <rect key="frame" x="20" y="194" width="398" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="sia.and.apao@gmail.com">

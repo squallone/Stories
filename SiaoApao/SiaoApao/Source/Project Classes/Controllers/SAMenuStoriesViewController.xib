@@ -45,9 +45,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-ts-p5i" userLabel="Buttons">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-ts-p5i" userLabel="Buttons">
                     <rect key="frame" x="177" y="607" width="852" height="162"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SS5-Ps-xed" userLabel="Btn Games">
                             <rect key="frame" x="328" y="20" width="187" height="142"/>
@@ -81,6 +80,10 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="40Z-tb-c8j"/>
+                        <constraint firstAttribute="width" constant="852" id="vCk-Ze-2ko"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3z-qd-pNe" userLabel="Language">
                     <rect key="frame" x="0.0" y="0.0" width="176" height="145"/>
@@ -167,6 +170,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="F6n-ts-p5i" secondAttribute="bottom" constant="-1" id="Upf-xp-BWK"/>
+                <constraint firstAttribute="trailing" secondItem="F6n-ts-p5i" secondAttribute="trailing" constant="-5" id="Zw4-cf-Amh"/>
                 <constraint firstAttribute="trailing" secondItem="6u4-my-VVL" secondAttribute="trailing" id="aGO-y6-ftl"/>
                 <constraint firstAttribute="bottom" secondItem="6u4-my-VVL" secondAttribute="bottom" id="s65-nO-mJs"/>
                 <constraint firstItem="6u4-my-VVL" firstAttribute="leading" secondItem="zAT-9e-Ivs" secondAttribute="leading" id="tCs-Sf-kvB"/>
